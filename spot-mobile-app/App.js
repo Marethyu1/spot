@@ -1,45 +1,68 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import TabNavigator from './app/TabNavigator';
 
-class Blink extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {isShowingText: true};
+console.disableYellowBox = true;
 
-        // Toggle the state every second
-        setInterval(() => {
-            this.setState(previousState => {
-                return { isShowingText: !previousState.isShowingText };
-            });
-        }, 1000);
+
+export default class App extends React.Component {
+    state = {
+      isReady: false,
+    }
+
+    componentDidMount() {
+      this.loadFonts();
+      // this.props.getInitialData() // call our action
+    }
+
+    async loadFonts() {
+      await Expo.Font.loadAsync({
+        Roboto: require('native-base/Fonts/Roboto.ttf'),
+        Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+        Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
+      });
+
+      this.setState({ isReady: true }, function () {
+        console.log(this.state.isReady);
+      });
     }
 
     render() {
-        let display = this.state.isShowingText ? this.props.text : ' ';
+      if (!this.state.isReady) {
         return (
-            <Text>{display}</Text>
+          <View style={styles.activityIndicatorContainer}>
+            <ActivityIndicator animating />
+          </View>
         );
+      }
+      return (
+        <TabNavigator />
+      );
     }
 }
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-          <Blink text='I love to blink' />
-          <Blink text='Yes blinking is so great' />
-          <Blink text='Why did they ever take this out of HTML' />
-          <Blink text='Look at me look at me look at me' />
-      </View>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  activityIndicatorContainer: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flex: 1,
+  },
+
+  row: {
+    borderBottomWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+  },
+
+  title: {
+    fontSize: 15,
+    fontWeight: '600',
+  },
+
+  description: {
+    marginTop: 5,
+    fontSize: 14,
   },
 });
