@@ -1,39 +1,48 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet,  } from 'react-native';
 import TabNavigator from './app/TabNavigator';
+import Login from "./app/Screens/Login"
 
 console.disableYellowBox = true;
 
 
 export default class App extends React.Component {
     state = {
-      isReady: false,
+      isLoggedIn: false,
     }
 
-    componentDidMount() {
-      this.loadFonts();
-      // this.props.getInitialData() // call our action
+    async componentDidMount() {
+        await this.loadFonts()
+        // this.setState({
+        //     isReady: true
+        // })
     }
+
+    setLoggedIn = () => {
+        this.setState({
+            isLoggedIn: true
+        })
+    }
+
+
 
     async loadFonts() {
-      await Expo.Font.loadAsync({
-        Roboto: require('native-base/Fonts/Roboto.ttf'),
-        Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-        Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
-      });
-
-      this.setState({ isReady: true }, function () {
-        console.log(this.state.isReady);
-      });
+        await Expo.Font.loadAsync({
+            Roboto: require('native-base/Fonts/Roboto.ttf'),
+            Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+            Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
+        });
     }
 
     render() {
-      if (!this.state.isReady) {
-        return (
-          <View style={styles.activityIndicatorContainer}>
-            <ActivityIndicator animating />
-          </View>
-        );
+      if (!this.state.isLoggedIn) {
+          {/*<Container style={styles.activityIndicatorContainer}>*/}
+          return (
+              <Login
+                  setLoggedIn={this.setLoggedIn}
+              />
+          )
+
       }
       return (
         <TabNavigator />
