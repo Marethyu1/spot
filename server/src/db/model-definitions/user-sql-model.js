@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize")
 const SqlAbstractModel = require("../sql-abstract-model")
-const USER = "user"
+const {USER_MODEL} = require("../../consts/model-names")
 
 class UserSqlModel extends SqlAbstractModel {
 
@@ -10,25 +10,23 @@ class UserSqlModel extends SqlAbstractModel {
 
     getModel() {
         return {
-            id: {
-                type: Sequelize.STRING,
+            // id: {
+            //     type: Sequelize.INTEGER,
+            //     primaryKey: true,
+            //     autoIncrement: true,
+            // },
+            facebook_id: {
+                type: Sequelize.INTEGER,
                 primaryKey: true,
+                autoIncrement: true,
+
             },
-            givenName: {
-                type: Sequelize.STRING,
-            },
-            familyName: {
-                type: Sequelize.STRING,
-            },
-            displayName: {
-                type: Sequelize.STRING,
-            },
-            provider: {
+            name: {
                 type: Sequelize.STRING,
             },
         }
     }
 }
 
-module.exports = new UserSqlModel(USER)
+module.exports = new UserSqlModel(USER_MODEL)
 

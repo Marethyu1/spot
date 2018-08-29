@@ -7,6 +7,13 @@ const getDatabase = () => {
     return db
 }
 
+const setUp = async () => {
+    getDatabase()
+    await db.sync()
+    return db
+}
+
 module.exports = {
-    getDatabase
+    getDatabase,
+    setUp
 }

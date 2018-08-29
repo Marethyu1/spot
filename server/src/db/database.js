@@ -7,7 +7,7 @@ const modelLoader = require("./create-db-models")
  */
 class Database {
     /**
-     * @param {Object} unparsedConfig
+     * @param {Object} config
      * //
      */
     constructor(config) {
@@ -92,7 +92,7 @@ class Database {
     async closeConnection() {
         const closedConnection = await sequelize.close()
         sequelize = null
-        console.log("Database connection closed successfully!")
+        // console.log("Database connection closed successfully!")
         return closedConnection
     }
 
