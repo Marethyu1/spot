@@ -13,7 +13,7 @@ class UserModel extends AbstractModel {
     upsert(options){
         return this.model.upsert(options)
             .then(() => {
-                return this.get(options.facebook_id)
+                return this.get(options.id)
             })
     }
 }

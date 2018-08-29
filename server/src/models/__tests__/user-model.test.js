@@ -14,7 +14,8 @@ afterAll(async () => {
 test("I create a user", async () => {
     const options = {
         name: "james",
-        facebook_id: 12345
+        id: 12345,
+        email: "a.b@c.com"
 
     }
     const model  = await userModel.upsert(options)

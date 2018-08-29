@@ -18,7 +18,7 @@ const DefaultHeader = () => {
 export default class Login extends Component {
 
     login = async () => {
-        // this.props.setLoggedIn()
+
         const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('242029906422575', {
             permissions: ['public_profile', "email"],
         })
@@ -27,8 +27,23 @@ export default class Login extends Component {
             const response = await fetch(
                 `https://graph.facebook.com/me?access_token=${token}&fields=id,name,email`);
             const joson = await response.json()
+            joson.id = parseInt(joson.id)
+            const body = JSON.stringify(joson)
+            const res = await fetch('http://192.168.1.15:3000/api/v1/users',
+                {
+                    method: "POST",
+                    body: body,
+                    headers: {
+                        "Content-Type": "application/json",
+                    }
+                }
+            ).then(x => x.json())
+                .catch(err => {
+                    console.log(err)
+                    debugger
+            })
 
-            console.log(joson)
+            console.log(res.json())
             this.props.setLoggedIn()
         }
     }

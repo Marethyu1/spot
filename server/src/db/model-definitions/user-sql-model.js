@@ -10,20 +10,18 @@ class UserSqlModel extends SqlAbstractModel {
 
     getModel() {
         return {
-            // id: {
-            //     type: Sequelize.INTEGER,
-            //     primaryKey: true,
-            //     autoIncrement: true,
-            // },
-            facebook_id: {
-                type: Sequelize.INTEGER,
+            id: {
+                type: Sequelize.BIGINT,
                 primaryKey: true,
                 autoIncrement: true,
-
             },
             name: {
                 type: Sequelize.STRING,
             },
+            email: {
+                type: Sequelize.STRING
+            }
+
         }
     }
 }

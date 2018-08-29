@@ -1,7 +1,6 @@
 const userModel = require("../models/user-model")
 
 const create  = async (req, res, next) => {
-    console.log("HERE")
     const model = await userModel.upsert(req.body)
         .catch((err) => {
             console.log("Error oh no!")
