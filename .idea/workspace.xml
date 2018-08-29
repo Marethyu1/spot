@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added bottom tab navigator and 3 basic screens.&#10;- Added Expo MapView for Map tab&#10;- Added Expo Camera for camera tab&#10;- Installed nativebase for frontend styled components">
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Created basic login component">
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/user.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routers/create.routers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routers/users.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,35 +27,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1119" />
+          <entry key="js" value="1755" />
           <entry key="json" value="2" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="1119" />
+          <entry key="JavaScript" value="1755" />
+          <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="3" />
+          <entry key="js" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -64,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="387">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -88,8 +92,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="153">
+              <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/routers/users.router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/routers/create.routers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -151,8 +182,13 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/package.json" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/TabNavigator.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/App.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" />
+        <option value="$PROJECT_DIR$/server/routers/create.routers.js" />
+        <option value="$PROJECT_DIR$/server/controllers/user.controller.js" />
+        <option value="$PROJECT_DIR$/server/routers/users.router.js" />
+        <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/server/src/routers/users.router.js" />
       </list>
     </option>
   </component>
@@ -192,6 +228,11 @@
             <path>
               <item name="spot" type="b2602c69:ProjectViewProjectNode" />
               <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,13 +240,6 @@
               <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,6 +261,11 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/spot-mobile-app/node_modules/eslint" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,10 +295,18 @@
       <workItem from="1534120214540" duration="160000" />
       <workItem from="1534801696386" duration="22000" />
     </task>
+    <task id="LOCAL-00001" summary="Created basic login component">
+      <created>1535436363896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535436363896</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5611000" />
+    <option name="totallyTimeSpent" value="7864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
@@ -277,7 +324,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.61663145" visible="true" weight="0.32824427" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38336858" side_tool="true" visible="true" weight="0.32824427" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38336858" side_tool="true" weight="0.32824427" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -289,6 +336,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created basic login component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created basic login component" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/.eslintrc">
@@ -312,10 +363,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/expo/src/Facebook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -329,23 +400,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js">
+    <entry file="file://$PROJECT_DIR$/server/src/routers/create.routers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
+    <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/routers/users.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>

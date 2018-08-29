@@ -18,10 +18,11 @@ export default class App extends React.Component {
         // })
     }
 
-    setLoggedIn = () => {
+    setLoggedIn = async () => {
         this.setState({
             isLoggedIn: true
         })
+        // Alert.alert("wow")
     }
 
 

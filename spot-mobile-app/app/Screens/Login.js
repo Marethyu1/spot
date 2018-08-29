@@ -18,24 +18,19 @@ const DefaultHeader = () => {
 export default class Login extends Component {
 
     login = async () => {
-        this.props.setLoggedIn()
-        // const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('242029906422575', {
-        //     permissions: ['public_profile', "email"],
-        // })
-        // if (type === 'success') {
-        //     // Get the user's name using Facebook's Graph API
-        //     const response = await fetch(
-        //         `https://graph.facebook.com/me?access_token=${token}`);
-        //     const joson = await response.json()
-        //     console.log(joson)
-        //     this.setState({
-        //         name: joson.name,
-        //         isLoggedIn: true
-        //     })
-        // }
-        this.setState({
-            isReady: true
+        // this.props.setLoggedIn()
+        const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('242029906422575', {
+            permissions: ['public_profile', "email"],
         })
+        if (type === 'success') {
+            // Get the user's name using Facebook's Graph API
+            const response = await fetch(
+                `https://graph.facebook.com/me?access_token=${token}&fields=id,name,email`);
+            const joson = await response.json()
+
+            console.log(joson)
+            this.props.setLoggedIn()
+        }
     }
 
     render() {
