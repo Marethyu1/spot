@@ -38,8 +38,6 @@ class Database {
                 options.dialectOptions.socketPath = `/cloudsql/${config.instance_connection_name}`
             }
 
-            console.log(options)
-
             sequelize = new Sequelize(
                 config.database,
                 config.username,
@@ -51,8 +49,8 @@ class Database {
         }
     }
 
-    static getDBConfig(config) {
-        return getDbConfig(config)
+    static create(config){
+        return new Database(config)
     }
 
     async sync(force = true) {

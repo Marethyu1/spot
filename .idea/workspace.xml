@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added a create users route">
-      <change afterPath="$PROJECT_DIR$/server/docker-compose.yml" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="added docker compose file for mysql">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/config/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/database-manager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routers/user-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routers/user-router.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,31 +28,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1755" />
-          <entry key="json" value="2" />
-          <entry key="txt" value="55" />
-          <entry key="yml" value="17" />
+          <entry key="js" value="3288" />
+          <entry key="json" value="6" />
+          <entry key="test" value="115" />
+          <entry key="txt" value="348" />
+          <entry key="yml" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="1755" />
-          <entry key="PLAIN_TEXT" value="55" />
-          <entry key="YAML" value="17" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="3403" />
+          <entry key="PLAIN_TEXT" value="348" />
+          <entry key="YAML" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="8" />
-          <entry key="json" value="1" />
+          <entry key="js" value="23" />
+          <entry key="json" value="2" />
+          <entry key="test" value="1" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="24" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -57,28 +63,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/index.js">
+        <entry file="file://$PROJECT_DIR$/server/src/db/sql-abstract-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="272">
+              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/package.json">
+        <entry file="file://$PROJECT_DIR$/server/src/db/create-db-models.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="425">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/db/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/config/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/docker-compose.yml">
+        <entry file="file://$PROJECT_DIR$/server/src/db/__tests__/database.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="68">
+              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -96,6 +129,8 @@
     <findStrings>
       <find>Left</find>
       <find>Button</find>
+      <find>modelLoader</find>
+      <find>logger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,10 +153,22 @@
         <option value="$PROJECT_DIR$/server/routers/create.routers.js" />
         <option value="$PROJECT_DIR$/server/controllers/user.controller.js" />
         <option value="$PROJECT_DIR$/server/routers/users.router.js" />
-        <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/server/src/routers/users.router.js" />
         <option value="$PROJECT_DIR$/server/stack.yml" />
+        <option value="$PROJECT_DIR$/server/src/db/sql.abstract.model.js" />
+        <option value="$PROJECT_DIR$/server/src/db/sql-abstract-model.js" />
+        <option value="$PROJECT_DIR$/server/src/db/create-db-models.js" />
+        <option value="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" />
+        <option value="$PROJECT_DIR$/server/package.json" />
+        <option value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
+        <option value="$PROJECT_DIR$/server/jest.config.js" />
         <option value="$PROJECT_DIR$/server/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/server/src/routers/user-router.js" />
+        <option value="$PROJECT_DIR$/server/src/db/database.js" />
+        <option value="$PROJECT_DIR$/server/config/config.js" />
+        <option value="$PROJECT_DIR$/server/src/db/database-manager.js" />
+        <option value="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" />
       </list>
     </option>
   </component>
@@ -183,6 +230,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.9.4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.prettier" value="true" />
@@ -193,6 +241,7 @@
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/spot-mobile-app/node_modules/eslint" />
     <property name="node.js.selected.package.prettier" value="" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/spot-mobile-app/node_modules/eslint" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/server/node_modules/jest" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
@@ -211,6 +260,69 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Jest.The database should be able to connnect">
+    <configuration name="The database should be able to connnect" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" />
+      <test-names>
+        <test-name value="The database should be able to connnect" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="adds 1 + 2 to equal 3" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
+      <test-names>
+        <test-name value="adds 1 + 2 to equal 3" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="database.test" type="JavaScriptTestRunnerJest" factoryName="Jest" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/server/jest.config.js" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
+      <method v="2" />
+    </configuration>
+    <configuration name="database.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="create-db-models.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="create-db-models.js" working-dir="$PROJECT_DIR$/server/src/db">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.create-db-models.js" />
+      <item itemvalue="Jest.database.test" />
+      <item itemvalue="Jest.adds 1 + 2 to equal 3" />
+      <item itemvalue="Jest.database.test.js" />
+      <item itemvalue="Jest.The database should be able to connnect" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.The database should be able to connnect" />
+        <item itemvalue="Jest.database.test.js" />
+        <item itemvalue="Jest.adds 1 + 2 to equal 3" />
+        <item itemvalue="Node.js.create-db-models.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -242,11 +354,57 @@
       <option name="project" value="LOCAL" />
       <updated>1535502558620</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added docker compose file for mysql">
+      <created>1535504464604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535504464604</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added sequelize as a dependency&#10;created docker file for mysql&#10;added basic db interface&#10;created basic user model&#10;added basic database tests">
+      <created>1535507108076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535507108076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="database_test_js - 2018.08.29 at 13h 47m 30s.xml">
+      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="database_test_js - 2018.08.29 at 16h 33m 01s.xml">
+      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 52m 00s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 52m 33s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 53m 00s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 53m 54s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 54m 15s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 55m 20s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 56m 03s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="The_database_should_be_able_to_connnect - 2018.08.29 at 16h 56m 39s.xml">
+      <configuration name="The database should be able to connnect" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9256000" />
+    <option name="totallyTimeSpent" value="13865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
@@ -257,14 +415,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49964765" weight="0.32951653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.56518674" visible="true" weight="0.44783714" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.61663145" visible="true" weight="0.32824427" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38336858" side_tool="true" weight="0.32824427" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6159267" weight="0.32824427" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3840733" side_tool="true" weight="0.5330789" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -280,7 +438,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic login component" />
     <MESSAGE value="Added a create users route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a create users route" />
+    <MESSAGE value="added docker compose file for mysql" />
+    <MESSAGE value="added sequelize as a dependency&#10;created docker file for mysql&#10;added basic db interface&#10;created basic user model&#10;added basic database tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sequelize as a dependency&#10;created docker file for mysql&#10;added basic db interface&#10;created basic user model&#10;added basic database tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/expo/src/Facebook.js">
@@ -320,21 +480,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/routers/users.router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/routers/create.routers.js">
+    <entry file="file://$PROJECT_DIR$/server/src/routers/create-routers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
@@ -355,6 +501,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/sequelize/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/sequelize/lib/sequelize.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -362,24 +525,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
+    <entry file="file://$PROJECT_DIR$/server/jest.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/create-db-models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/routers/user-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="52" lean-forward="true" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/sql-abstract-model.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/__tests__/database.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
         </state>
       </provider>
     </entry>

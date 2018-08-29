@@ -1,4 +1,4 @@
-const {jsonRouter} = require("./create.routers")
+const {jsonRouter} = require("./create-routers")
 const router = jsonRouter()
 const userController = require("../controllers/user.controller")
 
