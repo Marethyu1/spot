@@ -9,6 +9,7 @@
   "author": "Liz and Stefan",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "sequelize": "^4.38.0"
   }
 }
