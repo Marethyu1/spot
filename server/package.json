@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "create:dev-db": "node_modules/.bin/sequelize db:create",
-    "create:test-db": "node_modules/.bin/sequelize db:create --env=test",
+    "create:dev-db": "node_modules/.bin/sequelize db:create && NODE_ENV=development node ./scripts/create-tables",
+    "create:test-db": "node_modules/.bin/sequelize db:create --env=test && NODE_ENV=test node ./scripts/create-tables",
     "drop:dev-db": "node_modules/.bin/sequelize db:drop",
     "drop:test-db": "node_modules/.bin/sequelize db:drop --env=test",
     "create:dbs": "npm run create:dev-db && npm run create:test-db",
@@ -15,6 +15,7 @@
   "author": "Liz and Stefan",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
     "mysql2": "^1.6.1",

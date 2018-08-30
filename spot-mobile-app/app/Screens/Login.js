@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import {Body, Button, Container, Content, Header, Left, Right, Text, Title} from "native-base";
 import {Grid} from "react-native-easy-grid";
 import Row from "react-native-easy-grid/Components/Row";
+import config from "../config/config"
 
 const DefaultHeader = () => {
     return (
@@ -19,6 +20,10 @@ export default class Login extends Component {
 
     login = async () => {
 
+        console.log(`base url: ${config.base_url}`)
+        const userUrl = `${config.base_url}/users`
+        console.log(`url: ${userUrl} `)
+
         const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('242029906422575', {
             permissions: ['public_profile', "email"],
         })
@@ -27,17 +32,21 @@ export default class Login extends Component {
             const response = await fetch(
                 `https://graph.facebook.com/me?access_token=${token}&fields=id,name,email`);
             const joson = await response.json()
-            joson.id = parseInt(joson.id)
+            // joson.id = parseInt(joson.id)
             const body = JSON.stringify(joson)
-            const res = await fetch('http://10.196.69.201:3000/api/v1/users',
+            console.log(body)
+            const res = await fetch(userUrl,
                 {
                     method: "POST",
-                    body: body,
+                    body: userUrl,
                     headers: {
                         "Content-Type": "application/json",
                     }
                 }
-            ).then(x => x.json())
+            ).catch(err => {
+                    console.log(err)
+                    debugger
+                })
 
             console.log(res)
             this.props.setLoggedIn()

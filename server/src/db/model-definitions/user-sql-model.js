@@ -11,9 +11,9 @@ class UserSqlModel extends SqlAbstractModel {
     getModel() {
         return {
             id: {
-                type: Sequelize.BIGINT,
+                type: Sequelize.STRING,
                 primaryKey: true,
-                autoIncrement: true,
+                // autoIncrement: true,
             },
             name: {
                 type: Sequelize.STRING,
