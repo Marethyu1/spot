@@ -4,13 +4,12 @@ const baseUrl = config.baseUrl
 
 const createUrl = (route) => `${baseUrl}/${route}`
 
-const toJson = (x) => x.json()
+import {get, post, put} from "./apiMethods"
 
 export const login = async () => {
    try {
        const token = await facebookLogin()
        const userInfo = await getFacebookUserInfo(token)
-       debugger
        const createdUser = await createUser(userInfo)
        return createdUser
    } catch (err) {
@@ -19,8 +18,7 @@ export const login = async () => {
 }
 
 const getFacebookUserInfo = (token) => {
-    return fetch(`https://graph.facebook.com/me?access_token=${token}&fields=id,name,email`)
-        .then(toJson)
+    return get(`https://graph.facebook.com/me?access_token=${token}&fields=id,name,email`)
 }
 
 
@@ -39,14 +37,5 @@ const facebookLogin = async () => {
 //private
 const createUser = async (body) => {
     const url = createUrl("users")
-
-    return await fetch(url,
-        {
-            method: "POST",
-            body: JSON.stringify(body),
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }
-    ).then(toJson)
+    return await post(url, body)
 }
