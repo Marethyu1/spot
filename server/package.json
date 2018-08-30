@@ -9,7 +9,8 @@
     "create:test-db": "node_modules/.bin/sequelize db:create --env=test",
     "drop:dev-db": "node_modules/.bin/sequelize db:drop",
     "drop:test-db": "node_modules/.bin/sequelize db:drop --env=test",
-    "create:dbs": "npm run create:dev-db && npm run create:test-db"
+    "create:dbs": "npm run create:dev-db && npm run create:test-db",
+    "start-docker": "docker-compose run --service-ports db"
   },
   "author": "Liz and Stefan",
   "license": "MIT",
