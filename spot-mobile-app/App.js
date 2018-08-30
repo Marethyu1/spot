@@ -8,21 +8,19 @@ console.disableYellowBox = true;
 
 export default class App extends React.Component {
     state = {
-      isLoggedIn: false,
+        isLoggedIn: false,
+        userInfo: {},
     }
 
     async componentDidMount() {
         await this.loadFonts()
-        // this.setState({
-        //     isReady: true
-        // })
     }
 
-    setLoggedIn = async () => {
+    setLoggedIn = async (userInfo) => {
         this.setState({
-            isLoggedIn: true
+            isLoggedIn: true,
+            userInfo: userInfo
         })
-        // Alert.alert("wow")
     }
 
 
