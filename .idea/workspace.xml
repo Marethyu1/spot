@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="removed https server">
-      <change afterPath="$PROJECT_DIR$/server/test/helper/prop-generation.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added faker as dependency&#10;- Added updated test for user model&#10;- Added user prop generation method">
+      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/test/integration/user-routes.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/database-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/database-manager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/test/helper/prop-generation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/test/helper/prop-generation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,26 +29,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="7623" />
+          <entry key="js" value="8587" />
           <entry key="json" value="330" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="740" />
+          <entry key="txt" value="895" />
           <entry key="yml" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="330" />
-          <entry key="JavaScript" value="7738" />
-          <entry key="PLAIN_TEXT" value="783" />
+          <entry key="JavaScript" value="8702" />
+          <entry key="PLAIN_TEXT" value="938" />
           <entry key="YAML" value="80" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="52" />
-          <entry key="json" value="8" />
+          <entry key="js" value="59" />
+          <entry key="json" value="9" />
           <entry key="seqelizerc" value="1" />
           <entry key="test" value="1" />
           <entry key="yaml" value="1" />
@@ -53,8 +57,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="53" />
+          <entry key="JSON" value="9" />
+          <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="YAML" value="3" />
         </counts>
@@ -84,11 +88,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/test/integration/user-routes.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -97,7 +137,16 @@
         <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -120,6 +169,7 @@
       <find>console</find>
       <find>info.plist</find>
       <find>config&quot;</find>
+      <find>super</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,16 +209,19 @@
         <option value="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" />
         <option value="$PROJECT_DIR$/server/config/database-config.js" />
         <option value="$PROJECT_DIR$/server/.seqelizerc" />
-        <option value="$PROJECT_DIR$/server/src/db/database-manager.js" />
         <option value="$PROJECT_DIR$/server/config/application-config.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/server/config/config.json" />
-        <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" />
         <option value="$PROJECT_DIR$/server/src/db/database.js" />
         <option value="$PROJECT_DIR$/server/src/controllers/user.controller.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/server/index.js" />
+        <option value="$PROJECT_DIR$/server/src/db/database-manager.js" />
         <option value="$PROJECT_DIR$/server/test/helper/prop-generation.js" />
         <option value="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" />
+        <option value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
       </list>
     </option>
   </component>
@@ -194,10 +247,11 @@
       <path value="$PROJECT_DIR$/spot-mobile-app/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="878" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1920" />
+    <option name="y" value="-158" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -288,7 +342,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.user-model.test.js">
+  <component name="RunManager" selected="Jest.user-routes.test.js">
     <configuration name="I can create a user" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -323,6 +377,20 @@
       <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
       <method v="2" />
     </configuration>
+    <configuration name="the user routes.When creating a job.Should be able to create a job" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
+      <test-names>
+        <test-name value="the user routes" />
+        <test-name value="When creating a job" />
+        <test-name value="Should be able to create a job" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="user-model.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -332,41 +400,30 @@
       <test-file value="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" />
       <method v="2" />
     </configuration>
-    <configuration name="create:dbs" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="create:dbs" />
-      </scripts>
+    <configuration name="user-routes.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
       <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="create:dev-db" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="create:dev-db" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Jest.database.test" />
-      <item itemvalue="npm.create:dbs" />
-      <item itemvalue="npm.create:dev-db" />
       <item itemvalue="Jest.I can create a user" />
       <item itemvalue="Jest.I can update a user if one with the same id already exists" />
       <item itemvalue="Jest.user-model.test.js" />
+      <item itemvalue="Jest.user-routes.test.js" />
+      <item itemvalue="Jest.the user routes.When creating a job.Should be able to create a job" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.user-routes.test.js" />
         <item itemvalue="Jest.user-model.test.js" />
+        <item itemvalue="Jest.the user routes.When creating a job.Should be able to create a job" />
         <item itemvalue="Jest.I can update a user if one with the same id already exists" />
         <item itemvalue="Jest.I can create a user" />
-        <item itemvalue="npm.create:dev-db" />
-        <item itemvalue="npm.create:dbs" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +443,7 @@
       <workItem from="1534120214540" duration="160000" />
       <workItem from="1534801696386" duration="22000" />
       <workItem from="1535534294856" duration="1605000" />
-      <workItem from="1535600682803" duration="3051000" />
+      <workItem from="1535600682803" duration="4126000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -458,46 +515,53 @@
       <option name="project" value="LOCAL" />
       <updated>1535603851903</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added faker as dependency&#10;- Added updated test for user model&#10;- Added user prop generation method">
+      <created>1535604614583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535604614583</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="database_test_js - 2018.08.30 at 10h 42m 59s.xml">
-      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 01m 09s.xml">
+      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="database_test_js - 2018.08.30 at 10h 43m 23s.xml">
-      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="the_user_routes_When_creating_a_job_Should_be_able_to_create_a_job - 2018.08.30 at 17h 02m 00s.xml">
+      <configuration name="the user routes.When creating a job.Should be able to create a job" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="database_test_js - 2018.08.30 at 10h 43m 49s.xml">
-      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="the_user_routes_When_creating_a_job_Should_be_able_to_create_a_job - 2018.08.30 at 17h 03m 01s.xml">
+      <configuration name="the user routes.When creating a job.Should be able to create a job" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="database_test_js - 2018.08.30 at 10h 43m 58s.xml">
-      <configuration name="database.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="the_user_routes_When_creating_a_job_Should_be_able_to_create_a_job - 2018.08.30 at 17h 03m 15s.xml">
+      <configuration name="the user routes.When creating a job.Should be able to create a job" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="I_can_create_a_user - 2018.08.30 at 16h 39m 27s.xml">
-      <configuration name="I can create a user" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="the_user_routes_When_creating_a_job_Should_be_able_to_create_a_job - 2018.08.30 at 17h 04m 02s.xml">
+      <configuration name="the user routes.When creating a job.Should be able to create a job" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="I_can_create_a_user - 2018.08.30 at 16h 39m 34s.xml">
-      <configuration name="I can create a user" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="I_can_create_a_user - 2018.08.30 at 16h 42m 11s.xml">
-      <configuration name="I can create a user" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="I_can_update_a_user_if_one_with_the_same_id_already_exists - 2018.08.30 at 16h 46m 01s.xml">
-      <configuration name="I can update a user if one with the same id already exists" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="user-model_test_js - 2018.08.30 at 16h 48m 48s.xml">
+    <history-entry file="user-model_test_js - 2018.08.30 at 17h 04m 48s.xml">
       <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-model_test_js - 2018.08.30 at 16h 49m 10s.xml">
+    <history-entry file="user-model_test_js - 2018.08.30 at 17h 05m 05s.xml">
       <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 05m 15s.xml">
+      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="user-model_test_js - 2018.08.30 at 17h 30m 50s.xml">
+      <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 30m 59s.xml">
+      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28404000" />
+    <option name="totallyTimeSpent" value="29479000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
+    <frame x="-1920" y="-158" width="1440" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -562,7 +626,8 @@
     <MESSAGE value="Added script for dev and test db's for creation and deletion" />
     <MESSAGE value="added docker startup script" />
     <MESSAGE value="removed https server" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed https server" />
+    <MESSAGE value="Added faker as dependency&#10;- Added updated test for user model&#10;- Added user prop generation method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added faker as dependency&#10;- Added updated test for user model&#10;- Added user prop generation method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/expo/src/Facebook.js">
@@ -727,20 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/db/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -752,13 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -776,17 +820,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/faker/locale/.publish/scripts/prettify/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13312" selection-start-line="4" selection-start-column="13312" selection-end-line="4" selection-end-column="13312" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/supertest/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test/integration/user-routes.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

@@ -4,6 +4,7 @@ const {generateUserProps} = require("../../../test/helper/prop-generation")
 const faker = require("faker")
 let db
 
+
 beforeAll(async () => {
     db = await setUp()
 })

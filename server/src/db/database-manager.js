@@ -13,7 +13,13 @@ const setUp = async () => {
     return db
 }
 
+const tearDownConnection = () => {
+    if (!db) throw new Error("Connection doesnt exist")
+    return db.closeConnection()
+}
+
 module.exports = {
     getDatabase,
-    setUp
+    setUp,
+    tearDownConnection
 }

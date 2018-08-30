@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "jest": "^23.5.0"
+    "jest": "^23.5.0",
+    "supertest": "^3.1.0"
   }
 }

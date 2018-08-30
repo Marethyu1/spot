@@ -10,5 +10,5 @@ const generateUserProps = () => {
 }
 
 module.exports = {
-    generateUserProps
+    generateUserProps,
 }
