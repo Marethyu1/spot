@@ -29,7 +29,7 @@ export default class Login extends Component {
             const joson = await response.json()
             joson.id = parseInt(joson.id)
             const body = JSON.stringify(joson)
-            const res = await fetch('http://192.168.1.15:3000/api/v1/users',
+            const res = await fetch('http://10.196.69.201:3000/api/v1/users',
                 {
                     method: "POST",
                     body: body,
@@ -38,12 +38,8 @@ export default class Login extends Component {
                     }
                 }
             ).then(x => x.json())
-                .catch(err => {
-                    console.log(err)
-                    debugger
-            })
 
-            console.log(res.json())
+            console.log(res)
             this.props.setLoggedIn()
         }
     }

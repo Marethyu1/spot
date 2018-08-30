@@ -21,8 +21,10 @@ app.use(`${BASE_URL}/users/`, require("./src/routers/user-router"))
 
 getDatabase()
 
+// setUp()
+
 http.createServer(app).listen(3000);
-https.createServer(options, app).listen(3001)
+// https.createServer(options, app).listen(3001)
 console.log("created some servers!")
 
 // app.listen(3000, () => {
