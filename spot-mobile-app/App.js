@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet,  } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 
+
 console.disableYellowBox = true;
 
 
@@ -10,10 +11,12 @@ export default class App extends React.Component {
     state = {
         isLoggedIn: false,
         userInfo: {},
+
     }
 
     async componentDidMount() {
         await this.loadFonts()
+        await this.setLoggedIn()
     }
 
     setLoggedIn = async (userInfo) => {
@@ -22,6 +25,7 @@ export default class App extends React.Component {
             userInfo: userInfo
         })
     }
+
 
 
 
