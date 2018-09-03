@@ -7,12 +7,12 @@ const createUser = () => {
     return userModel.upsert(props)
 }
 
-const generateDog = (user_id) => {
+const createDog = (user_id) => {
     const props = generateDogProps(user_id)
     return dogsModel.create(props)
 }
 
 module.exports = {
     createUser,
-    generateDog
+    createDog
 }

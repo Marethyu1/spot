@@ -1,7 +1,7 @@
 const {setUp, tearDownConnection} = require("../../db/database-manager")
 const dogsModel = require("../dogs-model")
 const {generateDogProps} = require("../../../test/helper/prop-generation")
-const {createUser, generateDog} = require("../../../test/helper/model-generation")
+const {createUser, createDog} = require("../../../test/helper/model-generation")
 const faker = require("faker")
 
 let user
@@ -27,8 +27,8 @@ test("I can create a dog", async () => {
 test("I can get dogs based on my user id", async () => {
     const createdUser = await createUser()
 
-    await generateDog(createdUser.id)
-    await generateDog(createdUser.id)
+    await createDog(createdUser.id)
+    await createDog(createdUser.id)
 
     const dogs = await dogsModel.findDogsForUser(createdUser.id)
     expect(dogs.length).toBe(2)

@@ -1,4 +1,7 @@
 const userModel = require("../models/user-model")
+const dogsModel = require("../models/dogs-model")
+
+
 
 const create  = async (req, res, next) => {
     try {
@@ -17,6 +20,17 @@ const create  = async (req, res, next) => {
     }
 }
 
+
+const findDogs = async (req, res) => {
+    const {user_id} = req.params
+    const dogs = await dogsModel.findDogsForUser(user_id)
+    const body = {
+        dogs: dogs.map(x => x.toJSON())
+    }
+    res.send(body)
+}
+
 module.exports = {
-    create
+    create,
+    findDogs,
 }
