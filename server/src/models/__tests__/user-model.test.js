@@ -13,6 +13,12 @@ afterAll(async () => {
     await db.closeConnection()
 })
 
+test("I can get a user", async () => {
+    const user = generateUserProps()
+    const createdModel  = await userModel.upsert(user)
+    const foundModel = await userModel.get(createdModel.id)
+    expect(foundModel.id).toBe(createdModel.id)
+})
 
 test("I can create a user", async () => {
     const user = generateUserProps()
