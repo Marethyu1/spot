@@ -39,3 +39,8 @@ const createUser = async (body) => {
     const url = createUrl("users")
     return await post(url, body)
 }
+
+export const findDogsForUser = (user_id) => {
+    const url = createUrl(`users/${user_id}/dogs`)
+    return get(url)
+}

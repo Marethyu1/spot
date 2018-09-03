@@ -10,13 +10,15 @@ console.disableYellowBox = true;
 export default class App extends React.Component {
     state = {
         isLoggedIn: false,
-        userInfo: {},
+        userInfo: {
+            id: "10210259641485879"
+        },
 
     }
 
     async componentDidMount() {
         await this.loadFonts()
-        await this.setLoggedIn()
+        await this.setLoggedIn(this.state.userInfo)
     }
 
     setLoggedIn = async (userInfo) => {
@@ -48,7 +50,7 @@ export default class App extends React.Component {
 
       }
       return (
-        <TabNavigator />
+        <TabNavigator userInfo={this.state.userInfo}/>
       );
     }
 }

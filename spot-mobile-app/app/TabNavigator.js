@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 import {Badge, Button, Footer, FooterTab, Icon, Text} from "native-base"
 import ReactNavigation, {
     TabNavigator,
@@ -13,9 +13,19 @@ import {Platform, StatusBar, StyleSheet} from 'react-native'
 //to remove funny header thing..need to look into whether this impacts IOS
 ReactNavigation.SafeAreaView.setStatusBarHeight(0);
 
+//Wrapping the tab navigator in a component means we can inject state into the navigator
+//Access via this.props.screenProps
+export default class WrappedTabNavigator extends Component {
+
+    render() {
+        return (
+            <Navigator screenProps={{userInfo: this.props.userInfo}}/>
+        )
+    }
+}
 
 
-export default TabNavigator({
+const Navigator = TabNavigator({
     Map: {screen: MapTab},
     Camera: {screen: CameraTab},
     List: { screen: ListTab },
