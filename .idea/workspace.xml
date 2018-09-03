@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Implemented basic find dogs route">
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/App.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added fetch request for user/user_id/dogs">
+      <change afterPath="$PROJECT_DIR$/spot-mobile-app/assets/pin.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/TabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/TabNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/api/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/api/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/assets/logo.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,19 +24,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
-          <entry key="js" value="15850" />
+          <entry key="js" value="15853" />
           <entry key="json" value="398" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="1496" />
+          <entry key="txt" value="1561" />
           <entry key="yml" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="398" />
-          <entry key="JavaScript" value="15965" />
-          <entry key="PLAIN_TEXT" value="1555" />
+          <entry key="JavaScript" value="15968" />
+          <entry key="PLAIN_TEXT" value="1620" />
           <entry key="YAML" value="92" />
         </counts>
       </usages-collector>
@@ -47,7 +44,7 @@
         <counts>
           <entry key="js" value="118" />
           <entry key="json" value="11" />
-          <entry key="png" value="1" />
+          <entry key="png" value="2" />
           <entry key="seqelizerc" value="1" />
           <entry key="test" value="1" />
           <entry key="yaml" value="1" />
@@ -56,7 +53,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="1" />
+          <entry key="Image" value="2" />
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="119" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -88,9 +85,17 @@
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/assets/pin.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -281,6 +286,12 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Screens" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -311,6 +322,7 @@
       <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
       <recent name="$PROJECT_DIR$/spot-mobile-app/app/api" />
       <recent name="$PROJECT_DIR$/server/cert" />
       <recent name="$PROJECT_DIR$/server/src" />
@@ -438,7 +450,7 @@
       <workItem from="1535668269905" duration="299000" />
       <workItem from="1535770528606" duration="386000" />
       <workItem from="1535948811040" duration="5522000" />
-      <workItem from="1535954602929" duration="3406000" />
+      <workItem from="1535954602929" duration="3680000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -573,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535955855052</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added fetch request for user/user_id/dogs">
+      <created>1535958128363</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1535958128364</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -609,7 +628,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47873000" />
+    <option name="totallyTimeSpent" value="48147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-158" width="1576" height="1058" extended-state="0" />
@@ -687,10 +706,10 @@
     <MESSAGE value="Created dogs orm model&#10;Added helper methods for creating dogs" />
     <MESSAGE value="Added a find dogs method" />
     <MESSAGE value="Implemented basic find dogs route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic find dogs route" />
+    <MESSAGE value="Added fetch request for user/user_id/dogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fetch request for user/user_id/dogs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180829220629-create-user.js" />
     <entry file="file://$PROJECT_DIR$/server/seeders/20180829220753-demo-user.js" />
     <entry file="file://$PROJECT_DIR$/server/.seqelizerc" />
     <entry file="file://$PROJECT_DIR$/server/config/database-config.js" />
@@ -991,10 +1010,16 @@
     <entry file="file://$PROJECT_DIR$/images/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/assets/pin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

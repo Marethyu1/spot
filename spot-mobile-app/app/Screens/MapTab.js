@@ -12,7 +12,7 @@ import {
 import {Platform, StatusBar, StyleSheet} from "react-native";
 import {Location, MapView, Permissions} from 'expo';
 import {findDogsForUser} from "../api/routes"
-import DogPhoto from "../../assets/logo.png"
+import DogPhoto from "../../assets/pin.png"
 
 const Marker = MapView.Marker
 
