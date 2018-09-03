@@ -9,6 +9,17 @@ class AbstractModel {
     get(id){
         return this.model.findById(id)
     }
+
+    list(where){
+        const options = {
+            where
+        }
+        return this.model.findAll(options)
+    }
+
+    create(values, options) {
+        return this.model.create(values, options)
+    }
 }
 
 module.exports = AbstractModel

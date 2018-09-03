@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize")
 const SqlAbstractModel = require("../sql-abstract-model")
-const {DOGS} = require("../../consts/model-names")
+const {DOGS_MODEL} = require("../../consts/model-names")
 
 class DogsSqlModel extends SqlAbstractModel {
 
@@ -25,5 +25,5 @@ class DogsSqlModel extends SqlAbstractModel {
     }
 }
 
-module.exports = new DogsSqlModel(DOGS)
+module.exports = new DogsSqlModel(DOGS_MODEL)
 

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added current location to map tab">
-      <change afterPath="$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/models/dogs-model.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added basic dogs model&#10;Refactored user model, pulling get method to abstract model">
+      <change afterPath="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/test/helper/model-generation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/consts/model-names.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/consts/model-names.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/abstract-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/abstract-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/user-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/user-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/dogs-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/dogs-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/test/helper/prop-generation.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/test/helper/prop-generation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,25 +30,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="11598" />
+          <entry key="dummy" value="16" />
+          <entry key="js" value="13464" />
           <entry key="json" value="398" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="1266" />
+          <entry key="txt" value="1369" />
           <entry key="yml" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="398" />
-          <entry key="JavaScript" value="11713" />
-          <entry key="PLAIN_TEXT" value="1309" />
+          <entry key="JavaScript" value="13579" />
+          <entry key="PLAIN_TEXT" value="1428" />
           <entry key="YAML" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="97" />
+          <entry key="js" value="107" />
           <entry key="json" value="10" />
           <entry key="seqelizerc" value="1" />
           <entry key="test" value="1" />
@@ -56,21 +60,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="10" />
-          <entry key="JavaScript" value="98" />
+          <entry key="JavaScript" value="108" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -84,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+            <state relative-caret-position="1207">
+              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -96,10 +101,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-end-line="30" />
+            <state relative-caret-position="561">
+              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding>
-                <marker date="1535614453546" expanded="true" signature="398:418" ph="..." />
+                <marker date="1535953821709" expanded="true" signature="410:430" ph="..." />
               </folding>
             </state>
           </provider>
@@ -108,17 +113,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="357">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/models/dogs-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            <state relative-caret-position="85">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -126,26 +131,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/models/abstract-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/models/user-model.js">
+        <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="289">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js">
+        <entry file="file://$PROJECT_DIR$/server/test/helper/model-generation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="187">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -153,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/consts/model-names.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="102">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -201,11 +215,9 @@
         <option value="$PROJECT_DIR$/server/src/routers/users.router.js" />
         <option value="$PROJECT_DIR$/server/stack.yml" />
         <option value="$PROJECT_DIR$/server/src/db/sql.abstract.model.js" />
-        <option value="$PROJECT_DIR$/server/src/db/sql-abstract-model.js" />
         <option value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
         <option value="$PROJECT_DIR$/server/jest.config.js" />
         <option value="$PROJECT_DIR$/server/src/db/__tests__/database.test.js" />
-        <option value="$PROJECT_DIR$/server/src/db/create-db-models.js" />
         <option value="$PROJECT_DIR$/server/src/routers/user-router.js" />
         <option value="$PROJECT_DIR$/server/config/config.js" />
         <option value="$PROJECT_DIR$/server/scripts/migrate-db.js" />
@@ -217,12 +229,10 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/src/db/database-manager.js" />
-        <option value="$PROJECT_DIR$/server/test/helper/prop-generation.js" />
         <option value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
         <option value="$PROJECT_DIR$/server/scripts/create-tables.js" />
         <option value="$PROJECT_DIR$/server/docker-compose.yml" />
         <option value="$PROJECT_DIR$/server/index.js" />
-        <option value="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/server/src/controllers/user.controller.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/config/config.js" />
@@ -232,12 +242,18 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/App.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
         <option value="$PROJECT_DIR$/server/src/db/model-definitions/locations-sql-model.js" />
-        <option value="$PROJECT_DIR$/server/src/consts/model-names.js" />
         <option value="$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js" />
-        <option value="$PROJECT_DIR$/server/src/models/abstract-model.js" />
-        <option value="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" />
         <option value="$PROJECT_DIR$/server/src/models/user-model.js" />
+        <option value="$PROJECT_DIR$/server/src/consts/model-names.js" />
+        <option value="$PROJECT_DIR$/server/src/db/sql-abstract-model.js" />
+        <option value="$PROJECT_DIR$/server/src/db/create-db-models.js" />
+        <option value="$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js" />
+        <option value="$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/abstract-model.js" />
+        <option value="$PROJECT_DIR$/server/test/helper/prop-generation.js" />
+        <option value="$PROJECT_DIR$/server/test/helper/model-generation.js" />
         <option value="$PROJECT_DIR$/server/src/models/dogs-model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
       </list>
     </option>
   </component>
@@ -266,67 +282,14 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1920" />
     <option name="y" value="-158" />
-    <option name="width" value="1505" />
+    <option name="width" value="1920" />
     <option name="height" value="1058" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/stefanhall/Local/Documents/spot/spot-mobile-app/App.js" />
@@ -365,7 +328,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.I can get a user">
+  <component name="RunManager" selected="Jest.dogs-model.test.js">
+    <configuration name="I can create a dog" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
+      <test-names>
+        <test-name value="I can create a dog" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="I can get a user" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -378,6 +353,18 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="I can get dogs based on my user id" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
+      <test-names>
+        <test-name value="I can get dogs based on my user id" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="database.test" type="JavaScriptTestRunnerJest" factoryName="Jest" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/server/jest.config.js" />
       <node-interpreter value="project" />
@@ -386,6 +373,15 @@
       <envs />
       <scope-kind value="TEST_FILE" />
       <test-file value="$PROJECT_DIR$/server/src/db/__tests__/database.test" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dogs-model.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
       <method v="2" />
     </configuration>
     <configuration name="user-model.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
@@ -403,52 +399,22 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="create:dev-db" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="create:dev-db" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="drop:dev-db" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="drop:dev-db" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="drop:test-db" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="drop:test-db" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Jest.database.test" />
       <item itemvalue="Node.js.Server:dev" />
-      <item itemvalue="npm.create:dev-db" />
-      <item itemvalue="npm.drop:dev-db" />
-      <item itemvalue="npm.drop:test-db" />
       <item itemvalue="Jest.user-model.test.js" />
       <item itemvalue="Jest.I can get a user" />
+      <item itemvalue="Jest.I can create a dog" />
+      <item itemvalue="Jest.I can get dogs based on my user id" />
+      <item itemvalue="Jest.dogs-model.test.js" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.I can get a user" />
+        <item itemvalue="Jest.dogs-model.test.js" />
+        <item itemvalue="Jest.I can get dogs based on my user id" />
+        <item itemvalue="Jest.I can create a dog" />
         <item itemvalue="Jest.user-model.test.js" />
-        <item itemvalue="npm.create:dev-db" />
-        <item itemvalue="npm.drop:dev-db" />
-        <item itemvalue="npm.drop:test-db" />
+        <item itemvalue="Jest.I can get a user" />
       </list>
     </recent_temporary>
   </component>
@@ -473,7 +439,8 @@
       <workItem from="1535667930965" duration="153000" />
       <workItem from="1535668269905" duration="299000" />
       <workItem from="1535770528606" duration="386000" />
-      <workItem from="1535948811040" duration="3314000" />
+      <workItem from="1535948811040" duration="5522000" />
+      <workItem from="1535954602929" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -587,49 +554,56 @@
       <option name="project" value="LOCAL" />
       <updated>1535951768310</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added basic dogs model&#10;Refactored user model, pulling get method to abstract model">
+      <created>1535952388525</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1535952388525</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="user-model_test_js - 2018.08.30 at 17h 05m 05s.xml">
-      <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 01m 50s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 05m 15s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 01m 53s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-model_test_js - 2018.08.30 at 17h 30m 50s.xml">
-      <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 02m 10s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 30m 59s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 02m 25s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 31m 20s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 02m 41s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 31m 56s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="dogs-model_test_js - 2018.09.03 at 18h 04m 01s.xml">
+      <configuration name="dogs-model.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 32m 29s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="I_can_get_dogs_based_on_my_user_id - 2018.09.03 at 18h 04m 18s.xml">
+      <configuration name="I can get dogs based on my user id" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-routes_test_js - 2018.08.30 at 17h 32m 32s.xml">
-      <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="dogs-model_test_js - 2018.09.03 at 18h 04m 28s.xml">
+      <configuration name="dogs-model.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="user-model_test_js - 2018.09.03 at 17h 23m 52s.xml">
-      <configuration name="user-model.test.js" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="dogs-model_test_js - 2018.09.03 at 18h 05m 50s.xml">
+      <configuration name="dogs-model.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="I_can_get_a_user - 2018.09.03 at 17h 25m 41s.xml">
-      <configuration name="I can get a user" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="dogs-model_test_js - 2018.09.03 at 18h 06m 07s.xml">
+      <configuration name="dogs-model.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42259000" />
+    <option name="totallyTimeSpent" value="44637000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-158" width="1505" height="1058" extended-state="0" />
+    <frame x="-1920" y="-158" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.23854448" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" weight="0.23802002" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -697,40 +671,10 @@
     <MESSAGE value="Refactored login to into api calls" />
     <MESSAGE value="Refacted api into http request methods" />
     <MESSAGE value="Added current location to map tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added current location to map tab" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js</url>
-          <line>11</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added basic dogs model&#10;Refactored user model, pulling get method to abstract model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic dogs model&#10;Refactored user model, pulling get method to abstract model" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/db/__tests__/database.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/create-db-models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/.expo/settings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/.expo/packager-info.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/jest.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -807,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/node_modules/body-parser/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -860,13 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -940,57 +870,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/locations-sql-model.js" />
+    <entry file="file://$PROJECT_DIR$/server/src/db/sql-abstract-model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/locations-sql-model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/consts/model-names.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-end-line="30" />
-          <folding>
-            <marker date="1535614453546" expanded="true" signature="398:418" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="374">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1001,17 +888,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/user-model.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/create-db-models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/database-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test/helper/model-generation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/consts/model-names.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/user-sql-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <folding>
+            <marker date="1535953821709" expanded="true" signature="410:430" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/db/model-definitions/dogs-sql-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/models/abstract-model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="289">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/models/dogs-model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

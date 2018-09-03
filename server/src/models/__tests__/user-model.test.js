@@ -1,16 +1,15 @@
-const {setUp} = require("../../db/database-manager")
+const {setUp, tearDownConnection} = require("../../db/database-manager")
 const userModel = require("../user-model")
 const {generateUserProps} = require("../../../test/helper/prop-generation")
 const faker = require("faker")
-let db
 
 
 beforeAll(async () => {
-    db = await setUp()
+    await setUp()
 })
 
 afterAll(async () => {
-    await db.closeConnection()
+    await tearDownConnection()
 })
 
 test("I can get a user", async () => {
