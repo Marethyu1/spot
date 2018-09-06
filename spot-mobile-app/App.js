@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet,  } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 
@@ -13,6 +13,7 @@ export default class App extends React.Component {
         userInfo: {
             id: "10210259641485879"
         },
+        isReady: false,
 
     }
 
@@ -37,21 +38,30 @@ export default class App extends React.Component {
             Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
             Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
         });
+        // Please don't delete this, it is needed for Android
+        this.setState({isReady: true})
     }
 
     render() {
-      if (!this.state.isLoggedIn) {
-          {/*<Container style={styles.activityIndicatorContainer}>*/}
-          return (
-              <Login
-                  setLoggedIn={this.setLoggedIn}
-              />
-          )
+        if (!this.state.isReady) {
+            return (
+                <View style={styles.activityIndicatorContainer}>
+                    <ActivityIndicator animating={true}/>
+                </View>
+            )
+        } else {
+            if (!this.state.isLoggedIn) {
+                return (
+                    <Login
+                        setLoggedIn={this.setLoggedIn}
+                    />
+                )
 
-      }
-      return (
-        <TabNavigator userInfo={this.state.userInfo}/>
-      );
+            }
+            return (
+                <TabNavigator userInfo={this.state.userInfo}/>
+            );
+        }
     }
 }
 

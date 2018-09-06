@@ -1,12 +1,13 @@
 import React, {Component} from "react"
 import {Badge, Button, Footer, FooterTab, Icon, Text} from "native-base"
 import ReactNavigation, {
-    TabNavigator,
+    TabNavigator, StackNavigator
 } from "react-navigation"
 
 import MapTab from "./Screens/MapTab"
 import ListTab from "./Screens/ListTab"
 import CameraTab from "./Screens/CameraTab"
+import PhotoScreen from "./Screens/PhotoScreen"
 import {Platform, StatusBar, StyleSheet} from 'react-native'
 
 
@@ -27,7 +28,16 @@ export default class WrappedTabNavigator extends Component {
 
 const Navigator = TabNavigator({
     Map: {screen: MapTab},
-    Camera: {screen: CameraTab},
+    Camera: {
+        screen: StackNavigator({
+            CameraTab: {
+                screen: CameraTab
+            },
+            PhotoScreen: {
+                screen: PhotoScreen
+            }
+        })
+       },
     List: { screen: ListTab },
 }, {
     tabBarPosition: "bottom",
