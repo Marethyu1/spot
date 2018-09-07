@@ -28,10 +28,13 @@ export default class WrappedTabNavigator extends Component {
 
 const Navigator = TabNavigator({
     Map: {screen: MapTab},
-    Camera: {
+    Camera: { //screen: CameraTab
         screen: StackNavigator({
             CameraTab: {
-                screen: CameraTab
+                screen: CameraTab,
+                navigationOptions: {
+                    header: null,
+                },
             },
             PhotoScreen: {
                 screen: PhotoScreen

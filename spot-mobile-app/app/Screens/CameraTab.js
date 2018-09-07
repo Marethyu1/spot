@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Button } from 'native-base';
 import { View, TouchableOpacity } from 'react-native';
-import { Camera, Permissions, FileSystem } from 'expo';
+import { Camera, Permissions } from 'expo';
 
 export default class CameraTab extends Component {
     state = {
@@ -14,21 +14,10 @@ export default class CameraTab extends Component {
       this.setState({ hasCameraPermission: status === 'granted' });
     }
 
-    onPictureSaved = async photo => {
-
-        debugger
-        console.log("pppppooooooooo")
-        console.log(photo.uri);
-        this.setState({ newPhotos: true });
-    }
-
     async takePicture()  {
         if (this.camera) {
             let photo = await this.camera.takePictureAsync();
-            console.log(photo);
-            console.log(this.props.navigation)
             this.props.navigation.navigate("PhotoScreen", {image: photo})
-            //here we want to push an ol stack nav
         }
     };
 
@@ -46,8 +35,10 @@ export default class CameraTab extends Component {
         );
       }
       return (
+          <View style={{ flex: 1 }}>
             <Camera
                 style={{ flex: 1 }}
+                type={this.state.type}
                 ref={ (ref) => {this.camera = ref} }
             >
             <View
@@ -97,6 +88,7 @@ export default class CameraTab extends Component {
                 </TouchableOpacity>
             </View>
           </Camera>
+        </View>
 
       );
     }

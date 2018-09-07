@@ -4,7 +4,7 @@ const baseUrl = config.baseUrl
 
 const createUrl = (route) => `${baseUrl}/${route}`
 
-import {get, post, put} from "./apiMethods"
+import {get, post, put, postMultiPart} from "./apiMethods"
 
 export const login = async () => {
    try {
@@ -44,3 +44,10 @@ export const findDogsForUser = (user_id) => {
     const url = createUrl(`users/${user_id}/dogs`)
     return get(url)
 }
+
+export const uploadDogPhoto = (photo_data) => {
+    const url = createUrl(`users/${user_id}/dogs`)
+    return postMultiPart(url, photo_data)
+}
+
+

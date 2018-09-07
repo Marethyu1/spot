@@ -1,33 +1,47 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
+import {uploadDogPhoto} from "../api/routes"
 import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 export default class PhotoScreen extends Component {
+
+
+    onDogSubmit = () => {
+        let photoData = new FormData();
+        photoData.append('test_photo', {
+            uri: this.props.navigation.state.params.image.uri,
+            name:'test_photo.jpg',
+            type: 'image.jpg'
+        })
+
+        uploadDogPhoto(photoData)
+            .then((response) => {
+                console.log(response)
+            })
+    }
+
+
     render() {
-        debugger
         return (
             <Container>
                 <Content>
-                    <Card>
-                        <CardItem>
-                            <Left>
-                                <Thumbnail source={{uri: this.props.navigation.state.params.image.uri}}/>
-                                <Body>
-                                <Text>Cute Puppy!</Text>
-                                <Text note>wowza</Text>
-                                </Body>
-                            </Left>
-                        </CardItem>
-                        <CardItem cardBody>
-                            <Image
-                                source={{uri: this.props.navigation.state.params.image.uri}}
-                                style={{  resizeMode: 'cover', height: 200, width: null, flex: 1 }}/>
-                        </CardItem>
-                        <CardItem>
-                            <Left>
-                                <Text>11h ago</Text>
-                            </Left>
-                        </CardItem>
-                    </Card>
+
+                    <Image
+                        source={{uri: this.props.navigation.state.params.image.uri}}
+                        style={{flex:1, height: 300,resizeMode: 'contain', marginTop:10, marginBottom: 10, borderRadius: 10 }}
+                    />
+
+                    <Button block onPress={this.onDogSubmit}>
+                        <Text>Upload Doggo!</Text>
+                    </Button>
+
+                    {/*<Image*/}
+                        {/*style={{flex:1, height: null, width: '100%'}}*/}
+                        {/*source={{uri: this.props.navigation.state.params.image.uri}}*/}
+
+                    {/*/>*/}
+
+                    {/*<Image style={{width: '100%', height: '100%'}} resizeMode={'contain'} source={{uri: this.props.navigation.state.params.image.uri}}/>*/}
+
                 </Content>
             </Container>
         );
