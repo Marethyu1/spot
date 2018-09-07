@@ -1,13 +1,8 @@
 const Sequelize = require("sequelize")
 const SqlAbstractModel = require("../sql-abstract-model")
-const {DOGS_MODEL} = require("../../consts/model-names")
+const {DOGS_MODEL, IMAGES_MODEL} = require("../../consts/model-names")
 
 class DogsSqlModel extends SqlAbstractModel {
-
-    constructor(name) {
-        super(name)
-    }
-
     getModel() {
         return {
             id: {
@@ -21,6 +16,9 @@ class DogsSqlModel extends SqlAbstractModel {
             longitude: {
                 type: Sequelize.DOUBLE,
             },
+            comments: {
+                type: Sequelize.TEXT
+            }
         }
     }
 }

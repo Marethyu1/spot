@@ -3,11 +3,6 @@ const SqlAbstractModel = require("../sql-abstract-model")
 const {USER_MODEL, DOGS_MODEL} = require("../../consts/model-names")
 
 class UserSqlModel extends SqlAbstractModel {
-
-    constructor(name) {
-        super(name)
-    }
-
     getModel() {
         return {
             id: {

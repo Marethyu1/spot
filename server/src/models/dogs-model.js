@@ -1,4 +1,4 @@
-const {DOGS_MODEL} = require("../consts/model-names")
+const {DOGS_MODEL, IMAGES_MODEL} = require("../consts/model-names")
 const AbstractModel = require("./abstract-model")
 
 class DogsModel extends AbstractModel {
@@ -11,7 +11,9 @@ class DogsModel extends AbstractModel {
     }
 }
 
-module.exports = new DogsModel(DOGS_MODEL)
+const associations = [IMAGES_MODEL]
+
+module.exports = new DogsModel(DOGS_MODEL, associations)
 
 
 
