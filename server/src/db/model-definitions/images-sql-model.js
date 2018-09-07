@@ -11,11 +11,6 @@ class ImagesSqlModel extends SqlAbstractModel {
             }
         }
     }
-
-    setAssociations(models){
-        models[DOGS_MODEL].hasOne(models[IMAGES_MODEL], {foreignKey: {allowNull: false}})
-        models[IMAGES_MODEL].belongsTo(models[DOGS_MODEL], {foreignKey: {allowNull: false}})
-    }
 }
 
 module.exports = new ImagesSqlModel(IMAGES_MODEL)

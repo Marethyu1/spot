@@ -6,6 +6,7 @@ const imageBinary = require("../../../test/helper/load-image")
 
 describe("The images model", () => {
     let dog
+
     beforeAll(async () => {
         await setUp()
         let user = await createUser()
@@ -17,8 +18,9 @@ describe("The images model", () => {
     })
 
 
-    it("I save an image based on a dogs id", async () => {
+    it("It should save an image based on a dogs id", async () => {
         const image = await imagesModel.insertImage(dog.id, imageBinary)
+        console.log(image.toJSON())
         expect(image.image).toBe(imageBinary)
     })
 

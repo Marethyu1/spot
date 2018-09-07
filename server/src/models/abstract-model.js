@@ -3,6 +3,7 @@ const db = getDatabase()
 const path = require("path")
 
 class AbstractModel {
+
     constructor(modelName, models=[]) {
         this.model = db.getModel(modelName)
         this.models = {}
