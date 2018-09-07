@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'native-base';
+import { Text, Button } from 'native-base';
 import { View, TouchableOpacity } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
@@ -14,6 +14,15 @@ export default class CameraTab extends Component {
       this.setState({ hasCameraPermission: status === 'granted' });
     }
 
+    async takePicture()  {
+        if (this.camera) {
+            let photo = await this.camera.takePictureAsync();
+            this.props.navigation.navigate("PhotoScreen", {image: photo})
+        }
+    };
+
+
+
     render() {
       const { hasCameraPermission } = this.state;
       if (hasCameraPermission === null) {
@@ -26,8 +35,12 @@ export default class CameraTab extends Component {
         );
       }
       return (
-        <View style={{ flex: 1 }}>
-          <Camera style={{ flex: 1 }} type={this.state.type}>
+          <View style={{ flex: 1 }}>
+            <Camera
+                style={{ flex: 1 }}
+                type={this.state.type}
+                ref={ (ref) => {this.camera = ref} }
+            >
             <View
               style={{
                 flex: 1,
@@ -57,6 +70,22 @@ export default class CameraTab extends Component {
                   {' '}
                 </Text>
               </TouchableOpacity>
+                <TouchableOpacity
+                    style={{
+                        flex: 0.3,
+                        alignSelf: 'flex-end',
+                        alignItems: 'center',
+                    }}
+                    onPress={this.takePicture.bind(this)}
+                >
+                    <Text
+                        style={{ fontSize: 18, marginBottom: 10, color: 'white' }}
+                    >
+                        {' '}
+                        Capture
+                        {' '}
+                    </Text>
+                </TouchableOpacity>
             </View>
           </Camera>
         </View>

@@ -98,18 +98,18 @@ export default class MapTab extends Component {
                         region={this.props.region}
                         onRegionChangeComplete={region => this.onRegionChange(region)}
                     >
-                        {/*<MapView.Marker
-                            key={1}
-                            coordinate={{latitude: -43.517781, longitude: 172.576635}}
-                            title={"Some Title"}
-                            // description={"Hello world"}
-                        />
-                        <MapView.Marker
-                            key={2}
-                            coordinate={{latitude: -43.517781, longitude: 172.57700}}
-                            title={"Some Title"}
-                            // description={"Hello world"}
-                        />*/}
+                        {/*<MapView.Marker*/}
+                            {/*key={1}*/}
+                            {/*coordinate={{latitude: -43.517781, longitude: 172.576635}}*/}
+                            {/*title={"Some Title"}*/}
+                            {/*// description={"Hello world"}*/}
+                        {/*/>*/}
+                        {/*<MapView.Marker*/}
+                            {/*key={2}*/}
+                            {/*coordinate={{latitude: -43.517781, longitude: 172.57700}}*/}
+                            {/*title={"Some Title"}*/}
+                            {/*// description={"Hello world"}*/}
+                        {/*/>*/}
 
                         {this.state.markers.map((marker, key) => (
                             <MapView.Marker
