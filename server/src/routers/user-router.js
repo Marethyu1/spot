@@ -2,6 +2,9 @@ const {jsonRouter} = require("./create-routers")
 const router = jsonRouter()
 const userController = require("../controllers/user.controller")
 
+const bodyParser = require('body-parser')
+const rawParser = bodyParser.raw({type: 'image/*', limit: '16mb'})
+
 // TODO if another router is created, move this into its own file
 const wrap = (fn) => {
     return async (req, res, next) => {
@@ -18,7 +21,7 @@ router.route("/")
 
 router.route("/:user_id/dogs")
     .get(wrap(userController.findDogs))
-    .post(wrap(userController.createDog))
+    .post(rawParser, wrap(userController.createDog))
 
 
 module.exports = router
