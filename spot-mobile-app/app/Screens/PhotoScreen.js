@@ -6,14 +6,10 @@ export default class PhotoScreen extends Component {
 
 
     onDogSubmit = () => {
-        let photoData = new FormData();
-        photoData.append('test_photo', {
-            uri: this.props.navigation.state.params.image.uri,
-            name:'test_photo.jpg',
-            type: 'image.jpg'
-        })
-
-        uploadDogPhoto(photoData)
+        const options = {
+            image: this.props.navigation.state.params.image.base64
+        }
+        uploadDogPhoto(options)
             .then((response) => {
                 console.log(response)
             })

@@ -16,7 +16,9 @@ export default class CameraTab extends Component {
 
     async takePicture()  {
         if (this.camera) {
-            let photo = await this.camera.takePictureAsync();
+            let photo = await this.camera.takePictureAsync({
+                base64: true
+            });
             this.props.navigation.navigate("PhotoScreen", {image: photo})
         }
     };

@@ -45,9 +45,10 @@ export const findDogsForUser = (user_id) => {
     return get(url)
 }
 
-export const uploadDogPhoto = (photo_data) => {
-    const url = createUrl(`users/${user_id}/dogs`)
-    return postMultiPart(url, photo_data)
+export const uploadDogPhoto = async (photo_data) => {
+    // const url = createUrl(`users/${user_id}/dogs`)
+    const url = createUrl(`users/10210259641485879/dogs`)
+    return post(url, photo_data)
 }
 
 

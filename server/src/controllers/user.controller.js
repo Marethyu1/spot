@@ -31,7 +31,11 @@ const findDogs = async (req, res) => {
 
 const createDog = async (req, res) => {
     const {user_id} = req.params
-    const dogs = await dogsModel.create(req.body)
+    const options = {
+        user_id,
+        ...req.body
+    }
+    const dogs = await dogsModel.create(options)
     const body = dogs.toJSON()
     res.send(body)
 }
