@@ -19,10 +19,11 @@ const generateDogProps = (user_id) => {
     if (!user_id) throw new Error("Need user id to generate a dog")
     return {
         user_id: user_id,
+        title: faker.commerce.productName(),
         latitude: faker.address.latitude(),
         longitude: faker.address.longitude(),
-        comments: faker.lorem.sentences(),
-        image: fs.readFileSync(fileLocation)
+        caption: faker.lorem.sentences(),
+        //image: fs.readFileSync(fileLocation)
     }
 }
 

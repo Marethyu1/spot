@@ -10,13 +10,16 @@ class DogsSqlModel extends SqlAbstractModel {
                 primaryKey: true,
                 autoIncrement: true,
             },
+            title: {
+                type: Sequelize.STRING
+            },
             latitude: {
                 type: Sequelize.DOUBLE,
             },
             longitude: {
                 type: Sequelize.DOUBLE,
             },
-            comments: {
+            caption: {
                 type: Sequelize.TEXT
             }
         }

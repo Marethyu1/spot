@@ -2,7 +2,6 @@ const userModel = require("../models/user-model")
 const dogsModel = require("../models/dogs-model")
 
 
-
 const create  = async (req, res, next) => {
     try {
         const model = await userModel.upsert(req.body)
@@ -29,6 +28,8 @@ const findDogs = async (req, res) => {
     }
     res.send(body)
 }
+
+
 
 module.exports = {
     create,
