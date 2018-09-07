@@ -18,6 +18,7 @@ router.route("/")
 
 router.route("/:user_id/dogs")
     .get(wrap(userController.findDogs))
+    .post(wrap(userController.createDog))
 
 
 module.exports = router

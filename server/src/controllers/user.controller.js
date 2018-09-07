@@ -29,9 +29,17 @@ const findDogs = async (req, res) => {
     res.send(body)
 }
 
+const createDog = async (req, res) => {
+    const {user_id} = req.params
+    const dogs = await dogsModel.create(req.body)
+    const body = dogs.toJSON()
+    res.send(body)
+}
+
 
 
 module.exports = {
     create,
     findDogs,
+    createDog
 }

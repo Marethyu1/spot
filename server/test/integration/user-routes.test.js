@@ -2,7 +2,7 @@ const server = require("../../server")
 const request = require("supertest")
 const BASE_URL = "/api/v1/users"
 const {setUp, tearDownConnection} = require("../../src/db/database-manager")
-const {generateUserProps} = require("../helper/prop-generation")
+const {generateUserProps, generateDogPropsWithImage} = require("../helper/prop-generation")
 const {createUser, createDog} = require("../helper/model-generation")
 
 
@@ -43,5 +43,23 @@ describe("the user routes", () => {
             expect(body.dogs.length).toBe(2)
         })
     })
+
+    describe("When adding dogs ", () => {
+
+        it("should be able to save an image", async () => {
+            const user = await createUser()
+            const dogProps = generateDogPropsWithImage(user.id)
+            const url = `${BASE_URL}/${user.id}/dogs`
+
+            const {status, body} = await request(server)
+                .post(url)
+                .send(dogProps)
+
+            expect(status).toBe(200)
+            expect(body.image.image).toBeTruthy()
+
+        })
+    })
+
 
 })
