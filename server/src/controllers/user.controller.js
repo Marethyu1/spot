@@ -1,5 +1,6 @@
 const userModel = require("../models/user-model")
 const dogsModel = require("../models/dogs-model")
+const imagesModel = require("../models/images-model")
 
 
 const create  = async (req, res, next) => {
@@ -40,10 +41,20 @@ const createDog = async (req, res) => {
     res.send(body)
 }
 
+const findImage = async (req, res, next) => {
+    const {dog_id} = req.params
+    const image = await imagesModel.get(dog_id)
+
+    let binary = image.image
+
+    res.send(binary.toString())
+}
+
 
 
 module.exports = {
     create,
     findDogs,
-    createDog
+    createDog,
+    findImage
 }

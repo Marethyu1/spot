@@ -23,5 +23,8 @@ router.route("/:user_id/dogs")
     .get(wrap(userController.findDogs))
     .post(rawParser, wrap(userController.createDog))
 
+router.route("/:user_id/dogs/:dog_id/image")
+    .get(wrap(userController.findImage))
+
 
 module.exports = router
