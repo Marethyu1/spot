@@ -50,20 +50,19 @@ export default class CameraTab extends Component {
                 alignSelf: 'flex-end'
               }}
             >
-                <TouchableOpacity
-                    style={{
-                      flex: 1,
-                    }}
-                    onPress={() => {
-                      this.setState({
-                        type: this.state.type === Camera.Constants.Type.back
-                          ? Camera.Constants.Type.front
-                          : Camera.Constants.Type.back,
-                      });
-                    }}
-                >
-                    <Icon name="repeat" style={{fontSize: 40, color: 'white', marginTop: 15, marginRight:15}}/>
-                </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  flex: 1,
+                }}
+                onPress={() => {
+                  this.setState({
+                    type: this.state.type === Camera.Constants.Type.back
+                      ? Camera.Constants.Type.front
+                      : Camera.Constants.Type.back,
+                  });
+                }}>
+                  <Icon name="repeat" style={{fontSize: 40, color: 'white', marginTop: 15, marginRight:15}}/>
+              </TouchableOpacity>
             </View>
             <View
                 style={{
@@ -79,6 +78,13 @@ export default class CameraTab extends Component {
                     }}
                     onPress={this.takePicture.bind(this)}
                 >
+                    {/*<Text*/}
+                        {/*style={{ fontSize: 18, marginBottom: 10, color: 'white' }}*/}
+                    {/*>*/}
+                        {/*{' '}*/}
+                        {/*Capture*/}
+                        {/*{' '}*/}
+                    {/*</Text>*/}
                     <Icon name="aperture" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
 
                 </TouchableOpacity>
@@ -89,3 +95,15 @@ export default class CameraTab extends Component {
       );
     }
 }
+//
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         ...Platform.select({
+//             android: {
+//                 marginTop: StatusBar.currentHeight
+//             }
+//         })
+//
+//     }
+// })

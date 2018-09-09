@@ -2,8 +2,6 @@ import React from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
-import {findDogsForUser} from "./app/api/routes"
-
 
 
 console.disableYellowBox = true;
@@ -15,7 +13,6 @@ export default class App extends React.Component {
         userInfo: {
             id: "10210259641485879"
         },
-        dogs: [],
         isReady: false,
 
     }
@@ -23,20 +20,10 @@ export default class App extends React.Component {
     async componentDidMount() {
         await this.loadFonts()
         await this.setLoggedIn(this.state.userInfo)
-
-        findDogsForUser(this.state.userInfo.id)
-            .then(({dogs}) => {
-                this.setState({
-                    dogs,
-                })
-            }).catch(err => {
-                debugger
-        })
-
     }
 
     setLoggedIn = async (userInfo) => {
-        await this.setState({
+        this.setState({
             isLoggedIn: true,
             userInfo: userInfo
         })
@@ -72,7 +59,7 @@ export default class App extends React.Component {
 
             }
             return (
-                <TabNavigator userInfo={this.state.userInfo} dogs={this.state.dogs}/>
+                <TabNavigator userInfo={this.state.userInfo}/>
             );
         }
     }
