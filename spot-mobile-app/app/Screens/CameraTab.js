@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Button } from 'native-base';
+import { Text, Icon } from 'native-base';
 import { View, TouchableOpacity } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
@@ -47,46 +47,40 @@ export default class CameraTab extends Component {
               style={{
                 flex: 1,
                 backgroundColor: 'transparent',
-                flexDirection: 'row',
+                alignSelf: 'flex-end'
               }}
             >
-              <TouchableOpacity
-                style={{
-                  flex: 0.1,
-                  alignSelf: 'flex-end',
-                  alignItems: 'center',
-                }}
-                onPress={() => {
-                  this.setState({
-                    type: this.state.type === Camera.Constants.Type.back
-                      ? Camera.Constants.Type.front
-                      : Camera.Constants.Type.back,
-                  });
-                }}
-              >
-                <Text
-                  style={{ fontSize: 18, marginBottom: 10, color: 'white' }}
-                >
-                  {' '}
-                  Flip
-                  {' '}
-                </Text>
-              </TouchableOpacity>
                 <TouchableOpacity
                     style={{
-                        flex: 0.3,
+                      flex: 1,
+                    }}
+                    onPress={() => {
+                      this.setState({
+                        type: this.state.type === Camera.Constants.Type.back
+                          ? Camera.Constants.Type.front
+                          : Camera.Constants.Type.back,
+                      });
+                    }}
+                >
+                    <Icon name="repeat" style={{fontSize: 40, color: 'white', marginTop: 15, marginRight:15}}/>
+                </TouchableOpacity>
+            </View>
+            <View
+                style={{
+                    flex: 1,
+                    backgroundColor: 'transparent',
+                    flexDirection: 'row',
+                }}>
+                <TouchableOpacity
+                    style={{
+                        flex: 1,
                         alignSelf: 'flex-end',
                         alignItems: 'center',
                     }}
                     onPress={this.takePicture.bind(this)}
                 >
-                    <Text
-                        style={{ fontSize: 18, marginBottom: 10, color: 'white' }}
-                    >
-                        {' '}
-                        Capture
-                        {' '}
-                    </Text>
+                    <Icon name="aperture" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
+
                 </TouchableOpacity>
             </View>
           </Camera>
@@ -95,15 +89,3 @@ export default class CameraTab extends Component {
       );
     }
 }
-//
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         ...Platform.select({
-//             android: {
-//                 marginTop: StatusBar.currentHeight
-//             }
-//         })
-//
-//     }
-// })
