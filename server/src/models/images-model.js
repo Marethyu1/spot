@@ -3,9 +3,8 @@ const AbstractModel = require("./abstract-model")
 
 class ImagesModel extends AbstractModel {
 
-    insertImage(dog_id, image){
+    insertImage(image){
         const values = {
-            dog_id,
             image
         }
         return this.create(values)

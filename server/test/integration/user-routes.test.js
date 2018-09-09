@@ -3,7 +3,7 @@ const request = require("supertest")
 const BASE_URL = "/api/v1/users"
 const {setUp, tearDownConnection} = require("../../src/db/database-manager")
 const {generateUserProps, generateDogPropsWithImage} = require("../helper/prop-generation")
-const {createUser, createDog} = require("../helper/model-generation")
+const {createUser, createDog, createDogWithImage} = require("../helper/model-generation")
 
 
 describe("the user routes", () => {
@@ -58,6 +58,19 @@ describe("the user routes", () => {
             expect(status).toBe(200)
             expect(body.image.image).toBeTruthy()
 
+        })
+    })
+
+    describe("when getting an image", () => {
+        it("Should be able to get an image", async () => {
+            const dog = await createDogWithImage()
+            const url = `${BASE_URL}/${dog.user_id}/dogs/${dog.id}/image/${dog.image.id}`
+
+            const {status, body} = await request(server)
+                .get(url)
+
+            expect(status).toBe(200)
+            expect(body.toString()).toBe(dog.image.image.toString())
         })
     })
 

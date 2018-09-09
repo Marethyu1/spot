@@ -1,10 +1,6 @@
 const faker = require("faker")
-const fs = require("fs")
-const path = require("path")
 
-const fileName = "logo.png"
-const fileLocation = path.join(__dirname, "/../images/", fileName)
-
+const image = require("../../test/helper/load-image")
 
 const generateUserProps = () => {
     return {
@@ -35,7 +31,10 @@ const generateDogPropsWithImage = (user_id) => {
         latitude: faker.address.latitude(),
         longitude: faker.address.longitude(),
         caption: faker.lorem.sentences(),
-        image: fs.readFileSync(fileLocation)
+        image: {
+            image: image
+        }
+
     }
 }
 

@@ -7,7 +7,7 @@ const bodyParser = require("body-parser")
  */
 function jsonRouter() {
     const router = express.Router()
-    router.use(bodyParser.json())
+    router.use(bodyParser.json({limit: '10000mb'}))
     return router
 }
 

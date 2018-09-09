@@ -36,17 +36,12 @@ class AbstractModel {
     list(where){
         const options = {
             where,
-            include: this.include
         }
         return this.model.findAll(options)
     }
 
     create(values, options) {
-        const allOptions = {
-            ...options,
-            include: this.include
-        }
-        return this.model.create(values, allOptions)
+        return this.model.create(values, options)
     }
 }
 

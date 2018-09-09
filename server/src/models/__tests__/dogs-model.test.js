@@ -44,7 +44,7 @@ describe("The dogs model", () => {
         const dog = await dogsModel.create(dogsProps)
 
         expect(dog).toBeTruthy()
-        expect(dog.image.image.toString()).toBe(dogsProps.image.toString())
+        expect(dog.image.image).toBe(dogsProps.image.image)
     })
 })
 
