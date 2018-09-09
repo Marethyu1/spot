@@ -19,9 +19,22 @@ describe("The images model", () => {
 
 
     it("It should save an image based on a dogs id", async () => {
-        const image = await imagesModel.insertImage(dog.id, imageBinary)
-        console.log(image.toJSON())
+        const image = await imagesModel.insertImage(imageBinary)
         expect(image.image).toBe(imageBinary)
+    })
+
+    it("Should not be able to make a second image for the same dog", async () => {
+
+
+        try {
+            let dog = await createDog((await createUser()).id)
+            const image = await imagesModel.insertImage(dog.id, imageBinary)
+            expect(image.image).toBe(imageBinary)
+            await imagesModel.insertImage(dog.id, imageBinary)
+        } catch (err) {
+            console.log(err)
+        }
+
     })
 
 })

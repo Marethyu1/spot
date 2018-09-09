@@ -3,7 +3,7 @@ const env = "development"
 
 const config = {
     "development": {
-        baseUrl: "http://10.196.69.201:3000/api/v1"
+        baseUrl: "http://192.168.1.114:3000/api/v1"
     }
 }
 

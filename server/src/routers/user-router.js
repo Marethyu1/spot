@@ -3,7 +3,7 @@ const router = jsonRouter()
 const userController = require("../controllers/user.controller")
 
 const bodyParser = require('body-parser')
-const rawParser = bodyParser.raw({type: 'image/*', limit: '16mb'})
+const rawParser = bodyParser.raw({type: 'image/*', limit: '10000mb'})
 
 // TODO if another router is created, move this into its own file
 const wrap = (fn) => {
@@ -11,6 +11,8 @@ const wrap = (fn) => {
         try {
             await fn(req, res, next)
         } catch (err) {
+            console.log(err)
+            console.log(err.message)
             res.status(500).send(err.message)
         }
     }
@@ -23,7 +25,7 @@ router.route("/:user_id/dogs")
     .get(wrap(userController.findDogs))
     .post(rawParser, wrap(userController.createDog))
 
-router.route("/:user_id/dogs/:dog_id/image")
+router.route("/:user_id/dogs/:dog_id/image/:image_id")
     .get(wrap(userController.findImage))
 
 

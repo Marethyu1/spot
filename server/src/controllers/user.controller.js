@@ -36,18 +36,24 @@ const createDog = async (req, res) => {
         user_id,
         ...req.body
     }
+    console.log("HERE!")
+    // console.log(req.body)
+    const image = new Buffer(options.image.image.toString(), "base64")
+    options.image.image = image
     const dogs = await dogsModel.create(options)
-    const body = dogs.toJSON()
+    const body = {
+        dogs: dogs.toJSON()
+    }
     res.send(body)
 }
 
 const findImage = async (req, res, next) => {
-    const {dog_id} = req.params
-    const image = await imagesModel.get(dog_id)
+    const {image_id} = req.params
+    const image = await imagesModel.get(image_id)
 
     let binary = image.image
 
-    res.send(binary.toString())
+    res.send(image.toJSON().image)
 }
 
 

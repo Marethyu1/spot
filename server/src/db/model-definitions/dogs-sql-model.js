@@ -26,8 +26,10 @@ class DogsSqlModel extends SqlAbstractModel {
     }
 
     setAssociations(models){
-        models[DOGS_MODEL].hasOne(models[IMAGES_MODEL], {foreignKey: {allowNull: false}})
-        models[IMAGES_MODEL].belongsTo(models[DOGS_MODEL], {foreignKey: {allowNull: false}})
+        // models[DOGS_MODEL].hasOne(models[IMAGES_MODEL], {foreignKey: {allowNull: false}})
+        // models[IMAGES_MODEL].hasOne(models[IMAGES_MODEL], )
+        // models[IMAGES_MODEL].belongsTo(models[DOGS_MODEL], {foreignKey: {allowNull: false}})
+        models[DOGS_MODEL].belongsTo(models[IMAGES_MODEL])
     }
 }
 
