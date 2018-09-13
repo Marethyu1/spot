@@ -7,7 +7,7 @@ class ImagesSqlModel extends SqlAbstractModel {
     getModel() {
         return {
             image: {
-                type: Sequelize.BLOB("long")
+                type: Sequelize.BLOB('long')
             }
         }
     }

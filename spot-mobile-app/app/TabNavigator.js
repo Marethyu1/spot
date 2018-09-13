@@ -20,7 +20,7 @@ export default class WrappedTabNavigator extends Component {
 
     render() {
         return (
-            <Navigator screenProps={{userInfo: this.props.userInfo, dogs: this.props.dogs}}/>
+            <Navigator screenProps={{userInfo: this.props.userInfo}}/>
         )
     }
 }
