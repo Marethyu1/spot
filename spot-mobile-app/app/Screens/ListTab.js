@@ -5,6 +5,7 @@ import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, But
 const Dog = (props) => {
     const url = `http://10.196.69.201:3000/api/v1/users/10210259641485879/dogs/${props.id}/image/${props.image_id}`
     console.log(url)
+
     return (
         <Card key={props.id}>
             <CardItem>
@@ -31,6 +32,7 @@ const Dog = (props) => {
 
 export default class ListTab extends Component {
     render() {
+        debugger
         return (
             <Container>
                 <Header>
