@@ -49,6 +49,7 @@ const createDog = async (req, res) => {
 
 const findImage = async (req, res, next) => {
     const {image_id} = req.params
+    console.log("getting image....")
     const image = await imagesModel.get(image_id)
 
     let binary = image.image
