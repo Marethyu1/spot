@@ -4,12 +4,25 @@ import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 import {findDogsForUser} from "./app/api/routes"
 
+import store from './app/store'
+import {Provider} from "react-redux";
+
 
 
 console.disableYellowBox = true;
 
-
 export default class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <Main />
+            </Provider>
+        )
+    }
+}
+
+
+class Main extends React.Component {
     state = {
         isLoggedIn: false,
         userInfo: {

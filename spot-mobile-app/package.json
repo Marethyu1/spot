@@ -32,6 +32,8 @@
     "react-native-easy-grid": "^0.2.0",
     "react-native-fbsdk": "^0.7.0",
     "react-native-google-signin": "^1.0.0-rc2",
-    "react-navigation": "^2.11.2"
+    "react-navigation": "^2.11.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   }
 }
