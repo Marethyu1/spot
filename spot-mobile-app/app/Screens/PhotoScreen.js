@@ -16,10 +16,13 @@ export default class PhotoScreen extends Component {
                 image: this.props.image.base64
             },
             caption: this.state.caption,
-        }
+            latitude: -43.524088,
+            longitude: 172.582539,
+        };
         uploadDogPhoto(options)
             .then((response) => {
                 console.log(response)
+                this.props.onUpload()
             })
     }
 

@@ -14,8 +14,8 @@ const Dog = (props) => {
                 <Left>
                     <Thumbnail source={{uri: url}} />
                     <Body>
-                    <Text>{props.title}</Text>
-                    <Text note>wowza</Text>
+                    <Text>{props.caption}</Text>
+                    <Text note>{props.latitude}, {props.longitude}</Text>
                     </Body>
                 </Left>
             </CardItem>
@@ -39,6 +39,7 @@ const Dogs = (props) => {
 
 class ListTab extends Component {
     render() {
+        debugger
         return (
             <Container>
                 <Header>
