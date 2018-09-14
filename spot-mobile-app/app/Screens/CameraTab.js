@@ -3,13 +3,15 @@ import { Text, Icon, Container, Header, Right } from 'native-base';
 import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import { Camera, Permissions } from 'expo';
 import PhotoScreen from "./PhotoScreen";
+import {getLocation} from "./MapTab";
 
 export default class CameraTab extends Component {
     state = {
         hasCameraPermission: null,
         modalVisible: false,
         type: Camera.Constants.Type.back,
-        imageInfo: {}
+        imageInfo: {},
+        location: {}
     };
 
     async componentWillMount() {
@@ -22,10 +24,13 @@ export default class CameraTab extends Component {
             let photo = await this.camera.takePictureAsync({
                 base64: true
             });
+            const location = await getLocation()
 
             this.setState({
                 imageInfo: photo,
-                modalVisible: true})
+                modalVisible: true,
+                location: location
+            })
         }
     };
 
@@ -66,7 +71,7 @@ export default class CameraTab extends Component {
                               </Text>
                           </Right>
                       </Header>
-                      <PhotoScreen image={this.state.imageInfo} onUpload={this.onUpload}/>
+                      <PhotoScreen image={this.state.imageInfo} location={this.state.location} onUpload={this.onUpload}/>
                   </Container>
               </Modal>
 
@@ -128,15 +133,3 @@ export default class CameraTab extends Component {
       );
     }
 }
-//
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         ...Platform.select({
-//             android: {
-//                 marginTop: StatusBar.currentHeight
-//             }
-//         })
-//
-//     }
-// })

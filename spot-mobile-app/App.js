@@ -5,18 +5,19 @@ import Login from "./app/Screens/Login"
 
 import store from './app/store'
 import {Provider, connect} from "react-redux";
-import {findDogs} from "./app/actions"
+import {findDogs, tryLogin} from "./app/actions"
 
 console.disableYellowBox = true;
 
 
-
 const mapDispatchToProps = dispatch => ({
-    fetchDogs: () => dispatch(findDogs())
+    fetchDogs: () => dispatch(findDogs()),
+    tryLogin: () => dispatch(tryLogin())
 })
 
 const mapStateToProps = (state, props) => ({
-    dogs: state.dogs.dogs
+    dogs: state.dogs.dogs,
+    user: state.user
 })
 
 
@@ -31,21 +32,20 @@ class MainScreen extends React.Component {
 
     }
 
+    tryLoginFlow(){
+        if (!this.props.user.isLoggedIn){
+            this.props.tryLogin()
+        }
+        if (process && process.env.NODE_ENV === "development") {
+            //Load dogs on start up
+            this.props.fetchDogs()
+        }
+    }
+
     async componentDidMount() {
         await this.loadFonts()
-        await this.setLoggedIn(this.state.userInfo)
 
-        this.props.fetchDogs()
-
-        // findDogsForUser(this.state.userInfo.id)
-        //     .then(({dogs}) => {
-        //         this.setState({
-        //             dogs,
-        //         })
-        //     }).catch(err => {
-        //     debugger
-        // })
-
+        this.tryLoginFlow()
     }
 
     setLoggedIn = async (userInfo) => {
@@ -76,7 +76,7 @@ class MainScreen extends React.Component {
                 </View>
             )
         } else {
-            if (!this.state.isLoggedIn) {
+            if (!this.props.user.isLoggedIn) {
                 return (
                     <Login
                         setLoggedIn={this.setLoggedIn}
@@ -85,7 +85,7 @@ class MainScreen extends React.Component {
 
             }
             return (
-                <TabNavigator userInfo={this.state.userInfo} dogs={this.props.dogs}/>
+                <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs}/>
             );
         }
     }

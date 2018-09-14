@@ -19,7 +19,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "ip": "node ./scripts/updateIPAddress.js"
   },
   "jest": {
     "preset": "jest-expo",
@@ -37,6 +38,7 @@
     "react-navigation": "^2.11.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
   }
 }

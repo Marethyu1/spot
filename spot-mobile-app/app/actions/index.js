@@ -1,35 +1,35 @@
+//Imports all public actions from the actions directory
+//Exports all public actions for other files to import
+
 import {
-    ADD_DOGS,
-    ADD_SINGLE_DOG
-} from "../consts/dogs";
+    addDogs,
+    findDogs
+} from "./dogsActions";
 
-import {findDogsForUser, uploadDogPhoto} from "../api/routes"
+import {
+    tryLogin
+} from "./userActions"
 
-export const addDogs = dogs => {
-    return {
-        type: ADD_DOGS,
-        dogs: dogs
-    }
+import {
+    hasCameraPermission,
+    hasLocationPermission
+} from "./permissionsActions"
+
+export {
+    addDogs,
+    findDogs,
+
+    tryLogin,
+
+    hasCameraPermission,
+    hasLocationPermission,
 }
 
+//these are my functions that I need to work out where to put they are here after the merge conflicts
 export const addSingleDog = dog => {
     return {
         type: ADD_SINGLE_DOG,
         dog: dog
-    }
-}
-
-//TODO remove default user id
-export const findDogs = (userId="10210259641485879") => {
-    return async (dispatch) => {
-        console.log("fething some doggos!!!!!")
-        const {dogs} = await findDogsForUser(userId)
-            .catch(err => {
-
-            })
-
-        const addDogsAction = addDogs(dogs)
-        dispatch(addDogsAction)
     }
 }
 

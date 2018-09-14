@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
+import {connect} from "react-redux";
+import config from "../config/config"
+const BASE_URL = config.baseUrl
 
 const Dog = (props) => {
-    const url = `http://192.168.0.118:3000/api/v1/users/10210259641485879/dogs/${props.id}/image/${props.image_id}`
-    console.log(url)
-    console.log("Props!!!!")
-    console.log(props)
+    const url = `${BASE_URL}/users/${props.userId}/dogs/${props.dog.id}/image/${props.dog.image_id}`
 
     return (
         <Card key={props.id}>
@@ -31,7 +31,13 @@ const Dog = (props) => {
     )
 }
 
-export default class ListTab extends Component {
+const Dogs = (props) => {
+    return props.dogs.map((dog) => {
+        return <Dog dog={dog} userId={props.userId}/>
+    })
+}
+
+class ListTab extends Component {
     render() {
         return (
             <Container>
@@ -45,10 +51,19 @@ export default class ListTab extends Component {
                     <Right/>
                 </Header>
                 <Content>
-                    {this.props.screenProps.dogs &&
-                        this.props.screenProps.dogs.map(Dog)}
+                    <Dogs dogs={this.props.dogs} userId={this.props.userId}/>
                 </Content>
             </Container>
         );
     }
 }
+
+const mapDispatchToProps = dispatch => ({
+})
+
+const mapStateToProps = (state, props) => ({
+    dogs: state.dogs.dogs,
+    userId: state.user.userInfo.id
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTab)

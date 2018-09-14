@@ -20,8 +20,8 @@ class PhotoScreen extends Component {
                 image: this.props.image.base64
             },
             caption: this.state.caption,
-            latitude: -43.524088,
-            longitude: 172.582539,
+            latitude: this.props.location.coords.latitude,
+            longitude: this.props.location.coords.longitude,
         };
 
         this.props.postDog(options).then(() => {
