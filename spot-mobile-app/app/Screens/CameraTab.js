@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { Text, Icon } from 'native-base';
-import { View, TouchableOpacity } from 'react-native';
+import { Text, Icon, Container, Header, Right } from 'native-base';
+import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import { Camera, Permissions } from 'expo';
+import PhotoScreen from "./PhotoScreen";
 
 export default class CameraTab extends Component {
     state = {
-      hasCameraPermission: null,
-      type: Camera.Constants.Type.back,
+        hasCameraPermission: null,
+        modalVisible: false,
+        type: Camera.Constants.Type.back,
+        imageInfo: {}
     };
 
     async componentWillMount() {
@@ -19,6 +22,7 @@ export default class CameraTab extends Component {
             let photo = await this.camera.takePictureAsync({
                 base64: true
             });
+
             this.props.navigation.navigate("PhotoScreen", {image: photo})
         }
     };
@@ -38,6 +42,26 @@ export default class CameraTab extends Component {
       }
       return (
           <View style={{ flex: 1 }}>
+              <Modal
+                  animationType="slider"
+                  transparent={false}
+                  visible={this.state.modalVisible}
+                  presentationStyle={"currentContext"}>
+                  <Container>
+                      <Header>
+                          <Right>
+                              <Text onPress={() => {
+                                  this.setModalVisible(!this.state.modalVisible)
+                              }} style={{color: "white"}}>
+                                  Back
+                              </Text>
+                          </Right>
+                      </Header>
+                      <PhotoScreen />
+                  </Container>
+              </Modal>
+
+
             <Camera
                 style={{ flex: 1 }}
                 type={this.state.type}
