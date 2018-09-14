@@ -29,6 +29,13 @@ export default class CameraTab extends Component {
         }
     };
 
+    onUpload = () => {
+        // alert("Image Uploaded?")
+        this.setState({
+            modalVisible: false,
+            imageInfo: {}
+        })
+    }
 
 
     render() {
@@ -59,7 +66,7 @@ export default class CameraTab extends Component {
                               </Text>
                           </Right>
                       </Header>
-                      <PhotoScreen image={this.state.imageInfo}/>
+                      <PhotoScreen image={this.state.imageInfo} onUpload={this.onUpload}/>
                   </Container>
               </Modal>
 
