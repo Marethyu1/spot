@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import {uploadDogPhoto} from "../api/routes"
-import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
+import { Container, Input, Content, Text, Button,  } from 'native-base';
 export default class PhotoScreen extends Component {
 
 
+    state = {
+        caption: ""
+    }
+
     onDogSubmit = () => {
         const options = {
-            image: this.props.navigation.state.params.image.base64
+            // image: this.props.navigation.state.params.image.base64,
+            image: this.props.image.base64,
+            caption: this.state.caption,
         }
         uploadDogPhoto(options)
             .then((response) => {
@@ -22,24 +28,51 @@ export default class PhotoScreen extends Component {
                 <Content>
 
                     <Image
-                        source={{uri: this.props.navigation.state.params.image.uri}}
-                        style={{flex:1, height: 300,resizeMode: 'contain', marginTop:10, marginBottom: 10, borderRadius: 10 }}
+                        source={{uri: this.props.image.uri}}
+                        style={styles.image}
                     />
 
-                    <Button block onPress={this.onDogSubmit}>
+                    <Input placeholder="caption"
+                           multiline={true}
+                           style={styles.textInput}
+                           value={this.state.caption}
+                           onChangeText={(text) => this.setState({caption: text})}
+                    />
+
+                    <Button block onPress={this.onDogSubmit} style={styles.uploadButton}>
                         <Text>Upload Doggo!</Text>
                     </Button>
-
-                    {/*<Image*/}
-                        {/*style={{flex:1, height: null, width: '100%'}}*/}
-                        {/*source={{uri: this.props.navigation.state.params.image.uri}}*/}
-
-                    {/*/>*/}
-
-                    {/*<Image style={{width: '100%', height: '100%'}} resizeMode={'contain'} source={{uri: this.props.navigation.state.params.image.uri}}/>*/}
 
                 </Content>
             </Container>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    image: {
+        flex:1,
+        height: 300,
+        resizeMode: 'contain',
+        marginTop:10,
+        marginBottom: 10,
+        borderRadius: 10
+    },
+    textInput: {
+        flex:1,
+        marginTop:20,
+        marginBottom: 20,
+        marginLeft: 20,
+        marginRight: 20,
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1
+    },
+
+    uploadButton: {
+        borderRadius: 5,
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 20,
+        marginBottom: 15,
+    }
+});
