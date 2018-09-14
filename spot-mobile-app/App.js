@@ -10,7 +10,6 @@ import {findDogs, tryLogin} from "./app/actions"
 console.disableYellowBox = true;
 
 
-
 const mapDispatchToProps = dispatch => ({
     fetchDogs: () => dispatch(findDogs()),
     tryLogin: () => dispatch(tryLogin())
