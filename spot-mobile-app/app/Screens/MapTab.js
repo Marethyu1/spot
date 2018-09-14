@@ -13,6 +13,9 @@ import {Location, MapView, Permissions} from 'expo';
 import {connect} from "react-redux";
 import DogMarkers from "../components/mapComponents/DogMarkers";
 
+export const getLocation = () => {
+    return Location.getCurrentPositionAsync({});
+}
 
 class MapTab extends Component {
 
@@ -44,7 +47,7 @@ class MapTab extends Component {
             });
         }
 
-        let location = await Location.getCurrentPositionAsync({});
+        let location = await getLocation()
         this.setState({ location });
         console.log(location)
     };

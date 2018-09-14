@@ -20,5 +20,4 @@ describe("The permissions reducer", () => {
         const state = reduceFromInitialState(action)
         expect(state.hasLocationPermission).toBe(true)
     })
-
 })

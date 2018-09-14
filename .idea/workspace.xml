@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added redux logger in dev">
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/userActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/consts/permissions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added and tested permissions reducer for location and camera permissions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/user.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/user.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,19 +29,19 @@
         <counts>
           <entry key="dummy" value="16" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="32197" />
+          <entry key="js" value="32489" />
           <entry key="json" value="448" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="2613" />
+          <entry key="txt" value="2690" />
           <entry key="yml" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="448" />
-          <entry key="JavaScript" value="32312" />
-          <entry key="PLAIN_TEXT" value="2682" />
+          <entry key="JavaScript" value="32604" />
+          <entry key="PLAIN_TEXT" value="2759" />
           <entry key="YAML" value="92" />
         </counts>
       </usages-collector>
@@ -55,7 +49,7 @@
         <counts>
           <entry key="__tests__test" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="311" />
+          <entry key="js" value="322" />
           <entry key="json" value="20" />
           <entry key="md" value="1" />
           <entry key="png" value="9" />
@@ -71,7 +65,7 @@
         <counts>
           <entry key="Image" value="9" />
           <entry key="JSON" value="20" />
-          <entry key="JavaScript" value="311" />
+          <entry key="JavaScript" value="322" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="TypeScript" value="2" />
           <entry key="UML" value="1" />
@@ -109,95 +103,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/index.js">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="471">
+              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#112#170#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/userActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
-                <element signature="e#0#63#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/user.test.js">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="119">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -232,6 +183,7 @@
       <find>\&lt;Header\&gt;\n                    \&lt;Left\&gt;\n                        \&lt;Icon name\=\&quot;md\-paw\&quot; style\=\{\{color\: \'white\'\}\}\/\&gt;</find>
       <find>&lt;Header&gt;</find>
       <find>screenProps</find>
+      <find>hasCameraPermission</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -263,8 +215,6 @@
         <option value="$PROJECT_DIR$/server/src/routers/user-router.js" />
         <option value="$PROJECT_DIR$/server/src/db/model-definitions/images-sql-model.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/consts/dogs.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/dogs.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/api/apiMethods.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/user.js" />
@@ -282,7 +232,6 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/config/config.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/TabNavigator.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/store/index.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js" />
@@ -296,6 +245,9 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/actions/index.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js" />
       </list>
     </option>
   </component>
@@ -372,6 +324,13 @@
               <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="consts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -379,15 +338,7 @@
               <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+              <item name="Screens" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spot" type="b2602c69:ProjectViewProjectNode" />
@@ -596,7 +547,7 @@
       <workItem from="1536879921869" duration="4133000" />
       <workItem from="1536887240641" duration="20000" />
       <workItem from="1536887274711" duration="6677000" />
-      <workItem from="1536895432945" duration="9448000" />
+      <workItem from="1536895432945" duration="10709000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -864,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536906710988</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added and tested permissions reducer for location and camera permissions">
+      <created>1536907714380</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1536907714380</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -900,7 +858,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98261000" />
+    <option name="totallyTimeSpent" value="99522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-158" width="1598" height="1058" extended-state="0" />
@@ -977,7 +935,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added current location to map tab" />
     <MESSAGE value="Added basic dogs model&#10;Refactored user model, pulling get method to abstract model" />
     <MESSAGE value="Created dogs orm model&#10;Added helper methods for creating dogs" />
     <MESSAGE value="Added a find dogs method" />
@@ -1002,7 +959,8 @@
     <MESSAGE value="Added script for updating ip address" />
     <MESSAGE value="Linked MapTab to markers&#10;Refactored Markers into component file" />
     <MESSAGE value="Added redux logger in dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redux logger in dev" />
+    <MESSAGE value="Added and tested permissions reducer for location and camera permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and tested permissions reducer for location and camera permissions" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1014,13 +972,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/images-model.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -1161,20 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/react-native/Libraries/react-native/react-native-implementation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/react-native/Libraries/Network/fetch.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1196,13 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1233,13 +1163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1257,30 +1180,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/api/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1318,17 +1221,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/consts/permissions.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1342,42 +1241,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="17">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="285">
           <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#112#170#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1398,13 +1276,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/consts/permissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/expo/src/Location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="393" column="2" selection-start-line="393" selection-start-column="2" selection-end-line="393" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/node_modules/react-native/Libraries/react-native/react-native-implementation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
         </state>
       </provider>
     </entry>
