@@ -12,7 +12,9 @@ export default class PhotoScreen extends Component {
     onDogSubmit = () => {
         const options = {
             // image: this.props.navigation.state.params.image.base64,
-            image: this.props.image.base64,
+            image: {
+                image: this.props.image.base64
+            },
             caption: this.state.caption,
         }
         uploadDogPhoto(options)
