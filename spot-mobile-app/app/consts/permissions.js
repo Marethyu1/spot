@@ -1,0 +1,2 @@
+export const HAS_CAMERA_PERMISSION = "[permissions] HAS_CAMERA_PERMISSION"
+export const HAS_LOCATION_PERMISSION = "[permissions] HAS_LOCATION_PERMISSION"

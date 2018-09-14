@@ -1,5 +1,5 @@
 import userReducer, {initialState} from "../user"
-import {_setUserAsLoggedIn, _setUserDetails, _loginUser} from "../../actions";
+import {_setUserAsLoggedIn, _setUserDetails, _loginUser} from "../../actions/userActions";
 
 const reduceFromInitialState = (action) => userReducer(undefined, action)
 

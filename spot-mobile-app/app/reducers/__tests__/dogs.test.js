@@ -1,5 +1,5 @@
 import dogsReducer, {initialState} from "../dogs"
-import {addDogs, findDogs} from "../../actions";
+import {addDogs} from "../../actions";
 
 const reduceFromInitialState = (action) => dogsReducer(undefined, action)
 
