@@ -12,9 +12,14 @@ export const addDogs = dogs => {
 }
 
 //TODO remove default user id
-export const findDogs = (userId="242029906422575") => {
+export const findDogs = (userId="10210259641485879") => {
     return async (dispatch) => {
-        const dogs = await findDogsForUser(userId)
+        console.log("fething some doggos!!!!!")
+        const {dogs} = await findDogsForUser(userId)
+            .catch(err => {
+                debugger
+            })
+        debugger
         const addDogsAction = addDogs(dogs)
         dispatch(addDogsAction)
     }

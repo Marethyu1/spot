@@ -32,7 +32,6 @@ const Dog = (props) => {
 
 export default class ListTab extends Component {
     render() {
-        debugger
         return (
             <Container>
                 <Header>

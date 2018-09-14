@@ -2,27 +2,25 @@ import React from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
-import {findDogsForUser} from "./app/api/routes"
 
 import store from './app/store'
-import {Provider} from "react-redux";
-
-
+import {Provider, connect} from "react-redux";
+import {findDogs} from "./app/actions"
 
 console.disableYellowBox = true;
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <Main />
-            </Provider>
-        )
-    }
-}
 
 
-class Main extends React.Component {
+const mapDispatchToProps = dispatch => ({
+    fetchDogs: () => dispatch(findDogs())
+})
+
+const mapStateToProps = (state, props) => ({
+    dogs: state.dogs.dogs
+})
+
+
+class MainScreen extends React.Component {
     state = {
         isLoggedIn: false,
         userInfo: {
@@ -37,14 +35,16 @@ class Main extends React.Component {
         await this.loadFonts()
         await this.setLoggedIn(this.state.userInfo)
 
-        findDogsForUser(this.state.userInfo.id)
-            .then(({dogs}) => {
-                this.setState({
-                    dogs,
-                })
-            }).catch(err => {
-            debugger
-        })
+        this.props.fetchDogs()
+
+        // findDogsForUser(this.state.userInfo.id)
+        //     .then(({dogs}) => {
+        //         this.setState({
+        //             dogs,
+        //         })
+        //     }).catch(err => {
+        //     debugger
+        // })
 
     }
 
@@ -85,11 +85,14 @@ class Main extends React.Component {
 
             }
             return (
-                <TabNavigator userInfo={this.state.userInfo} dogs={this.state.dogs}/>
+                <TabNavigator userInfo={this.state.userInfo} dogs={this.props.dogs}/>
             );
         }
     }
 }
+
+const Main = connect(mapStateToProps, mapDispatchToProps)(MainScreen)
+
 
 
 const styles = StyleSheet.create({
@@ -116,3 +119,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
+
+
+export default class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <Main />
+            </Provider>
+        )
+    }
+}
