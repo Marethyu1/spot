@@ -1,9 +1,16 @@
 import {ADD_DOGS} from "../consts/dogs";
 
-const dogs = (state=[], action) => {
+export const initialState = {
+    dogs: []
+}
+
+const dogs = (state=initialState, action) => {
     switch (action.type) {
         case ADD_DOGS:
-            return state
+            return {
+                ...state,
+                dogs: [...state.dogs, ...action.dogs]
+            }
         default:
             return state
     }
