@@ -1,6 +1,6 @@
 const faker = require("faker")
 
-const image = require("../../test/helper/load-image")
+const image = require("../../test/helper/load-base64-image")
 
 const generateUserProps = () => {
     return {

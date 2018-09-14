@@ -4,7 +4,7 @@
   "description": "Server for SPOT",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --runInBand",
     "create:dev-db": "node_modules/.bin/sequelize db:create && NODE_ENV=development node ./scripts/create-tables",
     "create:test-db": "node_modules/.bin/sequelize db:create --env=test && NODE_ENV=test node ./scripts/create-tables",
     "drop:dev-db": "node_modules/.bin/sequelize db:drop",

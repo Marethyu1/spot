@@ -80,7 +80,6 @@ class Database {
     async testConnection() {
         return sequelize.authenticate()
             .then(() => {
-                console.log("Connected to the db successfully")
                 return true
             })
     }
@@ -92,7 +91,6 @@ class Database {
     async closeConnection() {
         const closedConnection = await sequelize.close()
         sequelize = null
-        // console.log("Database connection closed successfully!")
         return closedConnection
     }
 

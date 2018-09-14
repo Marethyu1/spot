@@ -36,9 +36,10 @@ const createDog = async (req, res) => {
         user_id,
         ...req.body
     }
-    console.log("HERE!")
-    // console.log(req.body)
+
+    // console.time('Now')
     const image = new Buffer(options.image.image.toString(), "base64")
+    // console.timeEnd("later")
     options.image.image = image
     const dogs = await dogsModel.create(options)
     const body = {
