@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { Text, Icon } from 'native-base';
-import { View, TouchableOpacity } from 'react-native';
+import { Text, Icon, Container, Header, Right } from 'native-base';
+import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import { Camera, Permissions } from 'expo';
+import PhotoScreen from "./PhotoScreen";
 
 export default class CameraTab extends Component {
     state = {
-      hasCameraPermission: null,
-      type: Camera.Constants.Type.back,
+        hasCameraPermission: null,
+        modalVisible: false,
+        type: Camera.Constants.Type.back,
+        imageInfo: {}
     };
 
     async componentWillMount() {
@@ -19,7 +22,10 @@ export default class CameraTab extends Component {
             let photo = await this.camera.takePictureAsync({
                 base64: true
             });
-            this.props.navigation.navigate("PhotoScreen", {image: photo})
+
+            this.setState({
+                imageInfo: photo,
+                modalVisible: true})
         }
     };
 
@@ -38,6 +44,26 @@ export default class CameraTab extends Component {
       }
       return (
           <View style={{ flex: 1 }}>
+              <Modal
+                  animationType="slider"
+                  transparent={false}
+                  visible={this.state.modalVisible}
+                  presentationStyle={"currentContext"}>
+                  <Container>
+                      <Header>
+                          <Right>
+                              <Text onPress={() => {
+                                  this.setState({modalVisible: false})
+                              }} style={{color: "gray"}}>
+                                  Back
+                              </Text>
+                          </Right>
+                      </Header>
+                      <PhotoScreen image={this.state.imageInfo}/>
+                  </Container>
+              </Modal>
+
+
             <Camera
                 style={{ flex: 1 }}
                 type={this.state.type}
