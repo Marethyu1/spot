@@ -1,9 +1,10 @@
 const env = "development"
+import IP_ADDRESS from "./ipaddress"
 
 
 const config = {
     "development": {
-        baseUrl: "http://10.196.69.201:3000/api/v1"
+        baseUrl: `http://${IP_ADDRESS}:3000/api/v1`
     }
 }
 
