@@ -23,7 +23,9 @@ export default class CameraTab extends Component {
                 base64: true
             });
 
-            this.props.navigation.navigate("PhotoScreen", {image: photo})
+            this.setState({
+                imageInfo: photo,
+                modalVisible: true})
         }
     };
 
@@ -51,13 +53,13 @@ export default class CameraTab extends Component {
                       <Header>
                           <Right>
                               <Text onPress={() => {
-                                  this.setModalVisible(!this.state.modalVisible)
-                              }} style={{color: "white"}}>
+                                  this.setState({modalVisible: false})
+                              }} style={{color: "gray"}}>
                                   Back
                               </Text>
                           </Right>
                       </Header>
-                      <PhotoScreen />
+                      <PhotoScreen image={this.state.imageInfo}/>
                   </Container>
               </Modal>
 

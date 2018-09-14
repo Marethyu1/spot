@@ -11,7 +11,8 @@ export default class PhotoScreen extends Component {
 
     onDogSubmit = () => {
         const options = {
-            image: this.props.navigation.state.params.image.base64,
+            // image: this.props.navigation.state.params.image.base64,
+            image: this.props.image.base64,
             caption: this.state.caption,
         }
         uploadDogPhoto(options)
@@ -27,7 +28,7 @@ export default class PhotoScreen extends Component {
                 <Content>
 
                     <Image
-                        source={{uri: this.props.navigation.state.params.image.uri}}
+                        source={{uri: this.props.image.uri}}
                         style={styles.image}
                     />
 
