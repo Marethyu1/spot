@@ -14,7 +14,7 @@ const dogs = (state=initialState, action) => {
         case ADD_SINGLE_DOG:
             return {
                 ...state,
-                dogs: [...state.dog, ...action.dog]
+                dogs: [...state.dogs, action.dog]
             }
         default:
             return state

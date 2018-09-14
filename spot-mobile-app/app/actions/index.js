@@ -34,15 +34,13 @@ export const findDogs = (userId="10210259641485879") => {
 }
 
 export const submitDog = (imageData) => {
-    debugger
     console.log(imageData)
     return async (dispatch) => {
-        const {dog} = await uploadDogPhoto(imageData)
+        const {dogs} = await uploadDogPhoto(imageData)
             .catch(err => {
-                debugger
+                console.log(err)
             })
-        debugger
-        const addSingleDogAction = addSingleDog(dog)
+        const addSingleDogAction = addSingleDog(dogs)
         dispatch(addSingleDogAction)
     }
 }

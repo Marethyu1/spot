@@ -24,9 +24,7 @@ class PhotoScreen extends Component {
             longitude: 172.582539,
         };
 
-        this.props.postDog(options)
-            .then((response) => {
-                console.log(response)
+        this.props.postDog(options).then(() => {
                 this.props.onUpload()
             })
     }

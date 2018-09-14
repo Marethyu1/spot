@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
 const Dog = (props) => {
-    const url = `http://10.196.78.25:3000/api/v1/users/10210259641485879/dogs/${props.id}/image/${props.image_id}`
+    const url = `http://192.168.0.118:3000/api/v1/users/10210259641485879/dogs/${props.id}/image/${props.image_id}`
     console.log(url)
     console.log("Props!!!!")
     console.log(props)
