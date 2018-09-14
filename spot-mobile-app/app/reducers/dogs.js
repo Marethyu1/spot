@@ -1,4 +1,4 @@
-import {ADD_DOGS} from "../consts/dogs";
+import {ADD_DOGS, ADD_SINGLE_DOG} from "../consts/dogs";
 
 export const initialState = {
     dogs: []
@@ -11,8 +11,14 @@ const dogs = (state=initialState, action) => {
                 ...state,
                 dogs: [...state.dogs, ...action.dogs]
             }
+        case ADD_SINGLE_DOG:
+            return {
+                ...state,
+                dogs: [...state.dog, ...action.dog]
+            }
         default:
             return state
+
     }
 }
 

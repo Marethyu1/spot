@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import {uploadDogPhoto} from "../api/routes"
 import { Container, Input, Content, Text, Button,  } from 'native-base';
-export default class PhotoScreen extends Component {
+import {connect} from "react-redux";
+import {submitDog} from "../actions";
+
+
+
+class PhotoScreen extends Component {
 
 
     state = {
@@ -11,13 +16,12 @@ export default class PhotoScreen extends Component {
 
     onDogSubmit = () => {
         const options = {
-            // image: this.props.navigation.state.params.image.base64,
             image: {
                 image: this.props.image.base64
             },
             caption: this.state.caption,
         }
-        uploadDogPhoto(options)
+        this.props.postDog(options)
             .then((response) => {
                 console.log(response)
             })
@@ -50,6 +54,19 @@ export default class PhotoScreen extends Component {
         );
     }
 }
+
+
+
+const mapDispatchToProps = dispatch => ({
+    postDog: (options) => dispatch(submitDog(options))
+})
+
+const mapStateToProps = (state, props) => ({
+    dogs: state.dogs.dogs
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhotoScreen)
 
 const styles = StyleSheet.create({
     image: {
