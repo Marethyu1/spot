@@ -9,26 +9,21 @@ import {
     Icon,
     Text
 } from 'native-base';
-import {Platform, StatusBar, StyleSheet} from "react-native";
 import {Location, MapView, Permissions} from 'expo';
-import {findDogsForUser} from "../api/routes"
-import DogPhoto from "../../assets/pin.png"
-
-const Marker = MapView.Marker
+import {connect} from "react-redux";
+import DogMarkers from "../components/mapComponents/DogMarkers";
 
 
-export default class MapTab extends Component {
+class MapTab extends Component {
 
     state = {
         regionSet: false,
         location: null,
         errorMessage: null,
-        markers: []
     }
 
     async componentDidMount() {
         await this._getLocationAsync();
-        console.log(this.props.screenProps.userInfo)
 
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords
@@ -39,18 +34,6 @@ export default class MapTab extends Component {
             }
             this.setState({ region, regionSet: true })
         })
-
-        const userId = this.props.screenProps.userInfo.id
-        if (!userId) throw new Error("Could not find users id")
-        else {
-            findDogsForUser(userId)
-                .then(({dogs}) => {
-                    this.setState({
-                        markers: dogs
-                    })
-                })
-
-        }
     }
 
     _getLocationAsync = async () => {
@@ -98,27 +81,7 @@ export default class MapTab extends Component {
                         region={this.props.region}
                         onRegionChangeComplete={region => this.onRegionChange(region)}
                     >
-                        {/*<MapView.Marker*/}
-                            {/*key={1}*/}
-                            {/*coordinate={{latitude: -43.517781, longitude: 172.576635}}*/}
-                            {/*title={"Some Title"}*/}
-                            {/*// description={"Hello world"}*/}
-                        {/*/>*/}
-                        {/*<MapView.Marker*/}
-                            {/*key={2}*/}
-                            {/*coordinate={{latitude: -43.517781, longitude: 172.57700}}*/}
-                            {/*title={"Some Title"}*/}
-                            {/*// description={"Hello world"}*/}
-                        {/*/>*/}
-
-                        {this.state.markers.map((marker, key) => (
-                            <MapView.Marker
-                                key={marker.id}
-                                coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                title={marker.title}
-                                image={DogPhoto}
-                            />
-                        ))}
+                        <DogMarkers markers={this.props.dogs}/>
                     </MapView>
 
             </Container>
@@ -127,4 +90,12 @@ export default class MapTab extends Component {
 }
 
 
+const mapDispatchToProps = dispatch => ({
+})
+
+const mapStateToProps = (state, props) => ({
+    dogs: state.dogs.dogs,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MapTab)
 

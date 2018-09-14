@@ -39,7 +39,6 @@ const Dogs = (props) => {
 
 class ListTab extends Component {
     render() {
-        debugger
         return (
             <Container>
                 <Header>
