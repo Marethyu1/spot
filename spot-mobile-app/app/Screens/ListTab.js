@@ -5,6 +5,8 @@ import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, But
 const Dog = (props) => {
     const url = `http://10.196.78.25:3000/api/v1/users/10210259641485879/dogs/${props.id}/image/${props.image_id}`
     console.log(url)
+    console.log("Props!!!!")
+    console.log(props)
 
     return (
         <Card key={props.id}>
@@ -12,13 +14,12 @@ const Dog = (props) => {
                 <Left>
                     <Thumbnail source={{uri: url}} />
                     <Body>
-                    <Text>{props.title}</Text>
-                    <Text note>wowza</Text>
+                    <Text>{props.caption}</Text>
+                    <Text note>{props.latitude}, {props.longitude}</Text>
                     </Body>
                 </Left>
             </CardItem>
             <CardItem cardBody>
-                {/*<Image source={{uri: 'https://cdn.images.express.co.uk/img/dynamic/128/590x/secondary/Cute-puppy-pictures-science-why-adorable-puppies-1355347.jpg'}} style={{height: 200, width: null, flex: 1}}/>*/}
                 <Image source={{uri: url}} style={{height: 200, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
