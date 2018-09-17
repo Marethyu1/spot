@@ -7,8 +7,6 @@ const BASE_URL = config.baseUrl
 
 const Dog = (props) => {
     const url = `${BASE_URL}/users/${props.userId}/dogs/${props.dog.id}/image/${props.dog.image_id}`
-    debugger
-    console.log(props)
     return (
         <Card key={props.dog.id}>
             <CardItem>
@@ -33,8 +31,6 @@ const Dog = (props) => {
 }
 
 const Dogs = (props) => {
-    console.log(props)
-    debugger
     return props.dogs.map((dog) => {
         return <Dog dog={dog} userId={props.userId}/>
     })
