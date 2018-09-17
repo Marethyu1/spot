@@ -4,7 +4,8 @@
 import {
     addDogs,
     findDogs,
-    submitDog
+    submitDog,
+    addSingleDog,
 } from "./dogsActions";
 
 import {
@@ -18,6 +19,7 @@ import {
 
 export {
     addDogs,
+    addSingleDog,
     findDogs,
     submitDog,
     tryLogin,
