@@ -5,17 +5,7 @@ import Row from "react-native-easy-grid/Components/Row";
 import config from "../config/config"
 import {login} from "../api/routes"
 
-const DefaultHeader = () => {
-    return (
-        <Header>
-            <Left/>
-            <Body>
-            <Title>Spot</Title>
-            </Body>
-            <Right />
-        </Header>
-    )
-}
+import DefaultHeader from "../components/layoutComponents/DefaultHeader"
 
 export default class Login extends Component {
 

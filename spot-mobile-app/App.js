@@ -1,11 +1,12 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View, Text } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 
 import store from './app/store'
 import {Provider, connect} from "react-redux";
 import {findDogs, tryLogin} from "./app/actions"
+import PermissionsScreen from "./app/Screens/Permissions";
 
 console.disableYellowBox = true;
 
@@ -17,7 +18,8 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state, props) => ({
     dogs: state.dogs.dogs,
-    user: state.user
+    user: state.user,
+    permissions: state.permissions
 })
 
 
@@ -69,24 +71,37 @@ class MainScreen extends React.Component {
     }
 
     render() {
-        if (!this.state.isReady) {
+        const {isReady} = this.state
+        const {user, permissions} = this.props
+        const {isLoggedIn} = user
+        const {hasCameraPermission, hasLocationPermission} = permissions
+
+        if (!isReady) {
             return (
                 <View style={styles.activityIndicatorContainer}>
                     <ActivityIndicator animating={true}/>
                 </View>
             )
         } else {
-            if (!this.props.user.isLoggedIn) {
+            if (!isLoggedIn) {
                 return (
                     <Login
                         setLoggedIn={this.setLoggedIn}
                     />
                 )
-
+            } else if (!hasCameraPermission || !hasLocationPermission){
+                return (
+                    <PermissionsScreen permissions={permissions}/>
+                )
             }
-            return (
-                <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs}/>
-            );
+
+
+            else {
+                return (
+                    <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs}/>
+                );
+            }
+
         }
     }
 }
