@@ -145,3 +145,9 @@ export default class App extends React.Component {
         )
     }
 }
+
+
+///For austen
+// What do we actually need to deploy...
+    //Server // apps/ specific builds
+// Eg allowing it on the store with the manifest file etc etc
