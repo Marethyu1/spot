@@ -20,7 +20,7 @@ export const addSingleDog = dog => {
 }
 
 //TODO remove default user id
-export const findDogs = (userId="10210259641485879") => {
+export const findDogs = (userId) => {
     return async (dispatch) => {
         const {dogs} = await findDogsForUser(userId)
             .catch(err => {
@@ -31,10 +31,10 @@ export const findDogs = (userId="10210259641485879") => {
     }
 }
 
-export const submitDog = (imageData) => {
+export const submitDog = (imageData, id) => {
     console.log(imageData)
     return async (dispatch) => {
-        const {dogs} = await uploadDogPhoto(imageData)
+        const {dogs} = await uploadDogPhoto(imageData, id)
             .catch(err => {
                 console.log(err)
             })

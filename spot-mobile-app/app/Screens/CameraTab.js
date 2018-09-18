@@ -57,10 +57,10 @@ export default class CameraTab extends Component {
       return (
           <View style={{ flex: 1 }}>
               <Modal
-                  animationType="slider"
+                  animationType="slide"
                   transparent={false}
                   visible={this.state.modalVisible}
-                  presentationStyle={"currentContext"}>
+                  >
                   <Container>
                       <Header>
                           <Right>

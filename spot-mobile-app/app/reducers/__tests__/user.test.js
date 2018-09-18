@@ -1,5 +1,5 @@
 import userReducer, {initialState} from "../user"
-import {_setUserAsLoggedIn, _setUserDetails, _loginUser} from "../../actions/userActions";
+import {loginUser} from "../../actions/userActions";
 
 const reduceFromInitialState = (action) => userReducer(undefined, action)
 
@@ -13,14 +13,8 @@ describe("The user reducer", () => {
         expect(reduceFromInitialState({})).toEqual(initialState)
     })
 
-    it("Should be able set a user as logged in", () => {
-        const action = _setUserAsLoggedIn()
-        const {isLoggedIn} = reduceFromInitialState(action)
-        expect(isLoggedIn).toEqual(true)
-    })
-
     it("Should be able to set user details", () => {
-        const action = _setUserDetails(EXAMPLE_USER)
+        const action = loginUser(EXAMPLE_USER)
         const {userInfo} = reduceFromInitialState(action)
         expect(userInfo).toBe(EXAMPLE_USER)
     })
@@ -29,7 +23,7 @@ describe("The user reducer", () => {
     describe.skip("When logging in", () => {
         let state
         beforeAll(async () => {
-            const action = _loginUser(EXAMPLE_USER)
+            const action = loginUser(EXAMPLE_USER)
             state = reduceFromInitialState(action)
         })
 

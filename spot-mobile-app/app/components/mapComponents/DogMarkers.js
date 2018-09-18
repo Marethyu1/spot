@@ -14,10 +14,10 @@ const DogMarker = ({marker}) => {
 }
 
 const DogMarkers = (props) => {
-    return props.markers.map((marker) => {
+    return props.markers.map((marker, key) => {
         return (
             <DogMarker
-                marker={marker}
+                marker={marker} key={key}
             />
         )
     })

@@ -9,7 +9,7 @@ import {
 } from "./dogsActions";
 
 import {
-    tryLogin
+    loginUser,
 } from "./userActions"
 
 import {
@@ -22,7 +22,7 @@ export {
     addSingleDog,
     findDogs,
     submitDog,
-    tryLogin,
+    loginUser,
 
     hasCameraPermission,
     hasLocationPermission,
