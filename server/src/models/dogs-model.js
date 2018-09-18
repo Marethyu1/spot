@@ -19,13 +19,17 @@ class DogsModel extends AbstractModel {
     }
 
     async create(values){
-        const originalImage = values.image.image
-        const {thumbnail, pin} = await preProcessImage(originalImage)
-        const imageValues = {
-            image: originalImage,
-            thumbnail,
-            pin,
+        let imageValues = {}
+        if (values.image){
+            const originalImage = values.image.image
+            const {thumbnail, pin} = await preProcessImage(originalImage)
+            imageValues = {
+                image: originalImage,
+                thumbnail,
+                pin,
+            }
         }
+
         const allValues = {
             ...values,
             image: {

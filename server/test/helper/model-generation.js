@@ -17,7 +17,7 @@ const createDogWithImage = async (user_id) =>{
         const user = await createUser()
         user_id = user.id
     }
-    const props = generateDogPropsWithImage(user_id)
+    const props = generateDogPropsWithImage(user_id, false)
     return dogsModel.create(props)
 
 }

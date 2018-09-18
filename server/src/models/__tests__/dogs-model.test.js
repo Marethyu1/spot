@@ -40,7 +40,7 @@ describe("The dogs model", () => {
 
     it("I can create a dog and save an image", async () => {
         const user = await createUser()
-        const dogsProps = generateDogPropsWithImage(user.id)
+        const dogsProps = generateDogPropsWithImage(user.id, false)
         const dog = await dogsModel.create(dogsProps)
 
         expect(dog).toBeTruthy()

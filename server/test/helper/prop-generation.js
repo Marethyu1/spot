@@ -1,6 +1,7 @@
 const faker = require("faker")
 
-const image = require("../../test/helper/load-base64-image")
+const image = require("../../test/helper/load-image")
+const base64Image = require("../../test/helper/load-base64-image")
 
 const generateUserProps = () => {
     return {
@@ -19,12 +20,12 @@ const generateDogProps = (user_id) => {
         latitude: faker.address.latitude(),
         longitude: faker.address.longitude(),
         caption: faker.lorem.sentences(),
-        //image: fs.readFileSync(fileLocation)
     }
 }
 
-const generateDogPropsWithImage = (user_id) => {
+const generateDogPropsWithImage = (user_id, base64=true) => {
     if (!user_id) throw new Error("Need user id to generate a dog")
+    let imageToSave = base64 ? base64Image : image
     return {
         user_id: user_id,
         title: faker.commerce.productName(),
@@ -32,9 +33,9 @@ const generateDogPropsWithImage = (user_id) => {
         longitude: faker.address.longitude(),
         caption: faker.lorem.sentences(),
         image: {
-            image: image,
-            thumbnail: image,
-            pin: image
+            image: imageToSave,
+            thumbnail: imageToSave,
+            pin: imageToSave
         }
 
     }
