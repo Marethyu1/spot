@@ -12,7 +12,6 @@ class PhotoScreen extends Component {
 
     state = {
         caption: "",
-        user: {},
     }
 
     onDogSubmit = () => {
@@ -25,7 +24,8 @@ class PhotoScreen extends Component {
             longitude: this.props.location.coords.longitude,
         };
 
-        this.props.postDog(options, this.props.user).then(() => {
+
+        this.props.postDog(options, this.props.user.id).then(() => {
                 this.props.onUpload()
             })
     }

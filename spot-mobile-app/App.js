@@ -22,26 +22,27 @@ class MainScreen extends React.Component {
     }
 
     componentDidMount() {
-        //this.logout()
         this.loadFonts()
         this._retrieveData()
-        // await this.tryLoginFlow()
     }
 
     _retrieveData = async () => {
 
         try {
             console.log("getting id from async storage")
-            const value = await AsyncStorage.getItem("id")
-            console.log("wow",JSON.parse(value))
-            let parsed = JSON.parse(value)
-            if (parsed !== null) {
+            const json = await AsyncStorage.getItem("id")
+            console.log("wow",JSON.parse(json))
+            let userId = JSON.parse(json)
+            if (userId !== null) {
+                const userInfo = {
+                    id: userId
+                }
                 // an Id is stored so they don't need to login
                 // get all the data using the id
                 //call action to save data to the store
                 this.setState({isLoggedIn: true})
-                this.props.storeUserRedux(parsed)
-                this.props.fetchDogs(parsed)
+                this.props.storeUserRedux(userInfo)
+                this.props.fetchDogs(userId)
                 //this.getJobsData()
             } else {
                 // we don't have their data so they need to login...
