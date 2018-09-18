@@ -11,7 +11,8 @@ class PhotoScreen extends Component {
 
 
     state = {
-        caption: ""
+        caption: "",
+        user: {},
     }
 
     onDogSubmit = () => {
@@ -24,7 +25,7 @@ class PhotoScreen extends Component {
             longitude: this.props.location.coords.longitude,
         };
 
-        this.props.postDog(options).then(() => {
+        this.props.postDog(options, this.props.user).then(() => {
                 this.props.onUpload()
             })
     }
@@ -60,11 +61,12 @@ class PhotoScreen extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    postDog: (options) => dispatch(submitDog(options))
+    postDog: (options, id) => dispatch(submitDog(options, id))
 })
 
 const mapStateToProps = (state, props) => ({
-    dogs: state.dogs.dogs
+    dogs: state.dogs.dogs,
+    user: state.user.userInfo,
 })
 
 

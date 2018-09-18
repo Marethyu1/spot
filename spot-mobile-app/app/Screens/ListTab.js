@@ -29,8 +29,8 @@ const Dog = ({dog}) => {
 }
 
 const Dogs = (props) => {
-    return props.dogs.map((dog) => {
-        return <Dog dog={dog} userId={props.userId}/>
+    return props.dogs.map((dog, key) => {
+        return <Dog dog={dog} key={key} userId={props.userId}/>
     })
 }
 

@@ -9,7 +9,7 @@ const dogs = (state=initialState, action) => {
         case ADD_DOGS:
             return {
                 ...state,
-                dogs: [...state.dogs, ...action.dogs]
+                dogs: [...action.dogs]
             }
         case ADD_SINGLE_DOG:
             return {

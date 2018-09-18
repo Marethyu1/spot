@@ -24,6 +24,15 @@ describe("The dogs reducer", () => {
         expect(dogs).toEqual(dogsToUpdate)
     })
 
+    it("Should replace existing dogs when adding", () => {
+        const dogsToUpdate = [{id: 1}, {id: 2}, {id:3}]
+
+        const action = addDogs(dogsToUpdate)
+        const {dogs} = reduceFromExistingState(action)
+
+        expect(dogs).toEqual(dogsToUpdate)
+    })
+
     it("Should be able to add a single dog", () => {
         const dog = {
             id: 1,

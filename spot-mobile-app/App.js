@@ -1,63 +1,85 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, View, Text } from 'react-native';
+import { ActivityIndicator, StyleSheet, View, AsyncStorage } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 
 import store from './app/store'
 import {Provider, connect} from "react-redux";
-import {findDogs, tryLogin} from "./app/actions"
+import {findDogs, tryLogin, loginUser} from "./app/actions"
 import PermissionsScreen from "./app/Screens/Permissions";
 
 console.disableYellowBox = true;
-
-
-const mapDispatchToProps = dispatch => ({
-    fetchDogs: () => dispatch(findDogs()),
-    tryLogin: () => dispatch(tryLogin())
-})
-
-const mapStateToProps = (state, props) => ({
-    dogs: state.dogs.dogs,
-    user: state.user,
-    permissions: state.permissions
-})
 
 
 class MainScreen extends React.Component {
     state = {
         isLoggedIn: false,
         userInfo: {
-            id: "10210259641485879"
+            id: ""
         },
         dogs: [],
         isReady: false,
-
     }
 
-    tryLoginFlow(){
-        if (!this.props.user.isLoggedIn){
-            this.props.tryLogin()
+    componentDidMount() {
+        //this.logout()
+        this.loadFonts()
+        this._retrieveData()
+        // await this.tryLoginFlow()
+    }
+
+    _retrieveData = async () => {
+
+        try {
+            console.log("getting id from async storage")
+            const value = await AsyncStorage.getItem("id")
+            console.log("wow",JSON.parse(value))
+            let parsed = JSON.parse(value)
+            if (parsed !== null) {
+                // an Id is stored so they don't need to login
+                // get all the data using the id
+                //call action to save data to the store
+                this.setState({isLoggedIn: true})
+                this.props.storeUserRedux(parsed)
+                this.props.fetchDogs(parsed)
+                //this.getJobsData()
+            } else {
+                // we don't have their data so they need to login...
+                console.log("not logged in")
+            }
+        } catch (error) {
+            // Error retrieving data
         }
-        if (process && process.env.NODE_ENV === "development") {
-            //Load dogs on start up
-            this.props.fetchDogs()
-        }
     }
 
-    async componentDidMount() {
-        await this.loadFonts()
+    afterLogin = async (loginData) => {
 
-        this.tryLoginFlow()
-    }
-
-    setLoggedIn = async (userInfo) => {
-        await this.setState({
-            isLoggedIn: true,
-            userInfo: userInfo
+        console.log("after login!")
+        this.setState({isLoggedIn: true,
+            userData: {id: loginData.id}
         })
+
+        await this.props.storeUserRedux(loginData)
+        this.props.fetchDogs()
+        this._storeAsyncStorageData()
     }
 
+    _storeAsyncStorageData = async () => {
+        console.log("storing login data to async storage")
+        try {
+            await AsyncStorage.setItem("id", JSON.stringify(this.props.user.userInfo.id))
+        } catch (error) {
+            console.log("Error saving data: " + error)
+        }
+    }
 
+    logout = async () => {
+        console.log("logging out")
+        await AsyncStorage.removeItem("id")
+        //call logout function
+       // this.props.logoutDevanner()
+        this.setState({isLoggedIn: false})
+    }
 
 
     async loadFonts() {
@@ -71,9 +93,8 @@ class MainScreen extends React.Component {
     }
 
     render() {
-        const {isReady} = this.state
+        const {isReady, isLoggedIn} = this.state
         const {user, permissions} = this.props
-        const {isLoggedIn} = user
         const {hasCameraPermission, hasLocationPermission} = permissions
 
         if (!isReady) {
@@ -87,23 +108,36 @@ class MainScreen extends React.Component {
                 return (
                     <PermissionsScreen permissions={permissions}/>
                 )
-            }
-            else if (!isLoggedIn) {
+            } else if (!isLoggedIn) {
                 return (
                     <Login
-                        setLoggedIn={this.setLoggedIn}
+                        tryLogin={this.props.tryLogin} afterLogin={this.afterLogin}
                     />
                 )
             }
             else {
                 return (
-                    <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs}/>
+                    <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs} onLogout={this.logout}/>
                 );
             }
+
 
         }
     }
 }
+
+const mapDispatchToProps = dispatch => ({
+    fetchDogs: (userId) => dispatch(findDogs(userId)),
+    storeUserRedux: (userInfo) => dispatch(loginUser(userInfo)),
+})
+
+const mapStateToProps = (state, props) => ({
+    dogs: state.dogs.dogs,
+    user: state.user,
+    permissions: state.permissions
+})
+
+
 
 const Main = connect(mapStateToProps, mapDispatchToProps)(MainScreen)
 

@@ -11,7 +11,7 @@ export default class Login extends Component {
 
     login = async () => {
         const userInfo = await login()
-        this.props.setLoggedIn(userInfo)
+        this.props.afterLogin(userInfo)
     }
 
     render() {

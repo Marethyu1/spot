@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {TouchableOpacity} from 'react-native'
 import {
     Container,
     Header,
@@ -64,12 +65,16 @@ class MapTab extends Component {
             <Container>
                 <Header>
                     <Left>
-                        <Icon name="md-paw" style={{color: 'white'}}/>
+                        <Icon name="md-paw"/>
                     </Left>
                     <Body>
                     <Title>Map</Title>
                     </Body>
-                    <Right/>
+                    <Right>
+                        <TouchableOpacity onPress={this.props.screenProps.onLogout}>
+                            <Text>Logout</Text>
+                        </TouchableOpacity>
+                    </Right>
                 </Header>
 
                     <MapView

@@ -16,7 +16,7 @@ export default class WrappedTabNavigator extends Component {
 
     render() {
         return (
-            <Navigator/>
+            <Navigator screenProps={{onLogout: this.props.onLogout}}/>
         )
     }
 }
