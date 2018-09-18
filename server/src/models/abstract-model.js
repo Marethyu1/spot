@@ -29,8 +29,8 @@ class AbstractModel {
         })
     }
 
-    get(id){
-        return this.model.findById(id)
+    get(id, options={}){
+        return this.model.findById(id, options)
     }
 
     list(where){

@@ -32,7 +32,9 @@ const generateDogPropsWithImage = (user_id) => {
         longitude: faker.address.longitude(),
         caption: faker.lorem.sentences(),
         image: {
-            image: image
+            image: image,
+            thumbnail: image,
+            pin: image
         }
 
     }

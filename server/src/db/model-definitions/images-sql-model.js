@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize")
 const SqlAbstractModel = require("../sql-abstract-model")
-const {IMAGES_MODEL, DOGS_MODEL} = require("../../consts/model-names")
+const {IMAGES_MODEL} = require("../../consts/model-names")
 
 class ImagesSqlModel extends SqlAbstractModel {
 
@@ -8,6 +8,12 @@ class ImagesSqlModel extends SqlAbstractModel {
         return {
             image: {
                 type: Sequelize.BLOB('long')
+            },
+            thumbnail: {
+                type: Sequelize.BLOB('long')
+            },
+            pin: {
+                type: Sequelize.BLOB('pin')
             }
         }
     }

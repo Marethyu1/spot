@@ -34,12 +34,11 @@ const createDog = async (req, res) => {
     const {user_id} = req.params
     const options = {
         user_id,
-        ...req.body
+        ...req.body,
     }
 
-    // console.time('Now')
     const image = new Buffer(options.image.image.toString(), "base64")
-    // console.timeEnd("later")
+
     options.image.image = image
     const dogs = await dogsModel.create(options)
     const body = {
@@ -50,11 +49,22 @@ const createDog = async (req, res) => {
 
 const findImage = async (req, res, next) => {
     const {image_id} = req.params
-    const image = await imagesModel.get(image_id)
+    const imageType = req.params[0] //The regex indexed by 0
 
-    let binary = image.image
+    const DEFAULT_IMAGE_TYPE = "image"
+    const expectedImageTypes = {
+        "image": "image",
+        "pin": "pin",
+        "thumbnail": "thumbnail"
+    }
+    //Check if the route matches a potential image type
+    const imageTypeToSearch = expectedImageTypes[imageType] ? imageType : DEFAULT_IMAGE_TYPE
 
-    res.send(image.toJSON().image)
+    const image = await imagesModel.get(image_id, imageTypeToSearch)
+
+    let binary = image[imageTypeToSearch]
+
+    res.send(binary)
 }
 
 

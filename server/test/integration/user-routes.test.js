@@ -62,15 +62,36 @@ describe("the user routes", () => {
     })
 
     describe("when getting an image", () => {
-        it("Should be able to get an image", async () => {
-            const dog = await createDogWithImage()
-            const url = `${BASE_URL}/${dog.user_id}/dogs/${dog.id}/image/${dog.image.id}`
+        let createdDog
+        beforeAll(async() => {
+            createdDog = await createDogWithImage()
+        })
 
+        const compareImageToResponse = async (url, image) => {
             const {status, body} = await request(server)
                 .get(url)
 
             expect(status).toBe(200)
-            expect(body.toString()).toBe(dog.image.image.toString())
+            expect(body.toString()).toBe(image)
+        }
+
+        const createUrl = (route, dog=createdDog) => {
+            return `${BASE_URL}/${dog.user_id}/dogs/${dog.id}/${route}/${dog.image.id}`
+        }
+
+        it("Should be able to get an image", async () => {
+            const url = createUrl("image")
+            await compareImageToResponse(url, createdDog.image.image.toString())
+        })
+
+        it("Should be able to get a pin", async () => {
+            const url = createUrl("pin")
+            await compareImageToResponse(url, createdDog.image.pin.toString())
+        })
+
+        it("Should be able to get a thumbnail", async () => {
+            const url = createUrl("thumbnail")
+            await compareImageToResponse(url, createdDog.image.thumbnail.toString())
         })
     })
 

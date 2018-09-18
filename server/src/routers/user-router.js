@@ -25,7 +25,7 @@ router.route("/:user_id/dogs")
     .get(wrap(userController.findDogs))
     .post(rawParser, wrap(userController.createDog))
 
-router.route("/:user_id/dogs/:dog_id/image/:image_id")
+router.route("/:user_id/dogs/:dog_id/*/:image_id")
     .get(wrap(userController.findImage))
 
 

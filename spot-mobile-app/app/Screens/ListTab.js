@@ -2,24 +2,22 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 import {connect} from "react-redux";
-import config from "../config/config"
-const BASE_URL = config.baseUrl
+import {createImageUrl, createThumbnailUrl} from "../utils";
 
-const Dog = (props) => {
-    const url = `${BASE_URL}/users/${props.userId}/dogs/${props.dog.id}/image/${props.dog.image_id}`
+const Dog = ({dog}) => {
     return (
-        <Card key={props.dog.id}>
+        <Card key={dog.id}>
             <CardItem>
                 <Left>
-                    <Thumbnail source={{uri: url}} />
+                    <Thumbnail source={{uri: createThumbnailUrl(dog)}} />
                     <Body>
-                    <Text>{props.dog.caption}</Text>
-                    <Text note>{props.dog.latitude}, {props.dog.longitude}</Text>
+                    <Text>{dog.caption}</Text>
+                    <Text note>{dog.latitude}, {dog.longitude}</Text>
                     </Body>
                 </Left>
             </CardItem>
             <CardItem cardBody>
-                <Image source={{uri: url}} style={{height: 200, width: null, flex: 1}}/>
+                <Image source={{uri: createImageUrl(dog)}} style={{height: 200, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
                 <Left>
@@ -62,7 +60,6 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state, props) => ({
     dogs: state.dogs.dogs,
-    userId: state.user.userInfo.id
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListTab)

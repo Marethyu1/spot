@@ -1,5 +1,6 @@
 const {DOGS_MODEL, IMAGES_MODEL} = require("../consts/model-names")
 const AbstractModel = require("./abstract-model")
+const {preProcessImage} = require("../images")
 
 class DogsModel extends AbstractModel {
 
@@ -18,10 +19,24 @@ class DogsModel extends AbstractModel {
     }
 
     async create(values){
+        const originalImage = values.image.image
+        const {thumbnail, pin} = await preProcessImage(originalImage)
+        const imageValues = {
+            image: originalImage,
+            thumbnail,
+            pin,
+        }
+        const allValues = {
+            ...values,
+            image: {
+                ...imageValues
+            }
+
+        }
         const allOptions = {
             include: this.include
         }
-        return super.create(values, allOptions)
+        return super.create(allValues, allOptions)
     }
 }
 
