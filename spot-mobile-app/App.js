@@ -83,19 +83,18 @@ class MainScreen extends React.Component {
                 </View>
             )
         } else {
-            if (!isLoggedIn) {
+            if (!hasCameraPermission || !hasLocationPermission) {
+                return (
+                    <PermissionsScreen permissions={permissions}/>
+                )
+            }
+            else if (!isLoggedIn) {
                 return (
                     <Login
                         setLoggedIn={this.setLoggedIn}
                     />
                 )
-            } else if (!hasCameraPermission || !hasLocationPermission){
-                return (
-                    <PermissionsScreen permissions={permissions}/>
-                )
             }
-
-
             else {
                 return (
                     <TabNavigator userInfo={this.props.userInfo} dogs={this.props.dogs}/>
@@ -145,9 +144,3 @@ export default class App extends React.Component {
         )
     }
 }
-
-
-///For austen
-// What do we actually need to deploy...
-    //Server // apps/ specific builds
-// Eg allowing it on the store with the manifest file etc etc
