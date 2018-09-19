@@ -3,7 +3,7 @@ import { Image, StyleSheet } from 'react-native';
 import {uploadDogPhoto} from "../api/routes"
 import { Container, Input, Content, Text, Button,  } from 'native-base';
 import {connect} from "react-redux";
-import {submitDog} from "../actions";
+import {submitDog} from "../actions/index";
 
 
 

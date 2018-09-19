@@ -7,6 +7,7 @@ import store from './app/store'
 import {Provider, connect} from "react-redux";
 import {findDogs, tryLogin, loginUser} from "./app/actions"
 import PermissionsScreen from "./app/Screens/Permissions";
+import {login} from "./app/api/routes";
 
 console.disableYellowBox = true;
 
@@ -61,14 +62,14 @@ class MainScreen extends React.Component {
         })
 
         await this.props.storeUserRedux(loginData)
-        this.props.fetchDogs()
+        this.props.fetchDogs(loginData.id)
         this._storeAsyncStorageData()
     }
 
     _storeAsyncStorageData = async () => {
         console.log("storing login data to async storage")
         try {
-            await AsyncStorage.setItem("id", JSON.stringify(this.props.user.userInfo.id))
+            await AsyncStorage.setItem("spot_user_id", JSON.stringify(this.props.user.userInfo.id))
         } catch (error) {
             console.log("Error saving data: " + error)
         }

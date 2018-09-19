@@ -7,7 +7,7 @@ import ReactNavigation, {
 import MapTab from "./Screens/MapTab"
 import ListTab from "./Screens/ListTab"
 import CameraTab from "./Screens/CameraTab"
-import PhotoScreen from "./Screens/PhotoScreen"
+import PhotoScreen from "./Modals/PhotoScreen"
 
 //to remove funny header thing..need to look into whether this impacts IOS
 ReactNavigation.SafeAreaView.setStatusBarHeight(0);
