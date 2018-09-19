@@ -21,7 +21,7 @@ const Dog = ({dog}) => {
             </CardItem>
             <CardItem>
                 <Left>
-                    <Text>11h ago</Text>
+                    <Text>{new Date(dog.updated_at).toLocaleString()}</Text>
                 </Left>
             </CardItem>
         </Card>
