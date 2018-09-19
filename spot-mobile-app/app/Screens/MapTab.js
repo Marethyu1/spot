@@ -10,13 +10,10 @@ import {
     Icon,
     Text
 } from 'native-base';
-import {Location, MapView, Permissions} from 'expo';
+import {MapView, Permissions} from 'expo';
 import {connect} from "react-redux";
 import DogMarkers from "../components/mapComponents/DogMarkers";
-
-export const getLocation = () => {
-    return Location.getCurrentPositionAsync({});
-}
+import {getLocation} from "../utils/locationUtils";
 
 class MapTab extends Component {
 
@@ -50,7 +47,6 @@ class MapTab extends Component {
 
         let location = await getLocation()
         this.setState({ location });
-        console.log(location)
     };
 
     onRegionChange = (region) => {
