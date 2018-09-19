@@ -1,5 +1,5 @@
 import permissionsReducer, {initialState} from "../permissions"
-import {hasCameraPermission, hasLocationPermission} from "../../actions"
+import {setCameraPermission, setLocationPermission} from "../../actions"
 
 const reduceFromInitialState = (action) => permissionsReducer(undefined, action)
 
@@ -10,13 +10,13 @@ describe("The permissions reducer", () => {
     })
 
     it("Should be able to enable camera permissions", () => {
-        const action = hasCameraPermission()
+        const action = setCameraPermission()
         const state = reduceFromInitialState(action)
         expect(state.hasCameraPermission).toBe(true)
     })
 
     it("Should be able to enable the location permissions", () => {
-        const action = hasLocationPermission()
+        const action = setLocationPermission()
         const state = reduceFromInitialState(action)
         expect(state.hasLocationPermission).toBe(true)
     })

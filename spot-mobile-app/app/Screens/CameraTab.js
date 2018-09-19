@@ -4,7 +4,6 @@ import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import { Camera, Permissions } from 'expo';
 import PhotoScreen from "./PhotoScreen";
 import {getLocation} from "./MapTab";
-
 export default class CameraTab extends Component {
     state = {
         hasCameraPermission: null,
@@ -13,7 +12,6 @@ export default class CameraTab extends Component {
         imageInfo: {},
         location: {}
     };
-
     async componentWillMount() {
       const { status } = await Permissions.askAsync(Permissions.CAMERA);
       this.setState({ hasCameraPermission: status === 'granted' });
