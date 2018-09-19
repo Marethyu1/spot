@@ -50,7 +50,7 @@ class CameraTab extends Component {
 
     render() {
       const { hasCameraPermission } = this.props;
-      if (!hasCameraPermission === null) {
+      if (!hasCameraPermission) {
           return (
               <Text>
                   No access to camera
