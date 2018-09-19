@@ -30,7 +30,7 @@ class MainScreen extends React.Component {
 
         try {
             console.log("getting id from async storage")
-            const json = await AsyncStorage.getItem("id")
+            const json = await AsyncStorage.getItem("spot_user_id")
             console.log("wow",JSON.parse(json))
             let userId = JSON.parse(json)
             if (userId !== null) {
@@ -76,7 +76,7 @@ class MainScreen extends React.Component {
 
     logout = async () => {
         console.log("logging out")
-        await AsyncStorage.removeItem("id")
+        await AsyncStorage.removeItem("spot_user_id")
         //call logout function
        // this.props.logoutDevanner()
         this.setState({isLoggedIn: false})
