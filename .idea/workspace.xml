@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added image processing for image creation&#10;Images can now be fetched as the original, a thumbnail, or a pin">
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/utils/permissionsUtils.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Updated camera permissions check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Permissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Permissions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/consts/permissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/consts/permissions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,19 +27,19 @@
         <counts>
           <entry key="dummy" value="41" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="40853" />
+          <entry key="js" value="41427" />
           <entry key="json" value="463" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="3368" />
+          <entry key="txt" value="3684" />
           <entry key="yml" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="463" />
-          <entry key="JavaScript" value="40968" />
-          <entry key="PLAIN_TEXT" value="3462" />
+          <entry key="JavaScript" value="41542" />
+          <entry key="PLAIN_TEXT" value="3778" />
           <entry key="YAML" value="92" />
         </counts>
       </usages-collector>
@@ -54,7 +47,7 @@
         <counts>
           <entry key="__tests__test" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="430" />
+          <entry key="js" value="433" />
           <entry key="json" value="33" />
           <entry key="md" value="2" />
           <entry key="png" value="12" />
@@ -70,7 +63,7 @@
         <counts>
           <entry key="Image" value="12" />
           <entry key="JSON" value="33" />
-          <entry key="JavaScript" value="430" />
+          <entry key="JavaScript" value="433" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="TypeScript" value="3" />
           <entry key="UML" value="1" />
@@ -130,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+            <state relative-caret-position="23">
+              <caret line="133" selection-start-line="133" selection-end-line="134" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -142,11 +135,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="117">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/utils/locationUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -162,10 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config&quot;</find>
-      <find>super</find>
-      <find>x.json</find>
-      <find>here!</find>
       <find>wrap</find>
       <find>doggo</find>
       <find>createStore</find>
@@ -192,6 +190,10 @@
       <find>container</find>
       <find>image</find>
       <find>borderRad</find>
+      <find>componentWillM</find>
+      <find>mapDispat</find>
+      <find>connectMap</find>
+      <find>connect(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/config/getIP.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.json" />
         <option value="$PROJECT_DIR$/spot-mobile-app/scripts/updateIPAddress.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/config/config.js" />
@@ -218,7 +219,6 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/actions/userActions.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/dogs.test.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/user.test.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/PhotoScreen.js" />
         <option value="$PROJECT_DIR$/server/test/helper/load-image.js" />
         <option value="$PROJECT_DIR$/server/test/helper/load-base64-image.js" />
@@ -251,12 +251,14 @@
         <option value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
         <option value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
         <option value="$PROJECT_DIR$/server/test/helper/model-generation.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/reducers/permissions.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/actions/permissionsActions.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/utils/index.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/utils/permissionsUtils.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Permissions.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/utils/locationUtils.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
       </list>
     </option>
   </component>
@@ -338,6 +340,13 @@
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -556,7 +565,7 @@
       <workItem from="1537218810692" duration="2217000" />
       <workItem from="1537228155375" duration="19635000" />
       <workItem from="1537327410020" duration="447000" />
-      <workItem from="1537327870906" duration="766000" />
+      <workItem from="1537327870906" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -880,7 +889,28 @@
       <option name="project" value="LOCAL" />
       <updated>1537309304295</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Refactored permissions into a utility file">
+      <created>1537328674072</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1537328674072</updated>
+    </task>
+    <task id="LOCAL-00048" summary="- Added a check for camera permissions when mounting Camera tab&#10;- Extracted current location request into utils">
+      <created>1537330776810</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1537330776810</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Updated camera permissions check">
+      <created>1537330820496</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1537330820496</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -916,7 +946,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135460000" />
+    <option name="totallyTimeSpent" value="137478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,7 +961,7 @@
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.18534179" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.18534179" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -942,7 +972,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.60535586" weight="0.32951653" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" weight="0.23536895" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" visible="true" weight="0.4605598" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39420485" side_tool="true" weight="0.37163562" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.43002546" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
@@ -1004,9 +1034,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added images sql model&#10;linked images to dogs model&#10;refactored Abstract model to load in associations if present" />
-    <MESSAGE value="Added test for images model" />
-    <MESSAGE value="Added insert image method to dogs model #pair[sha162, emr65]" />
     <MESSAGE value="Added post /users/id/dogs" />
     <MESSAGE value="Added body parser to routes" />
     <MESSAGE value="Added raw parser to dog creation" />
@@ -1029,7 +1056,10 @@
     <MESSAGE value="Added redux dev tool as a dependency&#10;Composed permissions with redux" />
     <MESSAGE value="App displays permissions before login screen" />
     <MESSAGE value="Added image processing for image creation&#10;Images can now be fetched as the original, a thumbnail, or a pin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added image processing for image creation&#10;Images can now be fetched as the original, a thumbnail, or a pin" />
+    <MESSAGE value="Refactored permissions into a utility file" />
+    <MESSAGE value="- Added a check for camera permissions when mounting Camera tab&#10;- Extracted current location request into utils" />
+    <MESSAGE value="Updated camera permissions check" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated camera permissions check" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1041,13 +1071,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__/permissions.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1058,16 +1081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,13 +1382,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/utils/locationUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+        <state relative-caret-position="23">
+          <caret line="133" selection-start-line="133" selection-end-line="134" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
         </state>
       </provider>
     </entry>

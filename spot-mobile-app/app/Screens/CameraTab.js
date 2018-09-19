@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Icon, Container, Header, Right } from 'native-base';
-import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Modal } from 'react-native';
 import { Camera } from 'expo';
 import PhotoScreen from "./PhotoScreen";
 import {getLocation} from "../utils/locationUtils";

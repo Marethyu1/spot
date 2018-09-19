@@ -10,10 +10,14 @@ import {
     Icon,
     Text
 } from 'native-base';
-import {MapView, Permissions} from 'expo';
+import {MapView} from 'expo';
 import {connect} from "react-redux";
 import DogMarkers from "../components/mapComponents/DogMarkers";
 import {getLocation} from "../utils/locationUtils";
+import {hasLocationPermission} from "../utils/permissionsUtils";
+import {setLocationPermission} from "../actions/permissionsActions"
+
+
 
 class MapTab extends Component {
 
@@ -24,7 +28,8 @@ class MapTab extends Component {
     }
 
     async componentDidMount() {
-        await this._getLocationAsync();
+
+        await this._getLocationAsync()
 
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords
@@ -38,15 +43,13 @@ class MapTab extends Component {
     }
 
     _getLocationAsync = async () => {
-        let { status } = await Permissions.askAsync(Permissions.LOCATION);
-        if (status !== 'granted') {
-            this.setState({
-                errorMessage: 'Permission to access location was denied',
-            });
+        const hasPermission = await hasLocationPermission()
+        if (!hasPermission) {
+            this.props.setLocationPermission(false)
+        } else {
+            let location = await getLocation()
+            this.setState({ location });
         }
-
-        let location = await getLocation()
-        this.setState({ location });
     };
 
     onRegionChange = (region) => {
@@ -95,10 +98,13 @@ class MapTab extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
+    setLocationPermission: (permission=true) => dispatch(setLocationPermission(permission))
 })
 
 const mapStateToProps = (state, props) => ({
     dogs: state.dogs.dogs,
+    hasLocationPermission: state.permissions.hasLocationPermission,
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapTab)
