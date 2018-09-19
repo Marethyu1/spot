@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import { Text, Icon, Container, Header, Right } from 'native-base';
-import { View, TouchableOpacity, Modal, StyleSheet } from 'react-native';
-import { Camera, Permissions } from 'expo';
-import PhotoScreen from "../Modals/PhotoScreen";
-import {getLocation} from "./MapTab";
+import { View, TouchableOpacity, Modal } from 'react-native';
+import { Camera } from 'expo';
+import PhotoScreen from "./PhotoScreen";
+import {getLocation} from "../utils/locationUtils";
+import {hasCameraPermission} from "../utils/permissionsUtils";
+import {setCameraPermission} from "../actions/permissionsActions"
+import {connect} from "react-redux";
 
-export default class CameraTab extends Component {
+
+class CameraTab extends Component {
     state = {
-        hasCameraPermission: null,
         modalVisible: false,
         type: Camera.Constants.Type.back,
         imageInfo: {},
         location: {}
-    };
+    }
 
-    async componentWillMount() {
-      const { status } = await Permissions.askAsync(Permissions.CAMERA);
-      this.setState({ hasCameraPermission: status === 'granted' });
+    async componentDidMount () {
+        const hasPermission = await hasCameraPermission()
+        if (!hasPermission) {
+            this.props.setCameraPermission(false)
+        }
     }
 
     async takePicture()  {
@@ -44,15 +49,13 @@ export default class CameraTab extends Component {
 
 
     render() {
-      const { hasCameraPermission } = this.state;
-      if (hasCameraPermission === null) {
-        return <View />;
-      } if (hasCameraPermission === false) {
-        return (
-          <Text>
-            No access to camera
-          </Text>
-        );
+      const { hasCameraPermission } = this.props;
+      if (!hasCameraPermission) {
+          return (
+              <Text>
+                  No access to camera
+              </Text>
+          );
       }
       return (
           <View style={{ flex: 1 }}>
@@ -116,13 +119,6 @@ export default class CameraTab extends Component {
                     }}
                     onPress={this.takePicture.bind(this)}
                 >
-                    {/*<Text*/}
-                        {/*style={{ fontSize: 18, marginBottom: 10, color: 'white' }}*/}
-                    {/*>*/}
-                        {/*{' '}*/}
-                        {/*Capture*/}
-                        {/*{' '}*/}
-                    {/*</Text>*/}
                     <Icon name="aperture" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
 
                 </TouchableOpacity>
@@ -133,3 +129,14 @@ export default class CameraTab extends Component {
       );
     }
 }
+
+const mapDispatchToProps = dispatch => ({
+    setCameraPermission: (permission=true) => dispatch(setCameraPermission(permission))
+})
+
+const mapStateToProps = (state, props) => ({
+    hasCameraPermission: state.permissions.hasCameraPermission,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CameraTab)
+

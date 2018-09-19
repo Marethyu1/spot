@@ -1,25 +1,25 @@
-import {HAS_CAMERA_PERMISSION, HAS_LOCATION_PERMISSION} from "../consts/permissions";
+import {SET_CAMERA_PERMISSION, SET_LOCATION_PERMISSION} from "../consts/permissions";
 
 export const initialState = {
     hasCameraPermission: false,
     hasLocationPermission: false
-}
+};
 
 const permissions = (state=initialState, action) => {
     switch (action.type) {
-        case HAS_CAMERA_PERMISSION:
+        case SET_CAMERA_PERMISSION:
             return {
                 ...state,
-                hasCameraPermission: true
-            }
-        case HAS_LOCATION_PERMISSION:
+                hasCameraPermission: action.permission
+            };
+        case SET_LOCATION_PERMISSION:
             return {
                 ...state,
-                hasLocationPermission: true
-            }
+                hasLocationPermission: action.permission
+            };
         default:
             return state
     }
-}
+};
 
 export default permissions

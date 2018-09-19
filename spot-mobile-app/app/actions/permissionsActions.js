@@ -1,9 +1,15 @@
-import {HAS_CAMERA_PERMISSION, HAS_LOCATION_PERMISSION} from "../consts/permissions";
+import {SET_CAMERA_PERMISSION, SET_LOCATION_PERMISSION} from "../consts/permissions"
 
-export const hasCameraPermission = () => ({
-    type: HAS_CAMERA_PERMISSION
-})
+export const setCameraPermission = (permission=true) => {
+    return ({
+        type: SET_CAMERA_PERMISSION,
+        permission: permission
+    })
+}
 
-export const hasLocationPermission = () => ({
-    type: HAS_LOCATION_PERMISSION
-})
+export const setLocationPermission = (permission=true) => {
+    return ({
+        type: SET_LOCATION_PERMISSION,
+        permission: permission
+    })
+}

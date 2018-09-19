@@ -4,29 +4,29 @@ import {Container, Content} from "native-base"
 import {Grid} from "react-native-easy-grid"
 import Row from "react-native-easy-grid/Components/Row"
 import DefaultHeader from "../components/layoutComponents/DefaultHeader"
-import {Permissions} from "expo"
 import {connect} from "react-redux"
 
-import {hasCameraPermission, hasLocationPermission} from "../actions"
+import {setCameraPermission, setLocationPermission} from "../actions"
+
+import {hasCameraPermission, hasLocationPermission} from "../utils/permissionsUtils";
 
 
 class PermissionsScreen extends Component {
-
 
     componentDidMount(){
         this.getAllPermissions()
     }
 
-        async getCameraPermission(){
-        const {status} = await Permissions.askAsync(Permissions.CAMERA)
-        if (status === "granted"){
+    async getCameraPermission(){
+        const hasPermission = await hasCameraPermission()
+        if (hasPermission){
             this.props.setCameraPermission()
         }
     }
 
     async getLocationPermission(){
-        const {status} = await Permissions.askAsync(Permissions.LOCATION)
-        if (status === "granted"){
+        const hasPermission = await hasLocationPermission()
+        if (hasPermission){
             this.props.setLocationPermission()
         }
     }
@@ -60,8 +60,8 @@ class PermissionsScreen extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    setCameraPermission: () => dispatch(hasCameraPermission()),
-    setLocationPermission: () => dispatch(hasLocationPermission())
+    setCameraPermission: () => dispatch(setCameraPermission()),
+    setLocationPermission: () => dispatch(setLocationPermission())
 })
 
 export default connect(() => ({}), mapDispatchToProps)(PermissionsScreen)

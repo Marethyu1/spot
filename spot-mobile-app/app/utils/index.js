@@ -1,7 +1,7 @@
 import _ from "lodash"
 import store from "../store"
 
-import config from "../config/config";
+import config from "../config/config"
 const BASE_URL = config.baseUrl
 
 export const createImageUrl = (options) => {

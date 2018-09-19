@@ -13,8 +13,8 @@ import {
 } from "./userActions"
 
 import {
-    hasCameraPermission,
-    hasLocationPermission
+    setCameraPermission,
+    setLocationPermission
 } from "./permissionsActions"
 
 export {
@@ -24,7 +24,7 @@ export {
     submitDog,
     loginUser,
 
-    hasCameraPermission,
-    hasLocationPermission,
+    setCameraPermission,
+    setLocationPermission,
 }
 
