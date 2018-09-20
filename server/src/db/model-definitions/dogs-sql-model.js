@@ -21,7 +21,28 @@ class DogsSqlModel extends SqlAbstractModel {
             },
             caption: {
                 type: Sequelize.TEXT
-            }
+            },
+            region: {
+                type: Sequelize.STRING
+            },
+            street: {
+                type: Sequelize.STRING
+            },
+            city: {
+                type: Sequelize.STRING
+            },
+            country: {
+                type: Sequelize.STRING
+            },
+            postalCode: {
+                type: Sequelize.STRING
+            },
+            name: {
+                type: Sequelize.STRING
+            },
+            isoCountryCode: {
+                type: Sequelize.STRING
+            },
         }
     }
 

@@ -23,8 +23,8 @@ class PhotoScreen extends Component {
             caption: this.state.caption,
             latitude: this.props.location.coords.latitude,
             longitude: this.props.location.coords.longitude,
-        };
-
+            geocode: this.props.location.geocode
+        }
 
         this.props.postDog(options, this.props.user.id).then(() => {
                 this.props.onUpload()
