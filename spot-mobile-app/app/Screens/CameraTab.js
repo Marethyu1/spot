@@ -3,7 +3,7 @@ import { Text, Icon, Container, Header, Right } from 'native-base';
 import { View, TouchableOpacity, Modal } from 'react-native';
 import { Camera } from 'expo';
 import PhotoScreen from "./PhotoScreen";
-import {getLocation} from "../utils/locationUtils";
+import {getLocationAndGeocode} from "../utils/locationUtils";
 import {hasCameraPermission} from "../utils/permissionsUtils";
 import {setCameraPermission} from "../actions/permissionsActions"
 import {connect} from "react-redux";
@@ -29,7 +29,7 @@ class CameraTab extends Component {
             let photo = await this.camera.takePictureAsync({
                 base64: true
             });
-            const location = await getLocation()
+            const location = await getLocationAndGeocode()
 
             this.setState({
                 imageInfo: photo,
