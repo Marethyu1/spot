@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, Icon, Container, Header, Right } from 'native-base';
 import { View, TouchableOpacity, Modal } from 'react-native';
 import { Camera } from 'expo';
-import PhotoScreen from "./PhotoScreen";
+import PhotoScreen from "../Modals/PhotoScreen";
 import {getLocation} from "../utils/locationUtils";
 import {hasCameraPermission} from "../utils/permissionsUtils";
 import {setCameraPermission} from "../actions/permissionsActions"
@@ -25,10 +25,14 @@ class CameraTab extends Component {
     }
 
     async takePicture()  {
+        console.log("taking pic")
         if (this.camera) {
+            debugger
+            console.log("woweeee")
             let photo = await this.camera.takePictureAsync({
                 base64: true
             });
+            console.log("photo taken")
             const location = await getLocation()
 
             this.setState({
@@ -41,6 +45,7 @@ class CameraTab extends Component {
 
     onUpload = () => {
         // alert("Image Uploaded?")
+        debugger
         this.setState({
             modalVisible: false,
             imageInfo: {}

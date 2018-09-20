@@ -15,6 +15,7 @@ class PhotoScreen extends Component {
     }
 
     onDogSubmit = () => {
+        debugger
         const options = {
             image: {
                 image: this.props.image.base64

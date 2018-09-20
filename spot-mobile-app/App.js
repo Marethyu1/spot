@@ -55,12 +55,10 @@ class MainScreen extends React.Component {
     }
 
     afterLogin = async (loginData) => {
-
         console.log("after login!")
         this.setState({isLoggedIn: true,
             userData: {id: loginData.id}
         })
-
         await this.props.storeUserRedux(loginData)
         this.props.fetchDogs(loginData.id)
         this._storeAsyncStorageData()

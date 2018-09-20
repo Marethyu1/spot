@@ -3,6 +3,7 @@ import { Image, Modal } from 'react-native';
 import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Icon, Left, Body, Right, View } from 'native-base';
 import {connect} from "react-redux";
 import {createImageUrl, createThumbnailUrl} from "../utils";
+import DogDetails from "../Modals/DogDetails";
 
 const Dog = (props) => {
     let dog = props.dog
@@ -65,9 +66,7 @@ class ListTab extends Component {
                                 </Text>
                             </Right>
                         </Header>
-                       <View>
-                           <Text>Woweeeeeeeee</Text>
-                       </View>
+                       <DogDetails dog={this.state.selectedDog}/>
                     </Container>
                 </Modal>
                 <Header>

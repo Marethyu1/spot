@@ -9,7 +9,7 @@ const DogMarker = ({marker}) => {
                 coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
                 title={marker.caption}
                 image={createPinUrl(marker)}
-                anchor={[0.5, 1]}
+                anchor={{x:0.5, y:1}}
             />
     )
 }
