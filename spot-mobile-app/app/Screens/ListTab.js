@@ -19,7 +19,7 @@ const Dog = (props) => {
                 </Left>
             </CardItem>
             <CardItem cardBody>
-                <Image source={{uri: createImageUrl(dog)}} style={{height: 300, width: null, flex: 1}}/>
+                <Image source={{uri: createImageUrl(dog)}}source={{uri: createImageUrl(dog)}} style={{height: 300, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
                 <Left>

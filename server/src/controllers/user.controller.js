@@ -37,7 +37,6 @@ const createDog = async (req, res) => {
         ...req.body,
         ...req.body.geocode
     }
-
     const image = new Buffer(options.image.image.toString(), "base64")
 
     options.image.image = image

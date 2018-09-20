@@ -1,49 +1,52 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import {Location} from 'expo'
+import moment from 'moment'
+import FitImage from 'react-native-fit-image'
 import {uploadDogPhoto} from "../api/routes"
 import {createImageUrl} from "../utils";
-import { Container, Input, Content, Text, Button,  } from 'native-base';
+import { Container, Input, Content, Text, View,  } from 'native-base';
 
 
 
 class DogDetails extends Component {
 
     async componentDidMount() {
-        await this.reverseGeoCode()
+        await this.locationStringMaker()
     }
 
     state = {
         location: ""
     }
 
-
-    //todo move this to somewhere else and maybe store
-    reverseGeoCode = async () => {
-        let location = {
-            latitude: parseFloat(this.props.dog.latitude),
-            longitude: parseFloat(this.props.dog.longitude)
-        };
-        let place = await Location.reverseGeocodeAsync(location)
-        place = place[0]
-        let locationString = place.street+ " " + place.city + " " + place.country
+    locationStringMaker = async () => {
+        let locationString = this.props.dog.street+ " " + this.props.dog.city + " " + this.props.dog.country
         this.setState({location: locationString})
     }
-
 
     render() {
         return (
             <Container>
-                <Content>
+                <Content style={styles.background}>
 
-                    <Image
+                    <Text style={styles.captionText}>{this.props.dog.caption}</Text>
+
+
+                    <FitImage
                         source={{uri: createImageUrl(this.props.dog)}}
-                        style={styles.image}
+                        style={styles.fitImage}
                     />
 
-                    <Text>{this.props.dog.caption}</Text>
-                    <Text>{this.props.dog.created_at}</Text>
-                    <Text>{this.state.location}</Text>
+                    {/*<Image*/}
+                        {/*source={{uri: createImageUrl(this.props.dog)}}*/}
+                        {/*style={styles.image}*/}
+                    {/*/>*/}
+
+                    <View style={styles.textView}>
+
+                        <Text style={styles.text}>{moment(this.props.dog.created_at).format("dddd MMMM Do YYYY, hh:mm a")}</Text>
+                        <Text style={styles.text}>{this.state.location}</Text>
+                    </View>
                 </Content>
             </Container>
         );
@@ -54,16 +57,45 @@ class DogDetails extends Component {
 export default DogDetails
 
 const styles = StyleSheet.create({
-    image: {
-        flex:1,
-        height: 300,
-        resizeMode: 'contain',
-        marginTop:10,
-        marginBottom: 10,
-        borderRadius: 10
+
+    fitImage: {
+        marginLeft: 20,
+        marginRight: 20,
+        borderWidth: 10,
+        borderRadius: 10,
+        borderColor: "#E1AC88",
     },
     text: {
+        color: "#74401d"
+    },
 
+    captionText: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 20,
+        marginRight: 20,
+        color: "#74401d"
+    },
+
+    textView: {
+        flexDirection: "column",
+        backgroundColor: "#FFE0CB",
+        marginTop: 10,
+        borderRadius: 10,
+        paddingTop: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingBottom: 5,
+        marginBottom: 10,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+
+    background: {
+        backgroundColor: "#F8EDED",
     }
 
 
