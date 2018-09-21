@@ -13,6 +13,7 @@ const wrap = (fn) => {
         } catch (err) {
             console.log(err)
             console.log(err.message)
+            console.log("Definitely threw an error....")
             res.status(500).send(err.message)
         }
     }

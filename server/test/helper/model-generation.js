@@ -19,11 +19,22 @@ const createDogWithImage = async (user_id) =>{
     }
     const props = generateDogPropsWithImage(user_id, false)
     return dogsModel.create(props)
+}
+
+const createDogLoadImage = async (user_id, image) => {
+    const props = {
+        ...generateDogProps(user_id),
+        image: {
+            image: image
+        }
+    }
+    return dogsModel.create(props)
 
 }
 
 module.exports = {
     createUser,
     createDog,
-    createDogWithImage
+    createDogWithImage,
+    createDogLoadImage
 }
