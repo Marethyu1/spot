@@ -4,6 +4,7 @@ import { Container, Title, Header, Content, Card, CardItem, Thumbnail, Text, Ico
 import {connect} from "react-redux";
 import {createImageUrl, createThumbnailUrl} from "../utils";
 import DogDetails from "../Modals/DogDetails";
+import FitImage from "react-native-fit-image";
 
 const Dog = (props) => {
     let dog = props.dog
@@ -19,7 +20,9 @@ const Dog = (props) => {
                 </Left>
             </CardItem>
             <CardItem cardBody>
-                <Image source={{uri: createImageUrl(dog)}}source={{uri: createImageUrl(dog)}} style={{height: 300, width: null, flex: 1}}/>
+                {/*<Image source={{uri: createImageUrl(dog)}}source={{uri: createImageUrl(dog)}} style={{height: 300, width: null, flex: 1}}/>*/}
+                <FitImage source={{uri: createImageUrl(dog)}} style={{flex:1}} />
+                {/*style={{flex: 1}}*/}
             </CardItem>
             <CardItem>
                 <Left>
