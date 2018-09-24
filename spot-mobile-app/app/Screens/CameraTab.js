@@ -24,32 +24,38 @@ class CameraTab extends Component {
         }
     }
 
-    async takePicture()  {
+    getLocation = () => {
+        getLocationAndGeocode()
+            .then(location => {
+                this.setState({
+                    location: location
+                })
+            })
+    }
+
+    takePicture()  {
         if (this.camera) {
 
             this.setState({
                 modalVisible: true,
             })
 
+            this.getLocation()
+
             this.camera.takePictureAsync({
                 base64: true
-            }).then(async (photo) => {
-                const location = await getLocationAndGeocode()
-
+            }).then((photo) => {
                 this.setState({
                     imageInfo: {
                         ...photo,
                         loaded: true
-                    },
-                    location: location
+                    }
                 })
             })
-
         }
     };
 
     onUpload = () => {
-        // alert("Image Uploaded?")
         this.setState({
             modalVisible: false,
             imageInfo: {}

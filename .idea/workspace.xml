@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added a callout for showing doggos on the map">
-      <change afterPath="$PROJECT_DIR$/spot-mobile-app/app/components/layoutComponents/LoadingActivity.js" afterDir="false" />
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Added loading screen after taking an image&#10;- Refactored loading into dumb component&#10;- Adding loading state to PhotoScreen Image props&#10;- Changed async nature of image component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,19 +29,19 @@
         <counts>
           <entry key="dummy" value="41" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="46129" />
+          <entry key="js" value="46770" />
           <entry key="json" value="481" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
-          <entry key="txt" value="4135" />
+          <entry key="txt" value="4420" />
           <entry key="yml" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="481" />
-          <entry key="JavaScript" value="46244" />
-          <entry key="PLAIN_TEXT" value="4229" />
+          <entry key="JavaScript" value="46885" />
+          <entry key="PLAIN_TEXT" value="4514" />
           <entry key="YAML" value="92" />
         </counts>
       </usages-collector>
@@ -132,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            <state relative-caret-position="1093">
+              <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -153,8 +149,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+            <state relative-caret-position="336">
+              <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -173,7 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hasLocationPermission</find>
       <find>hasCamera</find>
       <find>hasLocation</find>
       <find>email</find>
@@ -203,6 +198,7 @@
       <find>ActivityI</find>
       <find>expot  const</find>
       <find>export default</find>
+      <find>isMounted</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -604,14 +600,7 @@
       <workItem from="1537354913672" duration="119000" />
       <workItem from="1537401086562" duration="11745000" />
       <workItem from="1537479919319" duration="9601000" />
-      <workItem from="1537759775766" duration="4150000" />
-    </task>
-    <task id="LOCAL-00007" summary="add create method to user router">
-      <created>1535528744437</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1535528744438</updated>
+      <workItem from="1537759775766" duration="6194000" />
     </task>
     <task id="LOCAL-00008" summary="Added script for dev and test db's for creation and deletion">
       <created>1535582690517</created>
@@ -949,7 +938,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537499851737</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Added loading screen after taking an image&#10;- Refactored loading into dumb component&#10;- Adding loading state to PhotoScreen Image props&#10;- Changed async nature of image component">
+      <created>1537764021466</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1537764021467</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -985,7 +981,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164106000" />
+    <option name="totallyTimeSpent" value="166150000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +994,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-158" width="1920" height="1058" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.13849394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1074,7 +1069,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merged everything in" />
     <MESSAGE value="Added and tested basic dogs reducer" />
     <MESSAGE value="Added redux thunk" />
     <MESSAGE value="Mapped redux to app component" />
@@ -1099,7 +1093,8 @@
     <MESSAGE value="Added a callout for showing doggos on the map" />
     <MESSAGE value="Added generation script for generating doggos&#10;Used FitImage for map image" />
     <MESSAGE value="Added fit image to list tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fit image to list tab" />
+    <MESSAGE value="Added loading screen after taking an image&#10;- Refactored loading into dumb component&#10;- Adding loading state to PhotoScreen Image props&#10;- Changed async nature of image component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added loading screen after taking an image&#10;- Refactored loading into dumb component&#10;- Adding loading state to PhotoScreen Image props&#10;- Changed async nature of image component" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1420,16 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/layoutComponents/LoadingActivity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1437,12 +1422,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/layoutComponents/LoadingActivity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="460">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1454,10 +1439,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1093">
+          <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        <state relative-caret-position="336">
+          <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

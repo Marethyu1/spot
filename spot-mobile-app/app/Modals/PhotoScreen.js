@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet } from 'react-native';
-import {uploadDogPhoto} from "../api/routes"
+import { StyleSheet } from 'react-native';
 import { Container, Input, Content, Text, Button,  } from 'native-base';
 import {connect} from "react-redux";
 import {submitDog} from "../actions/index";
@@ -14,6 +13,12 @@ class PhotoScreen extends Component {
 
     state = {
         caption: "",
+        savingImage: false,
+    }
+    toggleImageSave = (saving=true) => {
+        this.setState({
+            savingImage: saving
+        })
     }
 
     onDogSubmit = () => {
@@ -27,7 +32,11 @@ class PhotoScreen extends Component {
             geocode: this.props.location.geocode
         }
 
+        this.toggleImageSave() //turn on saving screen
+
+
         this.props.postDog(options, this.props.user.id).then(() => {
+                this.toggleImageSave(false) //turn off saving screen
                 this.props.onUpload()
             })
     }
@@ -50,15 +59,15 @@ class PhotoScreen extends Component {
     isReadyToSubmit = () => {
         const hasImage = this.props.image.loaded
         const hasLocation = Object.keys(this.props.location).length > 0
-        return hasImage && hasLocation
+        const captionFilledIn = this.state.caption.length > 0
+        return hasImage && hasLocation && captionFilledIn
     }
 
 
     render() {
         const ImageComponent = this.renderImageOrLoading()
         const readyToSubmit = this.isReadyToSubmit()
-
-
+        const {savingImage} = this.state
         return (
             <Container>
                 <Content>
@@ -69,14 +78,17 @@ class PhotoScreen extends Component {
                            value={this.state.caption}
                            onChangeText={(text) => this.setState({caption: text})}
                     />
+                    {savingImage &&  <Text style={styles.uploadButton}>Saving Doggo! This may take some time!</Text>}
+                    {savingImage && <LoadingActivity/>}
 
-                    <Button block onPress={this.onDogSubmit} style={styles.uploadButton} disabled={!readyToSubmit}>
+                    <Button block onPress={this.onDogSubmit} style={styles.uploadButton} disabled={!readyToSubmit || savingImage}>
                         <Text>Upload Doggo!</Text>
                     </Button>
 
                 </Content>
             </Container>
         );
+
     }
 }
 
