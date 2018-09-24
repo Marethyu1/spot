@@ -26,16 +26,25 @@ class CameraTab extends Component {
 
     async takePicture()  {
         if (this.camera) {
-            let photo = await this.camera.takePictureAsync({
-                base64: true
-            });
-            const location = await getLocationAndGeocode()
 
             this.setState({
-                imageInfo: photo,
                 modalVisible: true,
-                location: location
             })
+
+            this.camera.takePictureAsync({
+                base64: true
+            }).then(async (photo) => {
+                const location = await getLocationAndGeocode()
+
+                this.setState({
+                    imageInfo: {
+                        ...photo,
+                        loaded: true
+                    },
+                    location: location
+                })
+            })
+
         }
     };
 

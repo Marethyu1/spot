@@ -2,7 +2,7 @@ import {MapView} from "expo";
 import React from "react";
 import {createImageUrl, createPinUrl} from "../../utils";
 import {Text} from "native-base"
-import {StyleSheet} from "react-native";
+import {StyleSheet, Image, View} from "react-native";
 import FitImage from "react-native-fit-image"
 
 // const fetchImage = async (uri) => {

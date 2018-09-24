@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, View, AsyncStorage } from 'react-native';
+import { StyleSheet, AsyncStorage } from 'react-native';
 import TabNavigator from './app/TabNavigator';
 import Login from "./app/Screens/Login"
 
@@ -7,7 +7,7 @@ import store from './app/store'
 import {Provider, connect} from "react-redux";
 import {findDogs, tryLogin, loginUser} from "./app/actions"
 import PermissionsScreen from "./app/Screens/Permissions";
-import {login} from "./app/api/routes";
+import LoadingActivity from "./app/components/layoutComponents/LoadingActivity"
 
 console.disableYellowBox = true;
 
@@ -99,9 +99,7 @@ class MainScreen extends React.Component {
 
         if (!isReady) {
             return (
-                <View style={styles.activityIndicatorContainer}>
-                    <ActivityIndicator animating={true}/>
-                </View>
+                <LoadingActivity/>
             )
         } else {
             if (!hasCameraPermission || !hasLocationPermission) {
@@ -144,12 +142,6 @@ const Main = connect(mapStateToProps, mapDispatchToProps)(MainScreen)
 
 
 const styles = StyleSheet.create({
-  activityIndicatorContainer: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-  },
 
   row: {
     borderBottomWidth: 1,
