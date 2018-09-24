@@ -10,18 +10,20 @@ import LoadingActivity from "../components/layoutComponents/LoadingActivity"
 
 class PhotoScreen extends Component {
 
-
     state = {
         caption: "",
         savingImage: false,
     }
-    toggleImageSave = (saving=true) => {
+
+    toggleImageSave = (saving=true, cb) => {
         this.setState({
             savingImage: saving
-        })
+        }, cb)
     }
 
     onDogSubmit = () => {
+        this.toggleImageSave() //turn on saving screen
+
         const options = {
             image: {
                 image: this.props.image.base64
@@ -32,12 +34,9 @@ class PhotoScreen extends Component {
             geocode: this.props.location.geocode
         }
 
-        this.toggleImageSave() //turn on saving screen
-
 
         this.props.postDog(options, this.props.user.id).then(() => {
-                this.toggleImageSave(false) //turn off saving screen
-                this.props.onUpload()
+                this.toggleImageSave(false, this.props.onUpload) //turn off saving screen
             })
     }
 
