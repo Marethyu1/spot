@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {TouchableOpacity} from 'react-native'
+import {Modal, TouchableOpacity} from 'react-native'
 import {
     Container,
     Header,
@@ -16,6 +16,7 @@ import DogMarkers from "../components/mapComponents/DogMarkers";
 import {getLocation} from "../utils/locationUtils";
 import {hasLocationPermission} from "../utils/permissionsUtils";
 import {setLocationPermission} from "../actions/permissionsActions"
+import DogDetails from "../Modals/DogDetails";
 
 
 
@@ -25,6 +26,9 @@ class MapTab extends Component {
         regionSet: false,
         location: null,
         errorMessage: null,
+        modalVisible: false,
+        selectedDog: null,
+
     }
 
     async componentDidMount() {
@@ -59,6 +63,13 @@ class MapTab extends Component {
         });
     }
 
+    showModal = (dog) => {
+        this.setState({
+            modalVisible: true,
+            selectedDog: dog
+        })
+    }
+
     render () {
         return (
             <Container>
@@ -76,6 +87,25 @@ class MapTab extends Component {
                     </Right>
                 </Header>
 
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={this.state.modalVisible}
+                >
+                    <Container>
+                        <Header>
+                            <Right>
+                                <Text onPress={() => {
+                                    this.setState({modalVisible: false})
+                                }} style={{color: "gray"}}>
+                                    Back
+                                </Text>
+                            </Right>
+                        </Header>
+                        <DogDetails dog={this.state.selectedDog}/>
+                    </Container>
+                </Modal>
+
                     <MapView
                         showsUserLocation={true}
                         style={{ flex: 1 }}
@@ -88,7 +118,7 @@ class MapTab extends Component {
                         region={this.props.region}
                         onRegionChangeComplete={region => this.onRegionChange(region)}
                     >
-                        <DogMarkers markers={this.props.dogs}/>
+                        <DogMarkers markers={this.props.dogs} onCalloutPress={this.showModal}/>
                     </MapView>
 
             </Container>

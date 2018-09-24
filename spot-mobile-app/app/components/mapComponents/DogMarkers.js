@@ -5,14 +5,12 @@ import {Text, Button, Icon} from "native-base"
 import {StyleSheet, Platform} from "react-native";
 import FitImage from "react-native-fit-image"
 
-// const fetchImage = async (uri) => {
-//     return fetch(uri)
-// }
+const DogMarker = ({marker, onCalloutPress}) => {
 
-const DogMarker = ({marker}) => {
-    // const uri = createImageUrl(marker)
-    // const image = await fetchImage(uri)
-debugger
+    const showModalData = () => {
+        onCalloutPress(marker)
+    }
+
     return (
             <MapView.Marker
                 key={marker.id}
@@ -21,7 +19,7 @@ debugger
                 image={createPinUrl(marker)}
                 anchor={{x:0.5, y:1}}
             >
-                <MapView.Callout>
+                <MapView.Callout onPress={showModalData}>
                     <Text style={{alignSelf: "center", fontWeight: "bold"}}>
                         {marker.caption}
                     </Text>
@@ -32,15 +30,7 @@ debugger
                         style={styles.fitImage}
                     />
                     }
-
-                    {Platform.OS === 'android' &&
-                        <Button>
-                            <Icon name="information-circle"/>
-                        </Button>
-                    }
-
                 </MapView.Callout>
-
             </MapView.Marker>
     )
 }
@@ -49,7 +39,7 @@ const DogMarkers = (props) => {
     return props.markers.map((marker, key) => {
         return (
             <DogMarker
-                marker={marker} key={key}
+                marker={marker} key={key} onCalloutPress={props.onCalloutPress}
             />
         )
     })
