@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things&#10;- pretty styles">
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Configured the app.json in order to do a test android build">
+      <change afterPath="$PROJECT_DIR$/server/scripts/images/Fotos-do-cachorro-da-raça-Pug24.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/scripts/create-doggos.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/scripts/create-doggos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,24 +109,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="js" value="160" />
           <entry key="json" value="75" />
-          <entry key="txt" value="16" />
+          <entry key="txt" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="75" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="JavaScript" value="160" />
+          <entry key="PLAIN_TEXT" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="js" value="2" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -168,11 +173,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="258">
+              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,11 +194,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="199">
               <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -208,7 +225,7 @@
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="35" />
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -254,6 +271,7 @@
       <find>upload doggo</find>
       <find>login</find>
       <find>debugger</find>
+      <find>icon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -267,7 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
         <option value="$PROJECT_DIR$/server/test/helper/model-generation.js" />
         <option value="$PROJECT_DIR$/server/src/routers/create-routers.js" />
         <option value="$PROJECT_DIR$/server/src/routers/user-router.js" />
@@ -309,7 +326,6 @@
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/CameraTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/App.js" />
@@ -318,6 +334,8 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Modals/DogDetails.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app.json" />
+        <option value="$PROJECT_DIR$/server/scripts/create-doggos.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" />
       </list>
     </option>
   </component>
@@ -381,6 +399,12 @@
             <path>
               <item name="spot" type="b2602c69:ProjectViewProjectNode" />
               <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -410,17 +434,138 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/spot-mobile-app/app/Modals" />
-      <recent name="$PROJECT_DIR$/server/src/models" />
-      <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
-      <recent name="$PROJECT_DIR$/spot-mobile-app/app/api" />
-      <recent name="$PROJECT_DIR$/server/cert" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server/test/images" />
       <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/scripts/images" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/spot-mobile-app/app/Modals" />
+      <recent name="$PROJECT_DIR$/server/src/models" />
+      <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/package-lock.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/package.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/server.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/src/routers/user-router.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/test/helper/model-generation.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/test/helper/prop-generation.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/package-lock.json</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/scripts/create-doggos.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -434,7 +579,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.create:dev-db">
+  <component name="RunManager" selected="Node.js.create-doggos.js">
     <configuration name="database.test" type="JavaScriptTestRunnerJest" factoryName="Jest" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/server/jest.config.js" />
       <node-interpreter value="project" />
@@ -460,7 +605,7 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="dogs.test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="dogs.test.js" working-dir="$PROJECT_DIR$/spot-mobile-app/app/reducers/__tests__">
+    <configuration name="create-doggos.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="create-doggos.js" working-dir="$PROJECT_DIR$/server/scripts">
       <method v="2" />
     </configuration>
     <configuration name="Frontend Tests" type="js.build_tools.npm" factoryName="npm">
@@ -519,18 +664,18 @@
       <item itemvalue="Node.js.Server:dev" />
       <item itemvalue="npm.Frontend Tests" />
       <item itemvalue="npm.create:dbs" />
-      <item itemvalue="Node.js.dogs.test.js" />
       <item itemvalue="npm.start-docker" />
       <item itemvalue="npm.drop:dev-db" />
       <item itemvalue="npm.create:dev-db" />
+      <item itemvalue="Node.js.create-doggos.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.create-doggos.js" />
         <item itemvalue="npm.create:dev-db" />
         <item itemvalue="npm.drop:dev-db" />
         <item itemvalue="npm.start-docker" />
         <item itemvalue="npm.create:dbs" />
-        <item itemvalue="Node.js.dogs.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -584,7 +729,7 @@
       <workItem from="1537482875562" duration="40000" />
       <workItem from="1537482967525" duration="38000" />
       <workItem from="1537483023906" duration="2391000" />
-      <workItem from="1537749483701" duration="586000" />
+      <workItem from="1537749483701" duration="2775000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -894,7 +1039,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537486572410</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Configured the app.json in order to do a test android build">
+      <created>1537762101740</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1537762101740</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -930,23 +1082,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122056000" />
+    <option name="totallyTimeSpent" value="124245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="23" width="1385" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.25953078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.592313" weight="0.42216358" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.592313" visible="true" weight="0.20712401" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4643766" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" sideWeight="0.60535586" weight="0.32951653" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" visible="true" weight="0.29023746" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" weight="0.22823219" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39420485" side_tool="true" weight="0.37163562" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.43002546" />
       <window_info anchor="bottom" id="Statistic" order="11" />
@@ -1007,7 +1160,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added pin asset" />
     <MESSAGE value="Added images sql model&#10;linked images to dogs model&#10;refactored Abstract model to load in associations if present" />
     <MESSAGE value="Added test for images model" />
     <MESSAGE value="Added insert image method to dogs model #pair[sha162, emr65]" />
@@ -1032,7 +1184,8 @@
     <MESSAGE value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues" />
     <MESSAGE value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things" />
     <MESSAGE value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things&#10;- pretty styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things&#10;- pretty styles" />
+    <MESSAGE value="Configured the app.json in order to do a test android build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured the app.json in order to do a test android build" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1195,13 +1348,6 @@
         <state relative-caret-position="-864" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="312" column="4" selection-start-line="312" selection-start-column="4" selection-end-line="312" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/node_modules/express/lib/response.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1355,13 +1501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="989">
@@ -1379,7 +1518,7 @@
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="35" />
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="35" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1388,8 +1527,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="199">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="303" column="4" selection-start-line="303" selection-start-column="4" selection-end-line="303" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

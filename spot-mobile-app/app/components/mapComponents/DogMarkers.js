@@ -1,8 +1,8 @@
 import {MapView} from "expo";
 import React from "react";
 import {createImageUrl, createPinUrl} from "../../utils";
-import {Text} from "native-base"
-import {StyleSheet} from "react-native";
+import {Text, Button, Icon} from "native-base"
+import {StyleSheet, Platform} from "react-native";
 import FitImage from "react-native-fit-image"
 
 // const fetchImage = async (uri) => {
@@ -12,7 +12,7 @@ import FitImage from "react-native-fit-image"
 const DogMarker = ({marker}) => {
     // const uri = createImageUrl(marker)
     // const image = await fetchImage(uri)
-
+debugger
     return (
             <MapView.Marker
                 key={marker.id}
@@ -25,10 +25,20 @@ const DogMarker = ({marker}) => {
                     <Text style={{alignSelf: "center", fontWeight: "bold"}}>
                         {marker.caption}
                     </Text>
+
+                    {Platform.OS === 'ios' &&
                     <FitImage
                         source={{uri: createImageUrl(marker)}}
                         style={styles.fitImage}
                     />
+                    }
+
+                    {Platform.OS === 'android' &&
+                        <Button>
+                            <Icon name="information-circle"/>
+                        </Button>
+                    }
+
                 </MapView.Callout>
 
             </MapView.Marker>
