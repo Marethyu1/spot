@@ -32,7 +32,6 @@ export const findDogs = (userId) => {
 }
 
 export const submitDog = (imageData, id) => {
-    console.log(imageData)
     return async (dispatch) => {
         const {dogs} = await uploadDogPhoto(imageData, id)
             .catch(err => {

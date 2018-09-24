@@ -1,10 +1,18 @@
 import {MapView} from "expo";
 import React from "react";
 import {createImageUrl, createPinUrl} from "../../utils";
-import {View, Text} from "native-base"
-import {Image} from "react-native";
+import {Text} from "native-base"
+import {StyleSheet} from "react-native";
+import FitImage from "react-native-fit-image"
+
+// const fetchImage = async (uri) => {
+//     return fetch(uri)
+// }
 
 const DogMarker = ({marker}) => {
+    // const uri = createImageUrl(marker)
+    // const image = await fetchImage(uri)
+
     return (
             <MapView.Marker
                 key={marker.id}
@@ -14,16 +22,13 @@ const DogMarker = ({marker}) => {
                 anchor={{x:0.5, y:1}}
             >
                 <MapView.Callout>
-                    <View>
-                        <Text style={{alignSelf: "center", fontWeight: "bold"}}>
-                            {marker.caption}
-                        </Text>
-                        <Image
-                            source={{uri: createImageUrl(marker)}}
-                            style={{ width: 200, height: 200, alignSelf:'center', margin: 5, backgroundColor: 'red'} }
-                            resizeMode='cover'
-                        />
-                    </View>
+                    <Text style={{alignSelf: "center", fontWeight: "bold"}}>
+                        {marker.caption}
+                    </Text>
+                    <FitImage
+                        source={{uri: createImageUrl(marker)}}
+                        style={styles.fitImage}
+                    />
                 </MapView.Callout>
 
             </MapView.Marker>
@@ -39,6 +44,20 @@ const DogMarkers = (props) => {
         )
     })
 }
+
+
+const styles = StyleSheet.create({
+
+    fitImage: {
+        // marginLeft: 20,
+        // marginRight: 20,
+        borderWidth: 10,
+        borderRadius: 10,
+        borderColor: "#E1AC88",
+        width:200,
+        height: 200,
+    }
+})
 
 
 export default DogMarkers

@@ -54,7 +54,6 @@ describe("when saving a file", () => {
     it.skip("Should be able to save it?", async () => {
         let user = await createUser()
 
-        console.log(dogsModel)
 
         const imagePath = path.join(__dirname, "../../../test/images/logo.png")
         const image = fs.readFileSync(imagePath)
@@ -64,10 +63,6 @@ describe("when saving a file", () => {
         dog.image = image
         let updatedDog = await dog.save()
         fs.writeFileSync(__dirname + "/test.png", updatedDog.image)
-        console.log(updatedDog)
-
-
-        console.log(image)
 
     })
 })

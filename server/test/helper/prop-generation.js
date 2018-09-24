@@ -11,15 +11,26 @@ const generateUserProps = () => {
     }
 }
 
+// [-43.475937, 172.549585] ->  [-43.475937, 172.709006]
+// [-43.583304, 172.549585] -> [-43.583304, 172.709006]
+
+const coordBounds = {
+    yMin: 172.549585,
+    yMax: 172.709006,
+    xMin: -43.477371,
+    xMax: -43.405937,
+}
 
 const generateDogProps = (user_id) => {
     if (!user_id) throw new Error("Need user id to generate a dog")
+    const lng = coordBounds.yMin + (Math.random() * (coordBounds.yMax - coordBounds.yMin))
+    const lat = coordBounds.xMin + (Math.random() * (coordBounds.xMax - coordBounds.xMin))
     return {
         user_id: user_id,
         title: faker.commerce.productName(),
-        latitude: faker.address.latitude(),
-        longitude: faker.address.longitude(),
-        caption: faker.lorem.sentences(),
+        latitude: lat,
+        longitude: lng,
+        caption: faker.commerce.productName(),
     }
 }
 
