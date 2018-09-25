@@ -155,3 +155,4 @@ const mapStateToProps = (state, props) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(CameraTab)
 
+// export GOOGLE_APPLICATION_CREDENTIALS="/Users/stefanhall/Local/Documents/spot/server/config/spot-d85b7c01dfc6.json"

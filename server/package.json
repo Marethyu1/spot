@@ -15,6 +15,7 @@
   "author": "Liz and Stefan",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/vision": "^0.22.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
