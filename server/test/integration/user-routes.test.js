@@ -56,7 +56,7 @@ describe("the user routes", () => {
                 .send(dogProps)
 
             expect(status).toBe(200)
-            expect(body.dogs.image.image).toBeTruthy()
+            expect(body.dogs).toBeTruthy()
 
         })
     })

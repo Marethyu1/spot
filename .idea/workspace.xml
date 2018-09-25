@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Configured the app.json in order to do a test android build">
-      <change afterPath="$PROJECT_DIR$/server/scripts/images/Fotos-do-cachorro-da-raça-Pug24.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/scripts/create-doggos.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/scripts/create-doggos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/test/integration/user-routes.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/test/integration/user-routes.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,14 +19,14 @@
           <entry key="git.branch.create.new" value="3" />
           <entry key="git.branch.delete.local" value="1" />
           <entry key="git.branch.delete.remote" value="4" />
-          <entry key="git.branch.merge" value="3" />
+          <entry key="git.branch.merge" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="32910" />
+          <entry key="js" value="32951" />
           <entry key="json" value="460" />
           <entry key="seqelizerc" value="43" />
           <entry key="test" value="115" />
@@ -39,7 +37,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="460" />
-          <entry key="JavaScript" value="33025" />
+          <entry key="JavaScript" value="33066" />
           <entry key="PLAIN_TEXT" value="2832" />
           <entry key="YAML" value="92" />
         </counts>
@@ -47,8 +45,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="__tests__test" value="1" />
+          <entry key="csr" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="345" />
+          <entry key="js" value="349" />
           <entry key="json" value="23" />
           <entry key="md" value="1" />
           <entry key="png" value="10" />
@@ -64,8 +63,8 @@
         <counts>
           <entry key="Image" value="10" />
           <entry key="JSON" value="23" />
-          <entry key="JavaScript" value="345" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="JavaScript" value="349" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="TypeScript" value="2" />
           <entry key="UML" value="1" />
           <entry key="YAML" value="4" />
@@ -75,7 +74,7 @@
         <counts>
           <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -86,7 +85,7 @@
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -140,95 +139,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/DogDetails.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1679">
-              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
+        <entry file="file://$PROJECT_DIR$/server/test/integration/user-routes.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/package.json">
+        <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="989">
-              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+            <state relative-caret-position="16">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/package.json">
+        <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="219">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
+        <entry file="file://$PROJECT_DIR$/server/src/models/dogs-model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="141">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -272,6 +214,8 @@
       <find>login</find>
       <find>debugger</find>
       <find>icon</find>
+      <find>../images/</find>
+      <find>should be able to save an</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,7 +263,6 @@
         <option value="$PROJECT_DIR$/server/test/helper/load-image.js" />
         <option value="$PROJECT_DIR$/server/src/models/__tests__/images-model.test.js" />
         <option value="$PROJECT_DIR$/server/test/helper/prop-generation.js" />
-        <option value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
         <option value="$PROJECT_DIR$/server/test/helper/load-base64-image.js" />
         <option value="$PROJECT_DIR$/server/src/db/database-manager.js" />
         <option value="$PROJECT_DIR$/server/src/db/database.js" />
@@ -336,6 +279,7 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app.json" />
         <option value="$PROJECT_DIR$/server/scripts/create-doggos.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js" />
+        <option value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
       </list>
     </option>
   </component>
@@ -357,28 +301,21 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/node_modules/js-tokens/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/loose-envify/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/moment/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/object-assign/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/prop-types/package.json" />
-      <path value="$PROJECT_DIR$/node_modules/react-native-fit-image/package.json" />
       <path value="$PROJECT_DIR$/server/package.json" />
       <path value="$PROJECT_DIR$/spot-mobile-app/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="y" value="23" />
-    <option name="width" value="1385" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1920" />
+    <option name="y" value="-158" />
+    <option name="width" value="1440" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -405,12 +342,21 @@
             <path>
               <item name="spot" type="b2602c69:ProjectViewProjectNode" />
               <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spot" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -446,127 +392,6 @@
       <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/package-lock.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/server.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/src/routers/user-router.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/test/helper/model-generation.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/test/helper/prop-generation.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/actions/dogsActions.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/spot-mobile-app/package-lock.json</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/server/scripts/create-doggos.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -579,7 +404,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.create-doggos.js">
+  <component name="RunManager" selected="Jest.the user routes.When adding dogs .should be able to save an image">
     <configuration name="database.test" type="JavaScriptTestRunnerJest" factoryName="Jest" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/server/jest.config.js" />
       <node-interpreter value="project" />
@@ -599,6 +424,20 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
+    <configuration name="the user routes.When adding dogs .should be able to save an image" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/server" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server/test/integration/user-routes.test.js" />
+      <test-names>
+        <test-name value="the user routes" />
+        <test-name value="When adding dogs " />
+        <test-name value="should be able to save an image" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Server:dev" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server/index.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="NODE_ENV" value="development" />
@@ -613,16 +452,6 @@
       <command value="run" />
       <scripts>
         <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="create:dbs" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="create:dbs" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -663,19 +492,19 @@
       <item itemvalue="Jest.database.test" />
       <item itemvalue="Node.js.Server:dev" />
       <item itemvalue="npm.Frontend Tests" />
-      <item itemvalue="npm.create:dbs" />
       <item itemvalue="npm.start-docker" />
       <item itemvalue="npm.drop:dev-db" />
       <item itemvalue="npm.create:dev-db" />
       <item itemvalue="Node.js.create-doggos.js" />
+      <item itemvalue="Jest.the user routes.When adding dogs .should be able to save an image" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.the user routes.When adding dogs .should be able to save an image" />
         <item itemvalue="Node.js.create-doggos.js" />
         <item itemvalue="npm.create:dev-db" />
         <item itemvalue="npm.drop:dev-db" />
         <item itemvalue="npm.start-docker" />
-        <item itemvalue="npm.create:dbs" />
       </list>
     </recent_temporary>
   </component>
@@ -730,6 +559,7 @@
       <workItem from="1537482967525" duration="38000" />
       <workItem from="1537483023906" duration="2391000" />
       <workItem from="1537749483701" duration="2775000" />
+      <workItem from="1537848693369" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -1050,21 +880,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 26m 32s.xml">
-      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 27m 28s.xml">
-      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 28m 32s.xml">
-      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 28m 36s.xml">
-      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 29m 13s.xml">
-      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.14 at 22h 29m 47s.xml">
       <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -1080,15 +895,50 @@
     <history-entry file="user-routes_test_js - 2018.09.14 at 22h 33m 40s.xml">
       <configuration name="user-routes.test.js" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.25 at 16h 20m 05s.xml">
+      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.25 at 16h 20m 20s.xml">
+      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.25 at 16h 22m 22s.xml">
+      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.25 at 16h 23m 27s.xml">
+      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="the_user_routes_When_adding_dogs__should_be_able_to_save_an_image - 2018.09.25 at 16h 23m 49s.xml">
+      <configuration name="the user routes.When adding dogs .should be able to save an image" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124245000" />
+    <option name="totallyTimeSpent" value="125013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="23" width="1385" height="877" extended-state="0" />
+    <frame x="-1919" y="-158" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.25953078" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.1937862" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.592313" visible="true" weight="0.37991717" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46376812" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" sideWeight="0.60535586" weight="0.32951653" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6050553" weight="0.4937888" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3949447" side_tool="true" weight="0.4937888" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.5587151" weight="0.42960662" />
+      <window_info anchor="bottom" id="Statistic" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.1937862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1099,29 +949,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" sideWeight="0.60535586" weight="0.32951653" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" weight="0.22823219" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39420485" side_tool="true" weight="0.37163562" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43002546" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.6050553" visible="true" weight="0.4937888" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3949447" side_tool="true" weight="0.4937888" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.5587151" weight="0.42960662" />
       <window_info anchor="bottom" id="Statistic" order="11" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.26004228" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.592313" weight="0.3307888" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29643765" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.60535586" weight="0.32951653" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" visible="true" weight="0.40330788" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39420485" side_tool="true" weight="0.37163562" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.43002546" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1187,6 +1018,24 @@
     <MESSAGE value="Configured the app.json in order to do a test android build" />
     <option name="LAST_COMMIT_MESSAGE" value="Configured the app.json in order to do a test android build" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/src/controllers/user.controller.js</url>
+          <line>43</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/test/integration/user-routes.test.js</url>
+          <line>57</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -1197,13 +1046,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/api/apiMethods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/reducers/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1324,13 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/models/dogs-model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/models/__tests__/images-model.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1362,24 +1197,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/integration/user-routes.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/db/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1467,17 +1288,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        <state relative-caret-position="132">
+          <caret line="303" column="4" selection-start-line="303" selection-start-column="4" selection-end-line="303" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/DogDetails.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="267">
+          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1486,15 +1317,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="382">
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/MapTab.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/DogDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1679">
-          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+        <state relative-caret-position="382">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1503,25 +1334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
+        <state relative-caret-position="382">
           <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1532,13 +1346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="303" column="4" selection-start-line="303" selection-start-column="4" selection-end-line="303" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1546,13 +1353,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/components/mapComponents/DogMarkers.js">
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="23">
+          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="35" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/cert/client.csr">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="63" lean-forward="true" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/dogs-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test/helper/prop-generation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/controllers/user.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/test/integration/user-routes.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
