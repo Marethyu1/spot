@@ -44,6 +44,7 @@ const createDog = async (req, res) => {
     const body = {
         dogs: dogs.toJSON()
     }
+    delete body.dogs.image
     res.send(body)
 }
 
@@ -60,7 +61,11 @@ const findImage = async (req, res, next) => {
     //Check if the route matches a potential image type
     const imageTypeToSearch = expectedImageTypes[imageType] ? imageType : DEFAULT_IMAGE_TYPE
 
+    const time = Date.now()
     const image = await imagesModel.get(image_id, imageTypeToSearch)
+    const totalTome = Date.now() - time
+    // console.log("time taken to search for image", image_id, ":" , totalTome.toLocaleString())
+
 
     let binary = image[imageTypeToSearch]
 
