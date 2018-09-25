@@ -1,5 +1,6 @@
 import dogsReducer, {initialState} from "../dogs"
-import {addDogs, addSingleDog} from "../../actions";
+import {addDogs, addSingleDog, setCurrentDog} from "../../actions";
+import {updateSingleDog} from "../../actions/dogsActions";
 
 const reduceFromInitialState = (action) => dogsReducer(undefined, action)
 
@@ -55,6 +56,28 @@ describe("The dogs reducer", () => {
         const {dogs} = reduceFromExistingState(action)
 
         expect(dogs).toEqual(dogsToUpdate)
+    })
+
+    it("Should be able to update a dog in the list of dogs", () => {
+        const dog = {
+            id: 1,
+            tag: "NEW TAG"
+        }
+
+        const action = updateSingleDog(dog)
+        const {dogs} = reduceFromExistingState(action)
+        const foundDog = dogs.find(x => x.id === dog.id)
+
+        expect(foundDog.tag).toBe(dog.tag)
+    })
+
+    it("Should be able to set the current dog", () => {
+        const dog = {
+            id: 4,
+        }
+        const action = setCurrentDog(dog)
+        const {currentDog} = reduceFromInitialState(action)
+        expect(currentDog).toEqual(dog)
     })
 
 })

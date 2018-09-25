@@ -81,8 +81,7 @@ const findImage = async (req, res, next) => {
 
 const updateDogTag = async (req, res, next) => {
     const {user_id, dog_id, tag} = req.params
-    const updatedDog = await dogsModel.updateTag(user_id, dog_id, tag)
-
+    const updatedDog = await dogsModel.updateTag(user_id, dog_id, tag.toString())
     const body = {
         dogs: updatedDog.toJSON()
     }

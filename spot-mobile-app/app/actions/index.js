@@ -6,6 +6,8 @@ import {
     findDogs,
     submitDog,
     addSingleDog,
+    setCurrentDog,
+    updateDogTagAndClearCurrent
 } from "./dogsActions";
 
 import {
@@ -22,6 +24,9 @@ export {
     addSingleDog,
     findDogs,
     submitDog,
+    setCurrentDog,
+    updateDogTagAndClearCurrent,
+
     loginUser,
 
     setCameraPermission,

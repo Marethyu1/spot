@@ -47,15 +47,10 @@ class DogsModel extends AbstractModel {
         const values = {
             tag: tag
         }
-        const options = {
-            where: {
-                user_id,
-                id: dog_id,
-            }
-        }
-        return this.model.update(values, options)
-            .then(() => {
-                return this.get(dog_id)
+
+        return this.get(dog_id)
+            .then((model) => {
+                return model.update(values)
             })
     }
 }

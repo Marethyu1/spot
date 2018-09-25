@@ -7,6 +7,8 @@ import {getLocationAndGeocode} from "../utils/locationUtils";
 import {hasCameraPermission} from "../utils/permissionsUtils";
 import {setCameraPermission} from "../actions/permissionsActions"
 import {connect} from "react-redux";
+import permissions from "../reducers/permissions";
+import {updateDogTagAndClearCurrent} from "../actions"
 
 
 class CameraTab extends Component {
@@ -62,8 +64,16 @@ class CameraTab extends Component {
         })
     }
 
+    updateDogTag = () => {
+        this.props.updateDogTag(10210259641485879, this.props.currentDog.id, "SICK NEW TAG")
+    }
+
 
     render() {
+        if (this.props.currentDog.tags){
+            console.log(`FOUND SOME TAGS FOR THE DOG ${this.props.currentDog.id}`)
+            console.log(this.props.currentDog.tags)
+        }
       const { hasCameraPermission } = this.props;
       if (!hasCameraPermission) {
           return (
@@ -120,24 +130,43 @@ class CameraTab extends Component {
                   <Icon name="repeat" style={{fontSize: 40, color: 'white', marginTop: 15, marginRight:15}}/>
               </TouchableOpacity>
             </View>
-            <View
-                style={{
-                    flex: 1,
-                    backgroundColor: 'transparent',
-                    flexDirection: 'row',
-                }}>
-                <TouchableOpacity
+                {this.props.currentDog.id &&  <View
                     style={{
                         flex: 1,
-                        alignSelf: 'flex-end',
-                        alignItems: 'center',
-                    }}
-                    onPress={this.takePicture.bind(this)}
-                >
-                    <Icon name="aperture" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
+                        backgroundColor: 'transparent',
+                        flexDirection: 'row',
+                    }}>
+                    <TouchableOpacity
+                        style={{
+                            flex: 1,
+                            alignSelf: 'flex-end',
+                            alignItems: 'left',
+                        }}
+                        onPress={this.updateDogTag.bind(this)}
+                    >
+                        <Icon name="pizza" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
 
-                </TouchableOpacity>
-            </View>
+                    </TouchableOpacity>
+                </View>}
+
+                <View
+                    style={{
+                        flex: 1,
+                        backgroundColor: 'transparent',
+                        flexDirection: 'row',
+                    }}>
+                    <TouchableOpacity
+                        style={{
+                            flex: 1,
+                            alignSelf: 'flex-end',
+                            alignItems: 'center',
+                        }}
+                        onPress={this.takePicture.bind(this)}
+                    >
+                        <Icon name="paw" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
+
+                    </TouchableOpacity>
+                </View>
           </Camera>
         </View>
 
@@ -146,11 +175,14 @@ class CameraTab extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    setCameraPermission: (permission=true) => dispatch(setCameraPermission(permission))
+    setCameraPermission: (permission=true) => dispatch(setCameraPermission(permission)),
+    // TODO @liz this will need to be put into the correct location
+    updateDogTag: (userId, dogId, tag) => dispatch(updateDogTagAndClearCurrent(userId, dogId, tag))
 })
 
 const mapStateToProps = (state, props) => ({
     hasCameraPermission: state.permissions.hasCameraPermission,
+    currentDog: state.dogs.currentDog
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CameraTab)
