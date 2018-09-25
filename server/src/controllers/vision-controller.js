@@ -18,6 +18,24 @@ const getTags = async (image) => {
     }
 }
 
+const getTagsPolyfill = async (image) => {
+    const faker = require("faker")
+    let labels = []
+    for (let i=0; i<10; i++){
+        labels.push(faker.commerce.productName())
+    }
+    return labels
+}
+
+const polyFillGetTags = () => {
+    if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+        console.log("GOOGLE_APPLICATION_CREDENTIALS not set, getting tags may return unexpected results")
+        return getTagsPolyfill
+    } else {
+        return getTags
+    }
+}
+
 module.exports = {
-    getTags
+    getTags: polyFillGetTags()
 }
