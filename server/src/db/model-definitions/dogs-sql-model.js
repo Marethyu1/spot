@@ -10,7 +10,7 @@ class DogsSqlModel extends SqlAbstractModel {
                 primaryKey: true,
                 autoIncrement: true,
             },
-            title: {
+            tag: {
                 type: Sequelize.STRING
             },
             latitude: {

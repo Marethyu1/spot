@@ -1,6 +1,7 @@
 const userModel = require("../models/user-model")
 const dogsModel = require("../models/dogs-model")
 const imagesModel = require("../models/images-model")
+const {getTags} = require("./vision-controller")
 
 
 const create  = async (req, res, next) => {
@@ -39,10 +40,20 @@ const createDog = async (req, res) => {
     }
     const image = new Buffer(options.image.image.toString(), "base64")
 
+    const tags = await getTags(image)
+        .catch(err => {
+            console.log(err)
+            return []
+        })
+
     options.image.image = image
-    const dogs = await dogsModel.create(options)
+    const dog = await dogsModel.create(options)
     const body = {
-        dogs: dogs.toJSON()
+        dogs:
+            {
+                ...dog.toJSON(),
+                tags: tags
+            },
     }
     delete body.dogs.image
     res.send(body)
@@ -61,15 +72,22 @@ const findImage = async (req, res, next) => {
     //Check if the route matches a potential image type
     const imageTypeToSearch = expectedImageTypes[imageType] ? imageType : DEFAULT_IMAGE_TYPE
 
-    const time = Date.now()
     const image = await imagesModel.get(image_id, imageTypeToSearch)
-    const totalTome = Date.now() - time
-    // console.log("time taken to search for image", image_id, ":" , totalTome.toLocaleString())
-
 
     let binary = image[imageTypeToSearch]
 
     res.send(binary)
+}
+
+const updateDogTag = async (req, res, next) => {
+    const {user_id, dog_id, tag} = req.params
+    const updatedDog = await dogsModel.updateTag(user_id, dog_id, tag)
+
+    const body = {
+        dogs: updatedDog.toJSON()
+    }
+    res.send(body)
+
 }
 
 
@@ -78,5 +96,6 @@ module.exports = {
     create,
     findDogs,
     createDog,
-    findImage
+    findImage,
+    updateDogTag
 }

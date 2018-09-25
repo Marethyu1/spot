@@ -42,6 +42,22 @@ class DogsModel extends AbstractModel {
         }
         return super.create(allValues, allOptions)
     }
+
+    updateTag(user_id, dog_id, tag) {
+        const values = {
+            tag: tag
+        }
+        const options = {
+            where: {
+                user_id,
+                id: dog_id,
+            }
+        }
+        return this.model.update(values, options)
+            .then(() => {
+                return this.get(dog_id)
+            })
+    }
 }
 
 const associations = [IMAGES_MODEL]

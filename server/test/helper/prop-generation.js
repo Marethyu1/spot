@@ -27,7 +27,7 @@ const generateDogProps = (user_id) => {
     const lat = coordBounds.xMin + (Math.random() * (coordBounds.xMax - coordBounds.xMin))
     return {
         user_id: user_id,
-        title: faker.commerce.productName(),
+        tag: faker.commerce.productName(),
         latitude: lat,
         longitude: lng,
         caption: faker.commerce.productName(),
@@ -39,7 +39,7 @@ const generateDogPropsWithImage = (user_id, base64=true) => {
     let imageToSave = base64 ? base64Image : image
     return {
         user_id: user_id,
-        title: faker.commerce.productName(),
+        tag: faker.commerce.productName(),
         latitude: faker.address.latitude(),
         longitude: faker.address.longitude(),
         caption: faker.lorem.sentences(),
