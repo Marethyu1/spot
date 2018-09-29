@@ -3,7 +3,7 @@
   "expo": {
     "name": "Spot",
     "version": "1.0.0",
-    "icon": "../images/logo.png",
+    "icon": "../images/splash.png",
     "slug": "spot",
     "sdkVersion": "27.0.0",
     "androidStatusBar": {
@@ -17,9 +17,9 @@
     },
     "orientation": "portrait",
     "splash": {
-      "backgroundColor": "#ffffff",
-      "image": "../images/logo.png",
-      "resizeMode": "cover"
+      "backgroundColor": "#f8eded",
+      "image": "../images/splash.png",
+      "resizeMode": "contain"
     }
   }
 }

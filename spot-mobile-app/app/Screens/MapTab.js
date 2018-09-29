@@ -88,7 +88,7 @@ class MapTab extends Component {
                 </Header>
 
                 <Modal
-                    animationType="slide"
+                    animationType="fade"
                     transparent={false}
                     visible={this.state.modalVisible}
                 >
