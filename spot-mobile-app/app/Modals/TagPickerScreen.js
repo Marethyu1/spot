@@ -14,7 +14,6 @@ class TagPickerScreen extends Component {
     }
 
     setupData = () => {
-        debugger
         let myData = []
         this.props.dog.tags.forEach(function(element) {
             myData = [...myData, {label: element}]

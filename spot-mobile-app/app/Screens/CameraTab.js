@@ -101,7 +101,7 @@ class CameraTab extends Component {
                               <Text onPress={() => {
                                   this.setState({modalVisible: false})
                               }} style={{color: "gray"}}>
-                                  Back
+                                  close
                               </Text>
                           </Right>
                       </Header>
