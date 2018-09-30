@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {createImageUrl, createThumbnailUrl} from "../utils";
 import DogDetails from "../Modals/DogDetails";
 import FitImage from "react-native-fit-image";
+import moment from "moment";
 
 const Dog = (props) => {
     let dog = props.dog
@@ -26,7 +27,7 @@ const Dog = (props) => {
             </CardItem>
             <CardItem>
                 <Left>
-                    <Text>{new Date(dog.updated_at).toLocaleString()}</Text>
+                    <Text>{moment(dog.created_at).format("dd MM YYYY, hh:mm a")}</Text>
                 </Left>
             </CardItem>
         </Card>
