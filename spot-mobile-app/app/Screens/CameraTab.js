@@ -7,6 +7,7 @@ import {getLocationAndGeocode} from "../utils/locationUtils";
 import {hasCameraPermission} from "../utils/permissionsUtils";
 import {setCameraPermission} from "../actions/permissionsActions"
 import {connect} from "react-redux";
+import TagPickerScreen from "../Modals/TagPickerScreen"
 import permissions from "../reducers/permissions";
 import {updateDogTagAndClearCurrent} from "../actions"
 
@@ -14,6 +15,8 @@ import {updateDogTagAndClearCurrent} from "../actions"
 class CameraTab extends Component {
     state = {
         modalVisible: false,
+        uploadModalVisible: true,
+        tagModalVisible: false,
         type: Camera.Constants.Type.back,
         imageInfo: {},
         location: {}
@@ -59,13 +62,16 @@ class CameraTab extends Component {
 
     onUpload = () => {
         this.setState({
-            modalVisible: false,
-            imageInfo: {}
+            //modalVisible: false,
+            uploadModalVisible: false,
+            imageInfo: {},
+            tagModalVisible: true,
         })
     }
 
-    updateDogTag = () => {
-        this.props.updateDogTag(10210259641485879, this.props.currentDog.id, "SICK NEW TAG")
+    updateDogTag = (tag) => {
+        this.props.updateDogTag(10210259641485879, this.props.currentDog.id, tag)
+        this.setState({tagModalVisible: false, modalVisible: false, uploadModalVisible: true})
     }
 
 
@@ -82,10 +88,10 @@ class CameraTab extends Component {
               </Text>
           );
       }
+
       return (
           <View style={{ flex: 1 }}>
               <Modal
-                  animationType="slide"
                   transparent={false}
                   visible={this.state.modalVisible}
                   >
@@ -99,10 +105,13 @@ class CameraTab extends Component {
                               </Text>
                           </Right>
                       </Header>
-                      <PhotoScreen image={this.state.imageInfo} location={this.state.location} onUpload={this.onUpload}/>
+                      {this.state.tagModalVisible &&
+                      <TagPickerScreen dog={this.props.currentDog} onSave={this.updateDogTag}/> }
+                      {this.state.uploadModalVisible &&
+                         <PhotoScreen image={this.state.imageInfo} location={this.state.location} onUpload={this.onUpload}/>
+                      }
                   </Container>
               </Modal>
-
 
             <Camera
                 style={{ flex: 1 }}
@@ -130,25 +139,6 @@ class CameraTab extends Component {
                   <Icon name="repeat" style={{fontSize: 40, color: 'white', marginTop: 15, marginRight:15}}/>
               </TouchableOpacity>
             </View>
-                {this.props.currentDog.id &&  <View
-                    style={{
-                        flex: 1,
-                        backgroundColor: 'transparent',
-                        flexDirection: 'row',
-                    }}>
-                    <TouchableOpacity
-                        style={{
-                            flex: 1,
-                            alignSelf: 'flex-end',
-                            alignItems: 'left',
-                        }}
-                        onPress={this.updateDogTag.bind(this)}
-                    >
-                        <Icon name="pizza" style={{fontSize: 80, color: 'white', marginBottom: 10}}/>
-
-                    </TouchableOpacity>
-                </View>}
-
                 <View
                     style={{
                         flex: 1,
