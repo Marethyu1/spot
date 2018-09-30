@@ -4,7 +4,7 @@ import {updateSingleDog} from "../../actions/dogsActions";
 
 const reduceFromInitialState = (action) => dogsReducer(undefined, action)
 
-const reduceFromExistingState = (action) => dogsReducer({dogs: [{id: 1}, {id: 2}, {id:3}]}, action)
+const reduceFromExistingState = (action, dogs=[{id: 1}, {id: 2}, {id:3}]) => dogsReducer({dogs: dogs}, action)
 
 describe("The dogs reducer", () => {
 
@@ -30,8 +30,8 @@ describe("The dogs reducer", () => {
 
         const action = addDogs(dogsToUpdate)
         const {dogs} = reduceFromExistingState(action)
-
-        expect(dogs).toEqual(dogsToUpdate)
+        const orderDogs = dogsToUpdate.reverse()
+        expect(dogs).toEqual(orderDogs)
     })
 
     it("Should be able to add a single dog", () => {
@@ -50,12 +50,13 @@ describe("The dogs reducer", () => {
         const dog = {
             id: 4,
         };
-        const dogsToUpdate = [{id: 1}, {id: 2}, {id:3}, dog]
+        const originalDogs = [{id: 1}, {id: 2}, {id:3}]
 
         const action = addSingleDog(dog)
-        const {dogs} = reduceFromExistingState(action)
+        const {dogs} = reduceFromExistingState(action, originalDogs)
 
-        expect(dogs).toEqual(dogsToUpdate)
+        const expectedDogs = [dog, ...originalDogs]
+        expect(dogs).toEqual(expectedDogs)
     })
 
     it("Should be able to update a dog in the list of dogs", () => {

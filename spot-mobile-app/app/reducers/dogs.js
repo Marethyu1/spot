@@ -1,4 +1,4 @@
-import {ADD_DOGS, ADD_SINGLE_DOG, SET_CURRENT_DOG, UPDATE_SINGLE_DOG} from "../consts/dogs";
+import {SET_DOGS, ADD_SINGLE_DOG, SET_CURRENT_DOG, UPDATE_SINGLE_DOG} from "../consts/dogs";
 
 export const initialState = {
     dogs: [],
@@ -7,15 +7,15 @@ export const initialState = {
 
 const dogs = (state=initialState, action) => {
     switch (action.type) {
-        case ADD_DOGS:
+        case SET_DOGS:
             return {
                 ...state,
-                dogs: [...action.dogs]
+                dogs: [...action.dogs].reverse()
             }
         case ADD_SINGLE_DOG:
             return {
                 ...state,
-                dogs: [...state.dogs, action.dog]
+                dogs: [action.dog, ...state.dogs]
             };
         case UPDATE_SINGLE_DOG:
             const dogId = action.dog.id

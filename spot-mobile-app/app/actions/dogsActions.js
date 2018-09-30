@@ -1,5 +1,5 @@
 import {
-    ADD_DOGS,
+    SET_DOGS,
     ADD_SINGLE_DOG,
     SET_CURRENT_DOG, UPDATE_SINGLE_DOG
 } from "../consts/dogs";
@@ -8,7 +8,7 @@ import {findDogsForUser, uploadDogPhoto, updateDogTag} from "../api/routes"
 
 export const addDogs = dogs => {
     return {
-        type: ADD_DOGS,
+        type: SET_DOGS,
         dogs: dogs
     }
 }
