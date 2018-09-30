@@ -15,7 +15,7 @@ const Dog = (props) => {
                     <Thumbnail source={{uri: createThumbnailUrl(dog)}} />
                     <Body>
                     <Text>{dog.caption}</Text>
-                    <Text note>{dog.latitude}, {dog.longitude}</Text>
+                    <Text note>{dog.tag}</Text>
                     </Body>
                 </Left>
             </CardItem>

@@ -70,7 +70,7 @@ class CameraTab extends Component {
     }
 
     updateDogTag = (tag) => {
-        this.props.updateDogTag(10210259641485879, this.props.currentDog.id, tag)
+        this.props.updateDogTag(this.props.user.id, this.props.currentDog.id, tag)
         this.setState({tagModalVisible: false, modalVisible: false, uploadModalVisible: true})
     }
 
@@ -166,13 +166,13 @@ class CameraTab extends Component {
 
 const mapDispatchToProps = dispatch => ({
     setCameraPermission: (permission=true) => dispatch(setCameraPermission(permission)),
-    // TODO @liz this will need to be put into the correct location
     updateDogTag: (userId, dogId, tag) => dispatch(updateDogTagAndClearCurrent(userId, dogId, tag))
 })
 
 const mapStateToProps = (state, props) => ({
     hasCameraPermission: state.permissions.hasCameraPermission,
-    currentDog: state.dogs.currentDog
+    currentDog: state.dogs.currentDog,
+    user: state.user.userInfo,
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CameraTab)
