@@ -1,9 +1,10 @@
 import dogsReducer, {initialState} from "../dogs"
-import {addDogs, addSingleDog} from "../../actions";
+import {addDogs, addSingleDog, setCurrentDog} from "../../actions";
+import {updateSingleDog} from "../../actions/dogsActions";
 
 const reduceFromInitialState = (action) => dogsReducer(undefined, action)
 
-const reduceFromExistingState = (action) => dogsReducer({dogs: [{id: 1}, {id: 2}, {id:3}]}, action)
+const reduceFromExistingState = (action, dogs=[{id: 1}, {id: 2}, {id:3}]) => dogsReducer({dogs: dogs}, action)
 
 describe("The dogs reducer", () => {
 
@@ -29,8 +30,8 @@ describe("The dogs reducer", () => {
 
         const action = addDogs(dogsToUpdate)
         const {dogs} = reduceFromExistingState(action)
-
-        expect(dogs).toEqual(dogsToUpdate)
+        const orderDogs = dogsToUpdate.reverse()
+        expect(dogs).toEqual(orderDogs)
     })
 
     it("Should be able to add a single dog", () => {
@@ -49,12 +50,35 @@ describe("The dogs reducer", () => {
         const dog = {
             id: 4,
         };
-        const dogsToUpdate = [{id: 1}, {id: 2}, {id:3}, dog]
+        const originalDogs = [{id: 1}, {id: 2}, {id:3}]
 
         const action = addSingleDog(dog)
-        const {dogs} = reduceFromExistingState(action)
+        const {dogs} = reduceFromExistingState(action, originalDogs)
 
-        expect(dogs).toEqual(dogsToUpdate)
+        const expectedDogs = [dog, ...originalDogs]
+        expect(dogs).toEqual(expectedDogs)
+    })
+
+    it("Should be able to update a dog in the list of dogs", () => {
+        const dog = {
+            id: 1,
+            tag: "NEW TAG"
+        }
+
+        const action = updateSingleDog(dog)
+        const {dogs} = reduceFromExistingState(action)
+        const foundDog = dogs.find(x => x.id === dog.id)
+
+        expect(foundDog.tag).toBe(dog.tag)
+    })
+
+    it("Should be able to set the current dog", () => {
+        const dog = {
+            id: 4,
+        }
+        const action = setCurrentDog(dog)
+        const {currentDog} = reduceFromInitialState(action)
+        expect(currentDog).toEqual(dog)
     })
 
 })

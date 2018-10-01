@@ -3,7 +3,7 @@ const request = require("supertest")
 const BASE_URL = "/api/v1/users"
 const {setUp, tearDownConnection} = require("../../src/db/database-manager")
 const {generateUserProps, generateDogPropsWithImage} = require("../helper/prop-generation")
-const {createUser, createDog, createDogWithImage} = require("../helper/model-generation")
+const {createUser, createDog, createDogWithImage, dog} = require("../helper/model-generation")
 
 
 describe("the user routes", () => {
@@ -56,8 +56,22 @@ describe("the user routes", () => {
                 .send(dogProps)
 
             expect(status).toBe(200)
-            expect(body.dogs.image.image).toBeTruthy()
+            expect(body.dogs).toBeTruthy()
 
+        })
+    })
+
+    describe("When adding a tag for an image", async () => {
+        it("Should be able to update the tag", async () => {
+            const dog = await createDog()
+            const UPDATED_TAG = "COOL DOG"
+            const url = `${BASE_URL}/${dog.user_id}/dogs/${dog.id}/tags/${UPDATED_TAG}`
+
+            const {status, body} = await request(server)
+                .put(url)
+
+            expect(status).toBe(200)
+            expect(body.dogs.tag).toBe(UPDATED_TAG)
         })
     })
 

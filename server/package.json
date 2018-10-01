@@ -10,11 +10,13 @@
     "drop:dev-db": "node_modules/.bin/sequelize db:drop",
     "drop:test-db": "node_modules/.bin/sequelize db:drop --env=test",
     "create:dbs": "npm run create:dev-db && npm run create:test-db",
-    "start-docker": "docker-compose run --service-ports db"
+    "start-docker": "docker-compose run --service-ports db",
+    "start": "node index.js"
   },
   "author": "Liz and Stefan",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/vision": "^0.22.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "lodash": "^4.17.10",

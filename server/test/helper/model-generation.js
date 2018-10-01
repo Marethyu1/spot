@@ -7,7 +7,8 @@ const createUser = () => {
     return userModel.upsert(props)
 }
 
-const createDog = (user_id) => {
+const createDog = async (user_id) => {
+    if (!user_id) user_id = (await createUser()).id
     const props = generateDogProps(user_id)
     return dogsModel.create(props)
 }

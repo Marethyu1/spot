@@ -46,6 +46,7 @@ class DogDetails extends Component {
 
                         <Text style={styles.text}>{moment(this.props.dog.created_at).format("dddd MMMM Do YYYY, hh:mm a")}</Text>
                         <Text style={styles.text}>{this.state.location}</Text>
+                        <Text style={styles.text}>{this.props.dog.tag}</Text>
                     </View>
                 </Content>
             </Container>

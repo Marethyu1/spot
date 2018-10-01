@@ -29,5 +29,8 @@ router.route("/:user_id/dogs")
 router.route("/:user_id/dogs/:dog_id/*/:image_id")
     .get(wrap(userController.findImage))
 
+router.route("/:user_id/dogs/:dog_id/tags/:tag")
+    .put(wrap(userController.updateDogTag))
+
 
 module.exports = router

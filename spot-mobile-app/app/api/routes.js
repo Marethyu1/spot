@@ -10,7 +10,7 @@ export const login = async () => {
    try {
        const token = await facebookLogin()
        const userInfo = await getFacebookUserInfo(token)
-       const createdUser = await createUser(userInfo)
+       const createdUser = await _createUser(userInfo)
        return createdUser
    } catch (err) {
        console.log(err)
@@ -35,7 +35,7 @@ const facebookLogin = async () => {
 }
 
 //private
-const createUser = async (body) => {
+const _createUser = async (body) => {
     const url = createUrl("users")
     return await post(url, body)
 }
@@ -45,10 +45,14 @@ export const findDogsForUser = (user_id) => {
     return get(url)
 }
 
-export const uploadDogPhoto = async (photo_data, user_id) => {
-    // const url = createUrl(`users/${user_id}/dogs`)
+export const uploadDogPhoto = (photo_data, user_id) => {
     const url = createUrl(`users/${user_id}/dogs`)
     return post(url, photo_data)
+}
+
+export const updateDogTag = (user_id, dog_id, tag) => {
+    const url = createUrl(`users/${user_id}/dogs/${dog_id}/tags/${tag}`)
+    return put(url)
 }
 
 
