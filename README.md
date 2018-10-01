@@ -6,7 +6,28 @@
 
 
 # Architecture
-Spot is split into two key components: A Mobile App and a Back End Server. The original architectural plan is as follows:
-![Architecture](https://github.com/Marethyu1/spot/blob/master/images/architecture.png)
+Spot is split into two key components: A Mobile App (./spot-mobile-app) and a Back End Server (./server)
 
-The mobile application is built using React Native. The Google App Engine will host a Node.js server. This can handle REsTful requests from the mobile app. The server can then authenticate users through Firebase Authentication and save data (including photos) to Google Cloud SQL database. 
+
+# Running the Server
+The server has the following dependencies
+- docker
+- nodejs
+
+It can be run with the following commands
+- Nagivate into the server directory with ```cd ./server```
+- Install the node dependencies with ```npm install```
+- Start a mysql docker container with ```npm run start-docker```
+- Once the docker container is running create the development db with ```npm run create:dev-db```
+- Start up the server with ```npm run start```
+
+
+# Running the Mobile App
+The server has the following dependencies
+- nodejs
+
+It can be run with the following commands
+- Nagivate into the server directory with ```cd ./spot-mobil-app```
+- Install the node dependencies with ```npm install```
+- Start the app with ```npm run start``` This will spin up app using [expo](https://expo.io/)
+- If you have an ios emulator installed you can press i to start the emulator
