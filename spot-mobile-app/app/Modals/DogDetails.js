@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet } from 'react-native';
-import {Location} from 'expo'
+import {MapView} from 'expo';
 import moment from 'moment'
 import FitImage from 'react-native-fit-image'
 import {uploadDogPhoto} from "../api/routes"
@@ -30,17 +30,10 @@ class DogDetails extends Component {
                 <Content style={styles.background}>
 
                     <Text style={styles.captionText}>{this.props.dog.caption}</Text>
-
-
                     <FitImage
                         source={{uri: createImageUrl(this.props.dog)}}
                         style={styles.fitImage}
                     />
-
-                    {/*<Image*/}
-                        {/*source={{uri: createImageUrl(this.props.dog)}}*/}
-                        {/*style={styles.image}*/}
-                    {/*/>*/}
 
                     <View style={styles.textView}>
 
@@ -48,6 +41,20 @@ class DogDetails extends Component {
                         <Text style={styles.text}>{this.state.location}</Text>
                         <Text style={styles.text}>{this.props.dog.tag}</Text>
                     </View>
+
+                    <MapView
+                        initialRegion={{
+                            latitude: this.props.dog.latitude,
+                            longitude:this.props.dog.longitude,
+                            latitudeDelta: 0.0222,
+                            longitudeDelta: 0.0121,
+                        }}
+                        style={styles.map}>
+
+                        <MapView.Marker
+                            coordinate={{latitude: this.props.dog.latitude, longitude: this.props.dog.longitude}}
+                        />
+                    </MapView>
                 </Content>
             </Container>
         );
@@ -97,6 +104,12 @@ const styles = StyleSheet.create({
 
     background: {
         backgroundColor: "#F8EDED",
+    },
+
+    map: {
+        height: 200,
+        marginLeft: 20,
+        marginRight: 20,
     }
 
 
