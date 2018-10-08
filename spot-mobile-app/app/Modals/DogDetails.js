@@ -69,12 +69,14 @@ const styles = StyleSheet.create({
     fitImage: {
         marginLeft: 20,
         marginRight: 20,
-        borderWidth: 10,
-        borderRadius: 10,
+        borderWidth: 5,
+        // borderRadius: 10,
         borderColor: "#E1AC88",
     },
     text: {
-        color: "#74401d"
+        color: "#74401d",
+        marginBottom: 10,
+        marginTop: 10,
     },
 
     captionText: {
