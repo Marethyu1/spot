@@ -2,10 +2,14 @@ import React, {Component} from "react"
 import {Body, Button, Container, Content, Header, Left, Right, Text, Title} from "native-base";
 import {Grid} from "react-native-easy-grid";
 import Row from "react-native-easy-grid/Components/Row";
+import FitImage from "react-native-fit-image";
+
 import config from "../config/config"
 import {login} from "../api/routes"
 
 import DefaultHeader from "../components/layoutComponents/DefaultHeader"
+import {StyleSheet} from "react-native";
+import {createImageUrl} from "../utils";
 
 export default class Login extends Component {
 
@@ -17,17 +21,19 @@ export default class Login extends Component {
     render() {
         return (
             <Container>
-                <DefaultHeader/>
-                <Content contentContainerStyle={{flex: 1}} style={{padding: 10}}>
+                {/*<DefaultHeader/>*/}
+                <Content contentContainerStyle={{flex: 1}} style={styles.screen}>
                     <Grid style={{alignItems: 'center'}}>
                         <Row>
-                            <Text>
-                                Welcome to spot!
-                            </Text>
+
+                            <FitImage
+                                source={require("../../images/splash.png")}
+                                style={styles.fitImage}
+                            />
                         </Row>
                         <Row>
                             <Button primary block
-                                    onPress={this.login}>
+                                    onPress={this.login} style={styles.button}>
                                 <Text> Login With Facebook </Text>
                             </Button>
                         </Row>
@@ -37,3 +43,39 @@ export default class Login extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+
+    row: {
+        borderBottomWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
+    },
+
+    screen: {
+        padding: 10,
+        backgroundColor: '#F8EDED',
+    },
+
+    title: {
+        fontSize: 15,
+        fontWeight: '600',
+    },
+
+    description: {
+        marginTop: 5,
+        fontSize: 14,
+    },
+
+    fitImage: {
+        // marginLeft: 20,
+        marginTop: 100,
+        width:200,
+        height: 200,
+    },
+
+    button: {
+        marginTop: 100,
+        backgroundColor: '#B3886B',
+    }
+});

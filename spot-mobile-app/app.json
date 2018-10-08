@@ -18,7 +18,7 @@
     "orientation": "portrait",
     "splash": {
       "backgroundColor": "#f8eded",
-      "image": "../images/splash.png",
+      "image": "./images/splash.png",
       "resizeMode": "contain"
     }
   }
