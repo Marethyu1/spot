@@ -2,7 +2,7 @@
 const preProcessImage = async (image) => {
     const sharp = require("sharp")
     const path = require("path")
-    const PIN_LOCATION = path.join(__dirname, "overlay.png")
+    const PIN_LOCATION = path.join(__dirname, "pin_new.png")
 
     const IMAGE_SIZE = 150
 

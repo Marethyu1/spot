@@ -20,9 +20,18 @@ const getTags = async (image) => {
 
 const getTagsPolyfill = async (image) => {
     const faker = require("faker")
-    let labels = []
+    let labels = ["Dog",
+    "Dog Like Mammal",
+    "Dog Breed",
+    "Dog Breed Group",
+    "Menswear Dog",
+    "Snout",
+    "Product",
+    "Puppy",
+    "Companion Dog",
+    "Carnivoran"]
     for (let i=0; i<10; i++){
-        labels.push(faker.commerce.productName())
+        //labels.push(faker.commerce.productName())
     }
     return labels
 }

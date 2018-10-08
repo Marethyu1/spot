@@ -6,8 +6,6 @@ import {submitDog} from "../actions/index";
 import FitImage from "react-native-fit-image";
 import LoadingActivity from "../components/layoutComponents/LoadingActivity"
 
-
-
 class PhotoScreen extends Component {
 
     state = {
