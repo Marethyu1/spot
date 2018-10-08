@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Merged in the ol map onto the dog details screen">
+    <list default="true" id="909034b6-c9e2-4151-a6bd-61ab7074555f" name="Default" comment="Updated login screen to have logo and coloured button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/scripts/create-doggos.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/scripts/create-doggos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spot-mobile-app/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/spot-mobile-app/app/config/ipaddress.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,15 +113,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="197" />
-          <entry key="json" value="77" />
-          <entry key="txt" value="69" />
+          <entry key="json" value="106" />
+          <entry key="txt" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="77" />
+          <entry key="JSON" value="106" />
           <entry key="JavaScript" value="197" />
-          <entry key="PLAIN_TEXT" value="69" />
+          <entry key="PLAIN_TEXT" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -162,20 +161,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="436">
+              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="291">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -228,8 +227,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            <state relative-caret-position="46">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -306,7 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/src/models/__tests__/dogs-model.test.js" />
         <option value="$PROJECT_DIR$/server/test/helper/model-generation.js" />
         <option value="$PROJECT_DIR$/server/src/routers/create-routers.js" />
         <option value="$PROJECT_DIR$/server/src/routers/user-router.js" />
@@ -355,8 +353,9 @@
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/ListTab.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Modals/PhotoScreen.js" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Modals/DogDetails.js" />
-        <option value="$PROJECT_DIR$/spot-mobile-app/app.json" />
         <option value="$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js" />
+        <option value="$PROJECT_DIR$/server/scripts/create-doggos.js" />
+        <option value="$PROJECT_DIR$/spot-mobile-app/app.json" />
       </list>
     </option>
   </component>
@@ -389,8 +388,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="23" />
+    <option name="x" value="9" />
+    <option name="y" value="24" />
     <option name="width" value="1418" />
     <option name="height" value="877" />
   </component>
@@ -431,19 +430,6 @@
               <item name="spot" type="b2602c69:ProjectViewProjectNode" />
               <item name="spot" type="462c0819:PsiDirectoryNode" />
               <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spot" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-mobile-app" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -474,16 +460,17 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/test/images" />
-      <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/spot-mobile-app/app/Modals" />
       <recent name="$PROJECT_DIR$/server/src/models" />
       <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
       <recent name="$PROJECT_DIR$/spot-mobile-app/app/api" />
       <recent name="$PROJECT_DIR$/server/cert" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spot-mobile-app" />
+      <recent name="$PROJECT_DIR$/server/test/images" />
+      <recent name="$PROJECT_DIR$/spot-mobile-app/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -498,7 +485,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="Node.js.create-doggos.js">
     <configuration name="database.test" type="JavaScriptTestRunnerJest" factoryName="Jest" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/server/jest.config.js" />
       <node-interpreter value="project" />
@@ -590,9 +577,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.create-doggos.js" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start" />
-        <item itemvalue="Node.js.create-doggos.js" />
         <item itemvalue="npm.create:dev-db" />
         <item itemvalue="npm.start-docker" />
       </list>
@@ -652,7 +639,7 @@
       <workItem from="1538385563080" duration="242000" />
       <workItem from="1538386100574" duration="3001000" />
       <workItem from="1538529123682" duration="2000" />
-      <workItem from="1538967249548" duration="1414000" />
+      <workItem from="1538967249548" duration="2314000" />
     </task>
     <task id="LOCAL-00001" summary="Created basic login component">
       <created>1535436363896</created>
@@ -969,7 +956,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538386421792</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Updated login screen to have logo and coloured button">
+      <created>1538968736429</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1538968736430</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1005,7 +999,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127472000" />
+    <option name="totallyTimeSpent" value="128372000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1017,21 +1011,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="23" width="1418" height="877" extended-state="0" />
+    <frame x="9" y="24" width="1418" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.21474588" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980916" visible="true" weight="0.30064425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5019084" side_tool="true" weight="0.242965" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.592313" weight="0.37598944" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.592313" weight="0.24670185" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4643766" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298153" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" sideWeight="0.60535586" weight="0.32951653" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" visible="true" weight="0.13984169" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.60579515" visible="true" weight="0.13984169" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39420485" side_tool="true" weight="0.37163562" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.4287599" />
       <window_info anchor="bottom" id="Statistic" order="11" />
@@ -1092,7 +1086,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added images sql model&#10;linked images to dogs model&#10;refactored Abstract model to load in associations if present" />
     <MESSAGE value="Added test for images model" />
     <MESSAGE value="Added insert image method to dogs model #pair[sha162, emr65]" />
     <MESSAGE value="Added post /users/id/dogs" />
@@ -1117,7 +1110,8 @@
     <MESSAGE value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things" />
     <MESSAGE value="Started work adding a modal to view dog details.&#10;- also updated some small things for async storage issues&#10;- modal displays some things&#10;- pretty styles" />
     <MESSAGE value="Merged in the ol map onto the dog details screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged in the ol map onto the dog details screen" />
+    <MESSAGE value="Updated login screen to have logo and coloured button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated login screen to have logo and coloured button" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1440,13 +1434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1458,13 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1480,11 +1460,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spot-mobile-app/app/Screens/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        <state relative-caret-position="291">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/scripts/create-doggos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spot-mobile-app/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
         </state>
       </provider>
     </entry>
