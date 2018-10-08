@@ -75,7 +75,7 @@ class PhotoScreen extends Component {
                            value={this.state.caption}
                            onChangeText={(text) => this.setState({caption: text})}
                     />
-                    {savingImage &&  <Text style={styles.uploadButton}>Saving Doggo! This may take some time!</Text>}
+                    {savingImage &&  <Text style={styles.loadingText}>Saving Doggo! This may take some time!</Text>}
                     {savingImage && <LoadingActivity/>}
 
                     <Button block onPress={this.onDogSubmit} style={styles.uploadButton} disabled={!readyToSubmit || savingImage}>
@@ -108,9 +108,11 @@ const styles = StyleSheet.create({
         flex:1,
         marginTop:10,
         marginBottom: 10,
-        borderWidth: 10,
-        borderRadius: 10,
-        borderColor: "#E1AC88",
+        marginLeft: 5,
+        marginRight: 5,
+        borderWidth: 5,
+        // borderRadius: 10,
+        borderColor: "#B3886B",
     },
     textInput: {
         flex:1,
@@ -122,11 +124,21 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1
     },
 
+    loadingText: {
+        flex:1,
+        marginTop:20,
+        marginBottom: 20,
+        marginLeft: 20,
+        marginRight: 20,
+        color: '#B3886B',
+    },
+
     uploadButton: {
         borderRadius: 5,
         marginLeft: 20,
         marginRight: 20,
         marginTop: 20,
         marginBottom: 15,
+        backgroundColor: '#B3886B',
     }
 });

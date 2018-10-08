@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 15,
+        backgroundColor: '#B3886B',
     }
 
 

@@ -75,7 +75,7 @@ class ListTab extends Component {
                 </Modal>
                 <Header>
                     <Left>
-                        <Icon name="md-paw" style={{color: 'white'}}/>
+                        <Icon name="md-paw" />
                     </Left>
                     <Body>
                     <Title>Spotted Dogs</Title>
