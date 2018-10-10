@@ -1,9 +1,8 @@
+const sharp = require("sharp")
+const path = require("path")
+const PIN_LOCATION = path.join(__dirname, "pin_new.png")
 
 const preProcessImage = async (image) => {
-    const sharp = require("sharp")
-    const path = require("path")
-    const PIN_LOCATION = path.join(__dirname, "pin_new.png")
-
     const IMAGE_SIZE = 150
 
     const roundedCorners = Buffer.from(

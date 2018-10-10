@@ -1,6 +1,6 @@
 const fs = require("fs")
 const path = require("path")
-const USER_ID = "2297418880278509"
+const USER_ID = "10210259641485879"
 
 const {createDogLoadImage} =require("../test/helper/model-generation")
 
