@@ -60,7 +60,9 @@ typings/
 # next.js build output
 .next
 
-.idea/**
+.idea/
+.idea/**/workspace.xml
+
 
 
 .DS_Store
