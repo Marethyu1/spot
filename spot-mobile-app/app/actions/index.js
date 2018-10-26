@@ -8,16 +8,16 @@ import {
   addSingleDog,
   setCurrentDog,
   updateDogTagAndClearCurrent,
-} from './dogsActions';
+} from './dogsActions'
 
 import {
   loginUser,
-} from './userActions';
+} from './userActions'
 
 import {
   setCameraPermission,
   setLocationPermission,
-} from './permissionsActions';
+} from './permissionsActions'
 
 export {
   addDogs,
@@ -31,4 +31,4 @@ export {
 
   setCameraPermission,
   setLocationPermission,
-};
+}

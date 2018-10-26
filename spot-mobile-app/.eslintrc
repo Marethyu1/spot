@@ -7,6 +7,7 @@
   "parser": "babel-eslint", // needed to make babel stuff work properly
   "extends": "airbnb",
   "rules": {
-    "no-underscore-dangle": ["error", { "allowAfterThis": true }]
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "semi": ["error", "never"]
   }
 }
