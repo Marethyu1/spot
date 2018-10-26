@@ -69,9 +69,9 @@ const styles = StyleSheet.create({
 
     fitImage: {
         // marginLeft: 20,
-        marginTop: 100,
+        marginTop: 50,
         width:200,
-        height: 200,
+        height: 300,
     },
 
     button: {
