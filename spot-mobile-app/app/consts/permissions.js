@@ -1,2 +1,2 @@
-export const SET_CAMERA_PERMISSION = "[permissions] SET_CAMERA_PERMISSION"
-export const SET_LOCATION_PERMISSION = "[permissions] SET_LOCATION_PERMISSION"
+export const SET_CAMERA_PERMISSION = '[permissions] SET_CAMERA_PERMISSION'
+export const SET_LOCATION_PERMISSION = '[permissions] SET_LOCATION_PERMISSION'
