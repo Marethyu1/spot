@@ -5,5 +5,11 @@
     "es6": true // enables es6 features
   },
   "parser": "babel-eslint", // needed to make babel stuff work properly
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "semi": ["error", "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/destructuring-assignment": ["enabled", "always", { "ignoreClassFields": true }]
+  }
 }
