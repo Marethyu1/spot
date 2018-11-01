@@ -8,6 +8,8 @@
   "extends": "airbnb",
   "rules": {
     "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/destructuring-assignment": ["enabled", "always", { "ignoreClassFields": true }]
   }
 }

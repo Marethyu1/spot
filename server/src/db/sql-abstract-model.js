@@ -1,28 +1,27 @@
 class SqlAbstractModel {
+  constructor(name) {
+    this.name = name
+  }
 
-    constructor(name){
-        this.name = name
+  getName() {
+    return this.name
+  }
+
+  getModel() {
+
+  }
+
+  getOptions() {
+    return {
+      timestamps: true,
+      underscored: true,
+      getterMethods: {},
     }
+  }
 
-    getName() {
-        return this.name
-    }
+  setAssociations(models) {
 
-    getModel(){
-
-    }
-
-    getOptions(){
-        return {
-            timestamps: true,
-            underscored: true,
-            getterMethods: {},
-        }
-    }
-
-    setAssociations(models){
-
-    }
+  }
 }
 
 module.exports = SqlAbstractModel

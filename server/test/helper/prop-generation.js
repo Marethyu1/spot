@@ -1,59 +1,57 @@
-const faker = require("faker")
+const faker = require('faker')
 
-const image = require("../../test/helper/load-image")
-const base64Image = require("../../test/helper/load-base64-image")
+const image = require('../../test/helper/load-image')
+const base64Image = require('../../test/helper/load-base64-image')
 
-const generateUserProps = () => {
-    return {
-        id: faker.random.number(),
-        name: faker.name.findName(),
-        email: faker.internet.email()
-    }
-}
+const generateUserProps = () => ({
+  id: faker.random.number(),
+  name: faker.name.findName(),
+  email: faker.internet.email(),
+})
 
 // [-43.475937, 172.549585] ->  [-43.475937, 172.709006]
 // [-43.583304, 172.549585] -> [-43.583304, 172.709006]
 
 const coordBounds = {
-    yMin: 172.549585,
-    yMax: 172.709006,
-    xMin: -43.477371,
-    xMax: -43.405937,
+  yMin: 172.549585,
+  yMax: 172.709006,
+  xMin: -43.477371,
+  xMax: -43.405937,
 }
 
 const generateDogProps = (user_id) => {
-    if (!user_id) throw new Error("Need user id to generate a dog")
-    const lng = coordBounds.yMin + (Math.random() * (coordBounds.yMax - coordBounds.yMin))
-    const lat = coordBounds.xMin + (Math.random() * (coordBounds.xMax - coordBounds.xMin))
-    return {
-        user_id: user_id,
-        tag: faker.commerce.productName(),
-        latitude: lat,
-        longitude: lng,
-        caption: faker.commerce.productName(),
-    }
+  if (!user_id) throw new Error('Need user id to generate a dog')
+  const lng = coordBounds.yMin + (Math.random() * (coordBounds.yMax - coordBounds.yMin))
+  const lat = coordBounds.xMin + (Math.random() * (coordBounds.xMax - coordBounds.xMin))
+  return {
+    user_id,
+    tag: faker.commerce.productName(),
+    latitude: lat,
+    longitude: lng,
+    caption: faker.commerce.productName(),
+  }
 }
 
-const generateDogPropsWithImage = (user_id, base64=true) => {
-    if (!user_id) throw new Error("Need user id to generate a dog")
-    let imageToSave = base64 ? base64Image : image
-    return {
-        user_id: user_id,
-        tag: faker.commerce.productName(),
-        latitude: faker.address.latitude(),
-        longitude: faker.address.longitude(),
-        caption: faker.lorem.sentences(),
-        image: {
-            image: imageToSave,
-            thumbnail: imageToSave,
-            pin: imageToSave
-        }
+const generateDogPropsWithImage = (user_id, base64 = true) => {
+  if (!user_id) throw new Error('Need user id to generate a dog')
+  const imageToSave = base64 ? base64Image : image
+  return {
+    user_id,
+    tag: faker.commerce.productName(),
+    latitude: faker.address.latitude(),
+    longitude: faker.address.longitude(),
+    caption: faker.lorem.sentences(),
+    image: {
+      image: imageToSave,
+      thumbnail: imageToSave,
+      pin: imageToSave,
+    },
 
-    }
+  }
 }
 
 module.exports = {
-    generateUserProps,
-    generateDogProps,
-    generateDogPropsWithImage
+  generateUserProps,
+  generateDogProps,
+  generateDogPropsWithImage,
 }
