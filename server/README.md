@@ -1,2 +1,2 @@
-readme goes here ...
-
+# Running The App
+```npm i```
