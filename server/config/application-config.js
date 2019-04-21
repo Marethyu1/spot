@@ -1,6 +1,7 @@
 const NODE_ENV = process.env.NODE_ENV || 'development'
+import config from './config'
 
-const database = require('./config')[NODE_ENV]
+const database = config[NODE_ENV]
 
 const applicationConfig = {
   development: {

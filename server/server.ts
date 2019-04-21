@@ -1,7 +1,7 @@
 import { Request, Response, Application } from 'express';
 import express from 'express';
 import morgan = require('morgan')
-// const userRouter = require('./src/routers/user-router')
+import userRouter from "./src/routers/user-router"
 
 
 const BASE_URL = '/api/v1'
@@ -12,6 +12,6 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use(morgan('tiny'))
-// app.use(`${BASE_URL}/users/`, userRouter)
+app.use(`${BASE_URL}/users/`, userRouter)
 
 export default app
