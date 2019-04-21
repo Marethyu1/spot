@@ -1,5 +1,6 @@
+import app from "./server"
+
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const app = require('./server')
 const { getDatabase, setUp } = require('./src/db/database-manager')
 
 const db = getDatabase()
