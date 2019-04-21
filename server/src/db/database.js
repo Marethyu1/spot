@@ -19,7 +19,6 @@ class Database {
       const options = {
         host: config.host,
         dialect: config.dialect || 'mysql',
-        operatorsAliases: false,
         pool: {
           max: 100,
           min: 0,
@@ -27,8 +26,9 @@ class Database {
           idle: 10000,
         },
         define: {
-          timestamps: false,
+          // underscored: true
         },
+
         logging: process.env.NODE_ENV === 'production',
         storage: config.storage,
         dialectOptions: {

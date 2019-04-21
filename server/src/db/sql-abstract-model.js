@@ -14,7 +14,7 @@ class SqlAbstractModel {
   getOptions() {
     return {
       timestamps: true,
-      underscored: true,
+      // underscored: true,
       getterMethods: {},
     }
   }
