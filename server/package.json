@@ -11,7 +11,7 @@
     "drop:test-db": "node_modules/.bin/sequelize db:drop --env=test",
     "create:dbs": "npm run create:dev-db && npm run create:test-db",
     "start-docker": "docker-compose run --service-ports db",
-    "start": "node index.js",
+    "start": "npm run tsc && node ./dist/index.js",
     "tsc": "tsc"
   },
   "author": "Liz and Stefan",
