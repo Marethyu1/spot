@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for SPOT",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "create:dev-db": "node_modules/.bin/sequelize db:create && NODE_ENV=development node ./scripts/create-tables",
+    "create:test-db": "node_modules/.bin/sequelize db:create --env=test && NODE_ENV=test node ./scripts/create-tables",
+    "drop:dev-db": "node_modules/.bin/sequelize db:drop",
+    "drop:test-db": "node_modules/.bin/sequelize db:drop --env=test",
+    "create:dbs": "npm run create:dev-db && npm run create:test-db",
+    "start-docker": "docker-compose run --service-ports db",
+    "start": "npm run tsc && node ./dist/index.js",
+    "tsc": "tsc"
+  },
+  "author": "Liz and Stefan",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/vision": "^0.22.1",
+    "npm i @types/bluebird": "^3.5.26",
+    "npm i @types/express": "^4.16.1",
+    "npm i @types/validator": "^10.11.0",
+    "npm i body-parser": "^1.18.3",
+    "npm i eslint-config-airbnb": "^17.1.0",
+    "npm i express": "^4.16.4",
+    "npm i lodash": "^4.17.11",
+    "npm i morgan": "^1.9.1",
+    "npm i mysql2": "^1.6.5",
+    "npm i sequelize": "^5.7.1",
+    "npm i sequelize-cli": "^5.4.0",
+    "npm i sharp": "^0.20.8"
+  },
+  "devDependencies": {
+    "npm i @types/morgan --save-dev": "^1.7.35",
+    "npm i awesome-typescript-loader --save-dev": "^5.2.1",
+    "npm i babel-eslint --save-dev": "^10.0.1",
+    "npm i eslint --save-dev": "^5.16.0",
+    "npm i eslint-plugin-import --save-dev": "^2.17.2",
+    "npm i eslint-plugin-jsx-a11y --save-dev": "^6.2.1",
+    "npm i eslint-plugin-react --save-dev": "^7.12.4",
+    "npm i faker --save-dev": "^4.1.0",
+    "npm i jest --save-dev": "^23.6.0",
+    "npm i source-map-loader --save-dev": "^0.2.4",
+    "npm i supertest --save-dev": "^3.4.2",
+    "npm i typescrip --save-devt": "^3.4.4"
+  }
+}

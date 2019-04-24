@@ -1,17 +1,16 @@
-const vision = require('@google-cloud/vision')
+import { ImageAnnotatorClient } from '@google-cloud/vision'
 
-const client = new vision.ImageAnnotatorClient()
+let client = null
 
 const _getLabels = (response) => {
   const labels = response[0].labelAnnotations
   return labels.map(x => x.description)
 }
 
-const getTags = async (image) => {
+const _getTags = async (image) => {
   try {
-    const results = await client.labelDetection(image)
+    return await client.labelDetection(image)
       .then(_getLabels)
-    return results
   } catch (err) {
     console.log('Error finding tags... ')
     console.log(err)
@@ -42,9 +41,10 @@ const polyFillGetTags = () => {
     console.log('GOOGLE_APPLICATION_CREDENTIALS not set, getting tags may return unexpected results')
     return getTagsPolyfill
   }
-  return getTags
+  if (!client) {
+    client = new ImageAnnotatorClient()
+  }
+  return _getTags
 }
 
-module.exports = {
-  getTags: polyFillGetTags(),
-}
+export const getTags = polyFillGetTags()
