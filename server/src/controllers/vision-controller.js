@@ -1,4 +1,4 @@
-import { ImageAnnotatorClient } from '@google-cloud/vision'
+const { ImageAnnotatorClient } = require('@google-cloud/vision')
 
 let client = null
 
@@ -47,4 +47,6 @@ const polyFillGetTags = () => {
   return _getTags
 }
 
-export const getTags = polyFillGetTags()
+module.exports = {
+  getTags: polyFillGetTags(),
+}
