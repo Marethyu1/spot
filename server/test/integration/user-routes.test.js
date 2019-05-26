@@ -88,7 +88,7 @@ describe('the user routes', () => {
       expect(body.toString()).toBe(image)
     }
 
-    const createUrl = (route, dog = createdDog) => `${BASE_URL}/${dog.user_id}/dogs/${dog.id}/${route}/${dog.image.id}`
+    const createUrl = (route, dog = createdDog) => `${BASE_URL}/${dog.userId}/dogs/${dog.id}/${route}/${dog.image.id}`
 
     it('Should be able to get an image', async () => {
       const url = createUrl('image')

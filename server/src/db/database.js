@@ -19,7 +19,7 @@ class Database {
       const options = {
         host: config.host,
         dialect: config.dialect || 'mysql',
-        operatorsAliases: false,
+        // operatorsAliases: false,
         pool: {
           max: 100,
           min: 0,

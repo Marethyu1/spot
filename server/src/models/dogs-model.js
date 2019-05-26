@@ -3,9 +3,9 @@ const AbstractModel = require('./abstract-model')
 const { preProcessImage } = require('../images')
 
 class DogsModel extends AbstractModel {
-  findDogsForUser(user_id) {
+  findDogsForUser(userId) {
     const where = {
-      user_id,
+      userId,
     }
     return this.list(where)
   }

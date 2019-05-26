@@ -30,7 +30,7 @@ class AbstractModel {
   }
 
   get(id, options = {}) {
-    return this.model.findById(id, options)
+    return this.model.findByPk(id, options)
   }
 
   list(where) {

@@ -19,12 +19,12 @@ const coordBounds = {
   xMax: -43.405937,
 }
 
-const generateDogProps = (user_id) => {
-  if (!user_id) throw new Error('Need user id to generate a dog')
+const generateDogProps = (userId) => {
+  if (!userId) throw new Error('Need user id to generate a dog')
   const lng = coordBounds.yMin + (Math.random() * (coordBounds.yMax - coordBounds.yMin))
   const lat = coordBounds.xMin + (Math.random() * (coordBounds.xMax - coordBounds.xMin))
   return {
-    user_id,
+    userId,
     tag: faker.commerce.productName(),
     latitude: lat,
     longitude: lng,
@@ -32,11 +32,11 @@ const generateDogProps = (user_id) => {
   }
 }
 
-const generateDogPropsWithImage = (user_id, base64 = true) => {
-  if (!user_id) throw new Error('Need user id to generate a dog')
+const generateDogPropsWithImage = (userId, base64 = true) => {
+  if (!userId) throw new Error('Need user id to generate a dog')
   const imageToSave = base64 ? base64Image : image
   return {
-    user_id,
+    userId,
     tag: faker.commerce.productName(),
     latitude: faker.address.latitude(),
     longitude: faker.address.longitude(),
